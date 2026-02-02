@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish Racing Series - Temporada 34</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-flag-checkered"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">SPANISH RACING</span>
+                    <span class="logo-sub">SERIES</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio" class="active"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#clasificacion"><i class="fas fa-trophy"></i> Clasificación</a></li>
+                    <li><a href="#jornadas"><i class="fas fa-calendar-alt"></i> Jornadas</a></li>
+                    <li><a href="#pilotos"><i class="fas fa-user-astronaut"></i> Pilotos</a></li>
+                    <li><a href="#equipos"><i class="fas fa-users"></i> Equipos</a></li>
+                </ul>
+            </nav>
+            <div class="header-info">
+                <div class="season-badge">
+                    <span class="season-label">TEMPORADA</span>
+                    <span class="season-number">34</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">🏎️ LA COMPETICIÓN MÁS EMOCIONANTE</div>
+            <h1 class="hero-title">SPANISH RACING<br><span>SERIES</span></h1>
+            <p class="hero-subtitle">31 pilotos. 1 campeón. La batalla por la gloria comienza ahora.</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">31</span>
+                    <span class="stat-label">Pilotos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Jornadas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Eliminatorias</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">T34</span>
+                    <span class="stat-label">Temporada</span>
+                </div>
+            </div>
+            <a href="#clasificacion" class="hero-btn">
+                <span>Ver Clasificación</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+        <div class="hero-cars">
+            <div class="floating-car car-1">🏎️</div>
+            <div class="floating-car car-2">🏎️</div>
+            <div class="floating-car car-3">🏎️</div>
+        </div>
+    </section>
+
+    <!-- Clasificación Section -->
+    <section id="clasificacion" class="section clasificacion-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-trophy"></i></div>
+                <h2 class="section-title">CLASIFICACIÓN GENERAL</h2>
+                <p class="section-subtitle">Temporada 34 - Actualizado: 02/02/2026</p>
+            </div>
+            
+            <div class="clasificacion-container">
+                <div class="clasificacion-header">
+                    <span class="col-pos">POS</span>
+                    <span class="col-piloto">PILOTO / EQUIPO</span>
+                    <span class="col-puntos">PUNTOS</span>
+                </div>
+                <div class="clasificacion-list" id="clasificacion-list">
+                    <!-- Se genera dinámicamente con JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jornadas Section -->
+    <section id="jornadas" class="section jornadas-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-calendar-alt"></i></div>
+                <h2 class="section-title">JORNADAS</h2>
+                <p class="section-subtitle">Calendario y resultados de la competición</p>
+            </div>
+
+            <div class="jornadas-nav">
+                <span class="nav-label">Fase de Grupos</span>
+                <button class="jornada-btn active" data-jornada="1">J1</button>
+                <button class="jornada-btn" data-jornada="2">J2</button>
+                <button class="jornada-btn" data-jornada="3">J3</button>
+                <button class="jornada-btn" data-jornada="4">J4</button>
+                <button class="jornada-btn" data-jornada="5">J5</button>
+                <button class="jornada-btn" data-jornada="6">J6</button>
+                <span class="nav-separator"></span>
+                <span class="nav-label">Eliminatorias</span>
+                <button class="jornada-btn eliminatoria-btn" data-eliminatoria="playoff">Play Off</button>
+                <button class="jornada-btn eliminatoria-btn" data-eliminatoria="octavos">Octavos</button>
+                <button class="jornada-btn eliminatoria-btn" data-eliminatoria="cuartos">Cuartos</button>
+                <button class="jornada-btn eliminatoria-btn" data-eliminatoria="semis">Semis</button>
+                <button class="jornada-btn eliminatoria-btn final-btn" data-eliminatoria="final">🏆 Final</button>
+            </div>
+
+            <div class="jornada-content">
+                <div class="jornada-header">
+                    <h3 class="jornada-title">JORNADA 1</h3>
+                    <span class="jornada-date"><i class="fas fa-calendar"></i> 02/02/2026</span>
+                </div>
+                <div class="partidos-grid" id="partidos-grid">
+                    <!-- Se genera dinámicamente con JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilotos Section -->
+    <section id="pilotos" class="section pilotos-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-user-astronaut"></i></div>
+                <h2 class="section-title">PILOTOS</h2>
+                <p class="section-subtitle">Los 31 competidores de la Spanish Racing Series</p>
+            </div>
+
+            <div class="pilotos-grid" id="pilotos-grid">
+                <!-- Se genera dinámicamente con JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <i class="fas fa-flag-checkered"></i>
+                            <span>SPANISH RACING SERIES</span>
+                        </div>
+                        <p>La competición de carreras más emocionante de España. 31 pilotos compiten por la gloria en la Temporada 34.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-discord"></i></a>
+                            <a href="#"><i class="fab fa-twitch"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Enlaces Rápidos</h4>
+                        <ul>
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#clasificacion">Clasificación</a></li>
+                            <li><a href="#jornadas">Jornadas</a></li>
+                            <li><a href="#pilotos">Pilotos</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Información</h4>
+                        <ul>
+                            <li><a href="#">Reglamento</a></li>
+                            <li><a href="#">Inscripciones</a></li>
+                            <li><a href="#">Historial</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>Newsletter</h4>
+                        <p>Recibe las últimas noticias de la competición</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Tu email...">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Spanish Racing Series. Todos los derechos reservados. | Temporada 34</p>
+                <div class="footer-badges">
+                    <span class="badge"><i class="fas fa-flag-checkered"></i> Official</span>
+                    <span class="badge"><i class="fas fa-star"></i> T34</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
