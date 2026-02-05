@@ -82,7 +82,7 @@ const jornadas = {
             { local: "Leonardo Castro", golesLocal: 0, golesVisitante: 0, visitante: "Nelson David Quiroz", dsq: false },
             { local: "Luis Rivera", golesLocal: 0, golesVisitante: 0, visitante: "Cristóbal Farías Galleguillos", dsq: false },
             { local: "Alejandro Alonso", golesLocal: 0, golesVisitante: 0, visitante: "Samuel Guevara Salazar", dsq: false },
-            { local: "Marc cr Rayo", golesLocal: 0, golesVisitante: "DNF", visitante: "Offline Account", dsq: false },
+            { local: "Marc cr Rayo", golesLocal: 0, golesVisitante: 0, visitante: "Offline Account", dsq: false },
             { local: "Alfonso Laguera", golesLocal: 0, golesVisitante: 0, visitante: "Pablo Parada", dsq: false },
             { local: "Valdi CT", golesLocal: 0, golesVisitante: 0, visitante: "Giacomina Leclerc", dsq: false },
             { local: "André Pov", golesLocal: 0, golesVisitante: 0, visitante: "Blake Ezeh", dsq: false },
