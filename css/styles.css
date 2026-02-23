@@ -419,7 +419,7 @@ body {
    ======================================== */
 
 .clasificacion-section {
-    background: var(--bg-gradient);
+    background: var(--bg-dark);
 }
 
 .clasificacion-container {
@@ -525,7 +525,7 @@ body {
    ======================================== */
 
 .jornadas-section {
-    background: var(--bg-dark);
+    background: var(--bg-gradient);
 }
 
 .jornadas-nav {
@@ -755,7 +755,7 @@ body {
    ======================================== */
 
 .pilotos-section {
-    background: var(--bg-gradient);
+    background: var(--bg-dark);
 }
 
 .pilotos-grid {

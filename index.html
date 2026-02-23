@@ -24,10 +24,9 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="#inicio" class="active"><i class="fas fa-home"></i> Inicio</a></li>
-                    <li><a href="#clasificacion"><i class="fas fa-trophy"></i> Clasificación</a></li>
                     <li><a href="#jornadas"><i class="fas fa-calendar-alt"></i> Jornadas</a></li>
                     <li><a href="#pilotos"><i class="fas fa-user-astronaut"></i> Pilotos</a></li>
-                    <li><a href="#equipos"><i class="fas fa-users"></i> Equipos</a></li>
+                    <li><a href="#clasificacion"><i class="fas fa-trophy"></i> Clasificación</a></li>
                 </ul>
             </nav>
             <div class="header-info">
@@ -43,9 +42,9 @@
     <section id="inicio" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-badge">🏎️ LA COMPETICIÓN MÁS EMOCIONANTE</div>
+            <div class="hero-badge">� FASE ELIMINATORIA EN MARCHA</div>
             <h1 class="hero-title">SPANISH RACING<br><span>SERIES</span></h1>
-            <p class="hero-subtitle">32 pilotos. 1 campeón. La batalla por la gloria comienza ahora.</p>
+            <p class="hero-subtitle">Octavos de Final en curso. 16 pilotos. 1 campeón. La gloria está más cerca que nunca.</p>
             <div class="hero-stats">
                 <div class="stat-item">
                     <span class="stat-number">32</span>
@@ -64,8 +63,8 @@
                     <span class="stat-label">Temporada</span>
                 </div>
             </div>
-            <a href="#clasificacion" class="hero-btn">
-                <span>Ver Clasificación</span>
+            <a href="#jornadas" class="hero-btn">
+                <span>Ver Jornadas</span>
                 <i class="fas fa-chevron-down"></i>
             </a>
         </div>
@@ -73,28 +72,6 @@
             <div class="floating-car car-1">🏎️</div>
             <div class="floating-car car-2">🏎️</div>
             <div class="floating-car car-3">🏎️</div>
-        </div>
-    </section>
-
-    <!-- Clasificación Section -->
-    <section id="clasificacion" class="section clasificacion-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-icon"><i class="fas fa-trophy"></i></div>
-                <h2 class="section-title">CLASIFICACIÓN GENERAL</h2>
-                <p class="section-subtitle">Temporada 34 - Actualizado: 02/02/2026</p>
-            </div>
-            
-            <div class="clasificacion-container">
-                <div class="clasificacion-header">
-                    <span class="col-pos">POS</span>
-                    <span class="col-piloto">PILOTO / EQUIPO</span>
-                    <span class="col-puntos">PUNTOS</span>
-                </div>
-                <div class="clasificacion-list" id="clasificacion-list">
-                    <!-- Se genera dinámicamente con JS -->
-                </div>
-            </div>
         </div>
     </section>
 
@@ -121,7 +98,6 @@
                 <button class="jornada-btn eliminatoria-btn" data-eliminatoria="octavos">Octavos</button>
                 <button class="jornada-btn eliminatoria-btn" data-eliminatoria="cuartos">Cuartos</button>
                 <button class="jornada-btn eliminatoria-btn" data-eliminatoria="semis">Semis</button>
-                <button class="jornada-btn eliminatoria-btn final-btn" data-eliminatoria="final">🏆 Final</button>
             </div>
 
             <div class="jornada-content">
@@ -142,11 +118,33 @@
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-user-astronaut"></i></div>
                 <h2 class="section-title">PILOTOS</h2>
-                <p class="section-subtitle">Los 31 competidores de la Spanish Racing Series</p>
+                <p class="section-subtitle">Los 27 competidores activos de la Spanish Racing Series</p>
             </div>
 
             <div class="pilotos-grid" id="pilotos-grid">
                 <!-- Se genera dinámicamente con JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Clasificación Section -->
+    <section id="clasificacion" class="section clasificacion-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-trophy"></i></div>
+                <h2 class="section-title">CLASIFICACIÓN GENERAL</h2>
+                <p class="section-subtitle">Temporada 34 - Actualizado: 23/02/2026</p>
+            </div>
+            
+            <div class="clasificacion-container">
+                <div class="clasificacion-header">
+                    <span class="col-pos">POS</span>
+                    <span class="col-piloto">PILOTO / EQUIPO</span>
+                    <span class="col-puntos">PUNTOS</span>
+                </div>
+                <div class="clasificacion-list" id="clasificacion-list">
+                    <!-- Se genera dinámicamente con JS -->
+                </div>
             </div>
         </div>
     </section>
@@ -174,9 +172,9 @@
                         <h4>Enlaces Rápidos</h4>
                         <ul>
                             <li><a href="#inicio">Inicio</a></li>
-                            <li><a href="#clasificacion">Clasificación</a></li>
                             <li><a href="#jornadas">Jornadas</a></li>
                             <li><a href="#pilotos">Pilotos</a></li>
+                            <li><a href="#clasificacion">Clasificación</a></li>
                         </ul>
                     </div>
                     <div class="footer-links">
