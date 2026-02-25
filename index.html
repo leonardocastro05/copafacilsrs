@@ -44,7 +44,7 @@
         <div class="hero-content">
             <div class="hero-badge">� FASE ELIMINATORIA EN MARCHA</div>
             <h1 class="hero-title">SPANISH RACING<br><span>SERIES</span></h1>
-            <p class="hero-subtitle">Octavos de Final en curso. 16 pilotos. 1 campeón. La gloria está más cerca que nunca.</p>
+            <p class="hero-subtitle">SEMIS. 4 pilotos. 1 campeón. La gloria está más cerca que nunca.</p>
             <div class="hero-stats">
                 <div class="stat-item">
                     <span class="stat-number">32</span>
@@ -133,7 +133,7 @@
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-trophy"></i></div>
                 <h2 class="section-title">CLASIFICACIÓN GENERAL</h2>
-                <p class="section-subtitle">Temporada 34 - Actualizado: 23/02/2026</p>
+                <p class="section-subtitle">Temporada 34 - Actualizado: 25/02/2026</p>
             </div>
             
             <div class="clasificacion-container">
@@ -207,6 +207,42 @@
             </div>
         </div>
     </footer>
+
+    <!-- Fullscreen Semis Animation Overlay -->
+    <div id="semis-overlay" class="semis-overlay">
+        <canvas id="semis-particles"></canvas>
+        <div class="semis-content">
+            <div class="semis-stage semis-stage-intro">
+                <div class="semis-lights">
+                    <div class="semis-light"></div>
+                    <div class="semis-light"></div>
+                    <div class="semis-light"></div>
+                    <div class="semis-light"></div>
+                    <div class="semis-light"></div>
+                </div>
+                <div class="semis-badge-container">
+                    <div class="semis-badge">SEMIFINALES</div>
+                </div>
+                <div class="semis-subtitle-anim">Los 4 mejores pilotos. 2 plazas para la Gran Final.</div>
+            </div>
+            <div class="semis-stage semis-stage-matchups" style="display:none">
+                <h2 class="semis-matchup-title">ENFRENTAMIENTOS</h2>
+                <div class="semis-pilots-showcase" id="semis-pilots-showcase">
+                    <!-- Generated dynamically -->
+                </div>
+                <div class="semis-matches" id="semis-matches-anim">
+                    <!-- Generated dynamically -->
+                </div>
+                <div class="semis-fecha-container">
+                    <span class="semis-fecha"><i class="fas fa-calendar-alt"></i> 27/02/2026</span>
+                </div>
+            </div>
+        </div>
+        <button class="semis-skip-btn" id="semis-skip"><i class="fas fa-forward"></i> Saltar</button>
+        <div class="semis-close-hint" id="semis-close-hint" style="display:none">
+            <span>Pulsa en cualquier lugar para continuar</span>
+        </div>
+    </div>
 
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>

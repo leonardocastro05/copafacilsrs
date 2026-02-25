@@ -214,16 +214,19 @@ const eliminatorias = {
         nombre: "Cuartos de Final",
         fecha: "25/02/2026",
         partidos: [
-            { local: "Alexis Iceman", golesLocal: 0, golesVisitante: 0, visitante: "Leonardo Castro", dsq: false },
-            { local: "Sergio Solano", golesLocal: 0, golesVisitante: 0, visitante: "Vasvo Lao", dsq: false },
-            { local: "Cristian Ezpeleta", golesLocal: 0, golesVisitante: 0, visitante: "Valdi CT", dsq: false },
-            { local: "Eduardo Calvo", golesLocal: 0, golesVisitante: 0, visitante: "Johans Gormaz", dsq: false }
+            { local: "Alexis Iceman", golesLocal: 27, golesVisitante: 11, visitante: "Leonardo Castro", dsq: false },
+            { local: "Sergio Solano", golesLocal: 2, golesVisitante: 6, visitante: "Vasvo Lao", dsq: false },
+            { local: "Cristian Ezpeleta", golesLocal: 3, golesVisitante: 9, visitante: "Valdi CT", dsq: false },
+            { local: "Eduardo Calvo", golesLocal: 1, golesVisitante: 5, visitante: "Johans Gormaz", dsq: false }
         ]
     },
     semis: {
         nombre: "Semifinales",
         fecha: "27/02/2026",
-        partidos: []
+        partidos: [
+            { local: "Leonardo Castro", golesLocal: 0, golesVisitante: 0, visitante: "Eduardo Calvo", dsq: false },
+            { local: "Sergio Solano", golesLocal: 0, golesVisitante: 0, visitante: "Cristian Ezpeleta", dsq: false }
+        ]
     },
     final: {
         nombre: "Gran Final",
