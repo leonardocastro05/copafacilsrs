@@ -224,14 +224,16 @@ const eliminatorias = {
         nombre: "Semifinales",
         fecha: "27/02/2026",
         partidos: [
-            { local: "Leonardo Castro", golesLocal: 0, golesVisitante: 0, visitante: "Eduardo Calvo", dsq: false },
-            { local: "Sergio Solano", golesLocal: 0, golesVisitante: 0, visitante: "Cristian Ezpeleta", dsq: false }
+            { local: "Leonardo Castro", golesLocal: 1, golesVisitante: 2, visitante: "Eduardo Calvo", dsq: false },
+            { local: "Sergio Solano", golesLocal: 6, golesVisitante: 9, visitante: "Cristian Ezpeleta", dsq: false }
         ]
     },
     final: {
         nombre: "Gran Final",
         fecha: "03/03/2026",
-        partidos: []
+        partidos: [
+            { local: "Leonardo Castro", golesLocal: 0, golesVisitante: 0, visitante: "Sergio Solano", dsq: false}
+        ]
     }
 };
 

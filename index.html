@@ -42,9 +42,9 @@
     <section id="inicio" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-badge">� FASE ELIMINATORIA EN MARCHA</div>
+            <div class="hero-badge">🏆 GRAN FINAL - 03/03/2026</div>
             <h1 class="hero-title">SPANISH RACING<br><span>SERIES</span></h1>
-            <p class="hero-subtitle">SEMIS. 4 pilotos. 1 campeón. La gloria está más cerca que nunca.</p>
+            <p class="hero-subtitle">LA BATALLA DEFINITIVA. Leonardo Castro vs Sergio Solano. Un campeón será coronado.</p>
             <div class="hero-stats">
                 <div class="stat-item">
                     <span class="stat-number">32</span>
@@ -98,6 +98,7 @@
                 <button class="jornada-btn eliminatoria-btn" data-eliminatoria="octavos">Octavos</button>
                 <button class="jornada-btn eliminatoria-btn" data-eliminatoria="cuartos">Cuartos</button>
                 <button class="jornada-btn eliminatoria-btn" data-eliminatoria="semis">Semis</button>
+                <button class="jornada-btn eliminatoria-btn" data-eliminatoria="final">🏆 FINAL</button>
             </div>
 
             <div class="jornada-content">
@@ -208,39 +209,66 @@
         </div>
     </footer>
 
-    <!-- Fullscreen Semis Animation Overlay -->
-    <div id="semis-overlay" class="semis-overlay">
-        <canvas id="semis-particles"></canvas>
-        <div class="semis-content">
-            <div class="semis-stage semis-stage-intro">
-                <div class="semis-lights">
-                    <div class="semis-light"></div>
-                    <div class="semis-light"></div>
-                    <div class="semis-light"></div>
-                    <div class="semis-light"></div>
-                    <div class="semis-light"></div>
-                </div>
-                <div class="semis-badge-container">
-                    <div class="semis-badge">SEMIFINALES</div>
-                </div>
-                <div class="semis-subtitle-anim">Los 4 mejores pilotos. 2 plazas para la Gran Final.</div>
+    <!-- Fullscreen FINAL Animation Overlay -->
+    <div id="final-overlay" class="final-overlay">
+        <canvas id="final-canvas"></canvas>
+        <div class="final-content">
+            <!-- ACT 1: Darkness + Heartbeat countdown -->
+            <div class="final-act final-act-1" id="final-act-1">
+                <div class="final-heartbeat-ring"></div>
+                <div class="final-countdown-num" id="final-countdown-num">3</div>
             </div>
-            <div class="semis-stage semis-stage-matchups" style="display:none">
-                <h2 class="semis-matchup-title">ENFRENTAMIENTOS</h2>
-                <div class="semis-pilots-showcase" id="semis-pilots-showcase">
-                    <!-- Generated dynamically -->
+
+            <!-- ACT 2: Title Explosion -->
+            <div class="final-act final-act-2" id="final-act-2" style="display:none">
+                <div class="final-flash" id="final-flash"></div>
+                <div class="final-title-wrap">
+                    <div class="final-crown"><i class="fas fa-crown"></i></div>
+                    <h1 class="final-title">GRAN FINAL</h1>
+                    <p class="final-tagline">SPANISH RACING SERIES — TEMPORADA 34</p>
                 </div>
-                <div class="semis-matches" id="semis-matches-anim">
-                    <!-- Generated dynamically -->
+            </div>
+
+            <!-- ACT 3: Fighter Cards -->
+            <div class="final-act final-act-3" id="final-act-3" style="display:none">
+                <div class="final-matchup">
+                    <div class="final-card final-card-left" id="final-card-left">
+                        <div class="final-card-glow"></div>
+                        <div class="final-card-label">FINALISTA</div>
+                        <div class="final-card-avatar" id="fc-avatar-1"></div>
+                        <div class="final-card-name" id="fc-name-1">Leonardo Castro</div>
+                        <div class="final-card-team" id="fc-team-1">07 CRT Competition</div>
+                        <div class="final-card-path">
+                            <span class="final-path-item">Semis: 1º <i class="fas fa-check"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="final-vs" id="final-vs">
+                        <span>VS</span>
+                    </div>
+
+                    <div class="final-card final-card-right" id="final-card-right">
+                        <div class="final-card-glow"></div>
+                        <div class="final-card-label">FINALISTA</div>
+                        <div class="final-card-avatar" id="fc-avatar-2"></div>
+                        <div class="final-card-name" id="fc-name-2">Sergio Solano</div>
+                        <div class="final-card-team" id="fc-team-2">Furia Andalusí</div>
+                        <div class="final-card-path">
+                            <span class="final-path-item">Semis: 1º <i class="fas fa-check"></i></span>
+                        </div>
+                    </div>
                 </div>
-                <div class="semis-fecha-container">
-                    <span class="semis-fecha"><i class="fas fa-calendar-alt"></i> 27/02/2026</span>
+                <div class="final-date" id="final-date">
+                    <i class="fas fa-calendar-alt"></i> 03 DE MARZO DE 2026
+                </div>
+                <div class="final-bottom-text" id="final-bottom-text">
+                    Solo uno será campeón.
                 </div>
             </div>
         </div>
-        <button class="semis-skip-btn" id="semis-skip"><i class="fas fa-forward"></i> Saltar</button>
-        <div class="semis-close-hint" id="semis-close-hint" style="display:none">
-            <span>Pulsa en cualquier lugar para continuar</span>
+        <button class="final-skip-btn" id="final-skip"><i class="fas fa-forward"></i> Saltar</button>
+        <div class="final-close-hint" id="final-close-hint" style="display:none">
+            Toca en cualquier lugar para continuar
         </div>
     </div>
 

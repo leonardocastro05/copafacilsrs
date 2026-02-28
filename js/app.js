@@ -416,411 +416,388 @@ console.log(`📅 ${Object.keys(jornadas).length} jornadas de fase de grupos`);
 console.log(`🏆 ${Object.keys(eliminatorias).length} fases eliminatorias`);
 
 // ========================================
-// SEMIS FULLSCREEN CINEMATIC ANIMATION
+// GRAN FINAL — CINEMATIC ANIMATION
+// Pacing designed for ~Skyfall tempo
 // ========================================
 
-let semisAnimationPlayed = false;
-let semisAnimTimers = [];
-let semisParticlesRAF = null;
+let _ft = [];          // timers
+let _fRAF = null;      // canvas RAF handle
 
-function launchSemisAnimation() {
-    const overlay = document.getElementById('semis-overlay');
-    if (!overlay) return;
+function launchFinalAnimation() {
+    const ov = document.getElementById('final-overlay');
+    if (!ov) return;
 
-    overlay.classList.add('active');
+    resetFinal();
+    ov.classList.add('active');
     document.body.style.overflow = 'hidden';
-
-    // Reset all states
-    resetSemisAnimation();
-
-    // Start particle system
-    initSemisParticles();
-
-    // Start cinematic sequence
-    startSemisSequence();
+    initFinalCanvas(ov);
+    runAct1();
 }
 
-function resetSemisAnimation() {
-    // Clear any pending timers
-    semisAnimTimers.forEach(t => clearTimeout(t));
-    semisAnimTimers = [];
+/* --- Reset everything to initial state --- */
+function resetFinal() {
+    _ft.forEach(t => clearTimeout(t));
+    _ft = [];
+    if (_fRAF) cancelAnimationFrame(_fRAF);
 
-    const overlay = document.getElementById('semis-overlay');
+    const ov = document.getElementById('final-overlay');
 
-    // Reset intro stage
-    const introStage = overlay.querySelector('.semis-stage-intro');
-    const matchStage = overlay.querySelector('.semis-stage-matchups');
-    introStage.style.display = 'flex';
-    matchStage.style.display = 'none';
-
-    // Reset lights
-    overlay.querySelectorAll('.semis-light').forEach(l => {
-        l.classList.remove('on', 'green');
-    });
-    overlay.querySelector('.semis-lights').classList.remove('show');
-
-    // Reset badge
-    overlay.querySelector('.semis-badge').classList.remove('reveal');
-    overlay.querySelector('.semis-subtitle-anim').classList.remove('reveal');
-
-    // Reset matchup title
-    const title = overlay.querySelector('.semis-matchup-title');
-    if (title) title.classList.remove('reveal');
-
-    // Reset fecha
-    const fecha = overlay.querySelector('.semis-fecha-container');
-    if (fecha) fecha.classList.remove('reveal');
-
-    // Hide close hint
-    document.getElementById('semis-close-hint').style.display = 'none';
-    document.getElementById('semis-skip').style.display = 'block';
-}
-
-function startSemisSequence() {
-    const overlay = document.getElementById('semis-overlay');
-    const lights = overlay.querySelectorAll('.semis-light');
-    const lightsContainer = overlay.querySelector('.semis-lights');
-    const badge = overlay.querySelector('.semis-badge');
-    const subtitle = overlay.querySelector('.semis-subtitle-anim');
-
-    // Phase 1: Show lights container
-    semisAnimTimers.push(setTimeout(() => {
-        lightsContainer.classList.add('show');
-    }, 300));
-
-    // Phase 2: Turn on lights one by one (F1 style)
-    lights.forEach((light, i) => {
-        semisAnimTimers.push(setTimeout(() => {
-            light.classList.add('on');
-            // Play a subtle vibration effect on supported devices
-        }, 800 + i * 600));
+    // Show / hide acts
+    ['final-act-1','final-act-2','final-act-3'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.style.display = 'flex';
+            el.classList.remove('visible');
+        }
     });
 
-    // Phase 3: Lights go green (GO!) + reveal badge
-    const allLightsOnTime = 800 + lights.length * 600 + 400;
+    // Reset countdown
+    const num = document.getElementById('final-countdown-num');
+    if (num) { num.textContent = '3'; num.classList.remove('pop'); }
 
-    semisAnimTimers.push(setTimeout(() => {
-        // All lights off briefly
-        lights.forEach(l => l.classList.remove('on'));
-    }, allLightsOnTime));
+    // Reset heartbeat
+    const ring = ov.querySelector('.final-heartbeat-ring');
+    if (ring) ring.classList.remove('beat');
 
-    semisAnimTimers.push(setTimeout(() => {
-        // All green!
-        lights.forEach(l => l.classList.add('green'));
-        // Reveal badge with explosion
-        badge.classList.add('reveal');
-    }, allLightsOnTime + 300));
+    // Reset act 2 elements
+    const flash = document.getElementById('final-flash');
+    if (flash) flash.classList.remove('fire');
+    ov.querySelectorAll('.final-crown, .final-title, .final-tagline')
+      .forEach(el => el.classList.remove('show'));
 
-    // Phase 4: Subtitle
-    semisAnimTimers.push(setTimeout(() => {
-        subtitle.classList.add('reveal');
-    }, allLightsOnTime + 1200));
+    // Reset act 3 elements
+    ov.querySelectorAll('.final-card').forEach(c => c.classList.remove('reveal'));
+    const vs = document.getElementById('final-vs');
+    if (vs) vs.classList.remove('reveal');
+    ov.querySelectorAll('.final-date, .final-bottom-text')
+      .forEach(el => el.classList.remove('show'));
 
-    // Phase 5: Transition to matchups
-    semisAnimTimers.push(setTimeout(() => {
-        transitionToMatchups();
-    }, allLightsOnTime + 3500));
+    // Controls
+    document.getElementById('final-close-hint').style.display = 'none';
+    document.getElementById('final-skip').style.display = 'block';
 }
 
-function transitionToMatchups() {
-    const overlay = document.getElementById('semis-overlay');
-    const introStage = overlay.querySelector('.semis-stage-intro');
-    const matchStage = overlay.querySelector('.semis-stage-matchups');
+/* ---- ACT 1: Heartbeat Countdown (3-2-1) ---- */
+function runAct1() {
+    const act = document.getElementById('final-act-1');
+    const num = document.getElementById('final-countdown-num');
+    const ring = act.querySelector('.final-heartbeat-ring');
 
-    // Fade out intro
-    introStage.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    introStage.style.opacity = '0';
-    introStage.style.transform = 'scale(1.1)';
+    // Fade in act 1
+    _ft.push(setTimeout(() => act.classList.add('visible'), 125));
 
-    semisAnimTimers.push(setTimeout(() => {
-        introStage.style.display = 'none';
-        matchStage.style.display = 'flex';
+    let count = 3;
+    function beat() {
+        // ring pulse
+        ring.classList.remove('beat');
+        void ring.offsetWidth;   // reflow trick
+        ring.classList.add('beat');
 
-        // Generate match cards
-        generateSemisMatchCards();
+        // number pop
+        num.textContent = count;
+        num.classList.remove('pop');
+        void num.offsetWidth;
+        num.classList.add('pop');
 
-        // Animate them in sequence
-        animateMatchCards();
-    }, 700));
-}
-
-function generateSemisMatchCards() {
-    const container = document.getElementById('semis-matches-anim');
-    const showcase = document.getElementById('semis-pilots-showcase');
-    if (!container) return;
-
-    const semisData = eliminatorias.semis;
-    if (!semisData || semisData.partidos.length === 0) return;
-
-    // Generate pilots showcase
-    if (showcase) {
-        const allPilots = [];
-        semisData.partidos.forEach(p => {
-            if (!allPilots.includes(p.local)) allPilots.push(p.local);
-            if (!allPilots.includes(p.visitante)) allPilots.push(p.visitante);
-        });
-        let showcaseHtml = '';
-        allPilots.forEach((nombre, i) => {
-            const color = getColorByName(nombre);
-            const equipo = getEquipoByName(nombre);
-            showcaseHtml += `
-                <div class="semis-pilot-badge" data-index="${i}">
-                    <div class="semis-pilot-avatar" style="background: ${color}">${getInitials(nombre)}</div>
-                    <div class="semis-pilot-info">
-                        <span class="semis-pilot-name">${nombre}</span>
-                        <span class="semis-pilot-team">${equipo}</span>
-                    </div>
-                </div>
-            `;
-        });
-        showcase.innerHTML = showcaseHtml;
+        count--;
+        if (count > 0) {
+            _ft.push(setTimeout(beat, 1375)); // ~Skyfall piano chord spacing (0.8x)
+        } else {
+            // After last beat, brief pause then transition
+            _ft.push(setTimeout(() => {
+                act.classList.remove('visible');
+                _ft.push(setTimeout(runAct2, 750));
+            }, 1125));
+        }
     }
 
-    let html = '';
-    semisData.partidos.forEach((partido, index) => {
-        const equipoLocal = getEquipoByName(partido.local);
-        const equipoVisitante = getEquipoByName(partido.visitante);
-
-        html += `
-            <div class="semis-match-card" data-match="${index}">
-                <div class="semis-match-label">SEMIFINAL ${index + 1}</div>
-                <div class="semis-driver-card left-driver">
-                    <div class="semis-driver-name">${partido.local}</div>
-                    <div class="semis-driver-team">${equipoLocal}</div>
-                </div>
-                <div class="semis-vs-badge">VS</div>
-                <div class="semis-driver-card right-driver">
-                    <div class="semis-driver-name">${partido.visitante}</div>
-                    <div class="semis-driver-team">${equipoVisitante}</div>
-                </div>
-            </div>
-        `;
-    });
-
-    container.innerHTML = html;
+    _ft.push(setTimeout(beat, 875));
 }
 
-function animateMatchCards() {
-    const overlay = document.getElementById('semis-overlay');
-    const title = overlay.querySelector('.semis-matchup-title');
-    const pilotBadges = overlay.querySelectorAll('.semis-pilot-badge');
-    const matches = overlay.querySelectorAll('.semis-match-card');
-    const fecha = overlay.querySelector('.semis-fecha-container');
+/* ---- ACT 2: Flash + Title Reveal ---- */
+function runAct2() {
+    const act  = document.getElementById('final-act-2');
+    const flash = document.getElementById('final-flash');
+    const crown = act.querySelector('.final-crown');
+    const title = act.querySelector('.final-title');
+    const tagline = act.querySelector('.final-tagline');
 
-    // Reveal title
-    semisAnimTimers.push(setTimeout(() => {
-        title.classList.add('reveal');
-    }, 200));
+    act.classList.add('visible');
+    flash.classList.add('fire');     // white flash
 
-    // Reveal pilot badges one by one
-    pilotBadges.forEach((badge, i) => {
-        semisAnimTimers.push(setTimeout(() => {
-            badge.classList.add('reveal');
-        }, 500 + i * 300));
-    });
+    _ft.push(setTimeout(() => crown.classList.add('show'), 500));
+    _ft.push(setTimeout(() => title.classList.add('show'), 1125));
+    _ft.push(setTimeout(() => tagline.classList.add('show'), 2500));
 
-    // Reveal each match with stagger (after pilot badges)
-    const matchStartDelay = 500 + pilotBadges.length * 300 + 400;
-    matches.forEach((match, i) => {
-        const delay = matchStartDelay + i * 800;
+    // Hold, then go to act 3
+    _ft.push(setTimeout(() => {
+        act.classList.remove('visible');
+        _ft.push(setTimeout(runAct3, 875));
+    }, 5250));
+}
 
-        // Match label
-        semisAnimTimers.push(setTimeout(() => {
-            const label = match.querySelector('.semis-match-label');
-            if (label) label.classList.add('reveal');
-        }, delay));
+/* ---- ACT 3: Fighter Cards ---- */
+function runAct3() {
+    const act   = document.getElementById('final-act-3');
+    const left  = document.getElementById('final-card-left');
+    const right = document.getElementById('final-card-right');
+    const vs    = document.getElementById('final-vs');
+    const date  = document.getElementById('final-date');
+    const bottom = document.getElementById('final-bottom-text');
+    const ov    = document.getElementById('final-overlay');
 
-        // Left driver slides in
-        semisAnimTimers.push(setTimeout(() => {
-            const left = match.querySelector('.left-driver');
-            if (left) left.classList.add('slide-in-left');
-        }, delay + 200));
+    // Populate dynamic data
+    populateFighters();
 
-        // Right driver slides in
-        semisAnimTimers.push(setTimeout(() => {
-            const right = match.querySelector('.right-driver');
-            if (right) right.classList.add('slide-in-right');
-        }, delay + 400));
+    act.classList.add('visible');
 
-        // VS badge pops
-        semisAnimTimers.push(setTimeout(() => {
-            const vs = match.querySelector('.semis-vs-badge');
-            if (vs) vs.classList.add('pop');
-        }, delay + 650));
-    });
-
-    // Show fecha
-    const totalDelay = matchStartDelay + matches.length * 800 + 400;
-    semisAnimTimers.push(setTimeout(() => {
-        fecha.classList.add('reveal');
-    }, totalDelay));
+    _ft.push(setTimeout(() => left.classList.add('reveal'),  375));
+    _ft.push(setTimeout(() => right.classList.add('reveal'), 875));
+    _ft.push(setTimeout(() => vs.classList.add('reveal'),    1375));
+    _ft.push(setTimeout(() => date.classList.add('show'),    2250));
+    _ft.push(setTimeout(() => bottom.classList.add('show'),  2875));
 
     // Show close hint
-    semisAnimTimers.push(setTimeout(() => {
-        document.getElementById('semis-skip').style.display = 'none';
-        document.getElementById('semis-close-hint').style.display = 'block';
-        // Click anywhere to close
-        overlay.addEventListener('click', closeSemisOverlay, { once: true });
-    }, totalDelay + 800));
+    _ft.push(setTimeout(() => {
+        document.getElementById('final-skip').style.display = 'none';
+        document.getElementById('final-close-hint').style.display = 'block';
+        ov.addEventListener('click', closeFinalOverlay, { once: true });
+    }, 3750));
 }
 
-function closeSemisOverlay() {
-    const overlay = document.getElementById('semis-overlay');
-    overlay.style.transition = 'opacity 0.5s ease';
-    overlay.style.opacity = '0';
+function populateFighters() {
+    const f1 = "Leonardo Castro";
+    const f2 = "Sergio Solano";
+
+    // Left card
+    const av1 = document.getElementById('fc-avatar-1');
+    av1.textContent = getInitials(f1);
+    av1.style.background = `linear-gradient(135deg, ${getColorByName(f1)}, #ff8c00)`;
+    document.getElementById('fc-name-1').textContent = f1;
+    document.getElementById('fc-team-1').textContent = getEquipoByName(f1);
+
+    // Right card
+    const av2 = document.getElementById('fc-avatar-2');
+    av2.textContent = getInitials(f2);
+    av2.style.background = `linear-gradient(135deg, ${getColorByName(f2)}, #00b4ff)`;
+    document.getElementById('fc-name-2').textContent = f2;
+    document.getElementById('fc-team-2').textContent = getEquipoByName(f2);
+}
+
+function closeFinalOverlay() {
+    const ov = document.getElementById('final-overlay');
+    ov.style.transition = 'opacity 1.1s ease';
+    ov.style.opacity = '0';
 
     setTimeout(() => {
-        overlay.classList.remove('active');
-        overlay.style.opacity = '';
-        overlay.style.transition = '';
+        ov.classList.remove('active');
+        ov.style.opacity = '';
+        ov.style.transition = '';
         document.body.style.overflow = '';
-        // Stop particles
-        if (semisParticlesRAF) cancelAnimationFrame(semisParticlesRAF);
-        // Clear timers
-        semisAnimTimers.forEach(t => clearTimeout(t));
-        semisAnimTimers = [];
-    }, 500);
+        if (_fRAF) cancelAnimationFrame(_fRAF);
+        _ft.forEach(t => clearTimeout(t));
+        _ft = [];
+    }, 1100);
 }
 
-// ========================================
-// PARTICLE SYSTEM FOR SEMIS
-// ========================================
-
-function initSemisParticles() {
-    const canvas = document.getElementById('semis-particles');
+/* ============================
+   Unified Canvas (particles + fireworks)
+   ============================ */
+function initFinalCanvas(ov) {
+    const canvas = document.getElementById('final-canvas');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    function resize() {
+        canvas.width  = window.innerWidth  * dpr;
+        canvas.height = window.innerHeight * dpr;
+        canvas.style.width  = window.innerWidth  + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    resize();
+    window.addEventListener('resize', resize);
 
-    const particles = [];
-    const sparks = [];
-    const PARTICLE_COUNT = 80;
-    const SPARK_COUNT = 40;
+    const W = () => window.innerWidth;
+    const H = () => window.innerHeight;
 
-    // Create floating embers
-    for (let i = 0; i < PARTICLE_COUNT; i++) {
-        particles.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            size: Math.random() * 2.5 + 0.5,
-            speedX: (Math.random() - 0.5) * 0.5,
-            speedY: -Math.random() * 1.5 - 0.3,
-            opacity: Math.random() * 0.6 + 0.2,
-            color: Math.random() > 0.5
-                ? `rgba(225, 6, 0, ${Math.random() * 0.6 + 0.2})`
-                : `rgba(255, 215, 0, ${Math.random() * 0.4 + 0.1})`,
-            pulseSpeed: Math.random() * 0.02 + 0.01,
-            pulsePhase: Math.random() * Math.PI * 2
+    // --- Ember pool ---
+    const embers = [];
+    for (let i = 0; i < 90; i++) {
+        embers.push({
+            x: Math.random() * W(),
+            y: Math.random() * H(),
+            r: Math.random() * 2 + 0.6,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: -(Math.random() * 1.2 + 0.3),
+            phase: Math.random() * Math.PI * 2,
+            gold: Math.random() > 0.35
         });
     }
 
-    // Create fast horizontal sparks
-    for (let i = 0; i < SPARK_COUNT; i++) {
-        sparks.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            length: Math.random() * 60 + 20,
-            speed: Math.random() * 4 + 2,
-            opacity: Math.random() * 0.3 + 0.1,
-            direction: Math.random() > 0.5 ? 1 : -1
+    // --- Star pool ---
+    const stars = [];
+    for (let i = 0; i < 80; i++) {
+        stars.push({
+            x: Math.random() * W(),
+            y: Math.random() * H(),
+            r: Math.random() * 1.2 + 0.2,
+            phase: Math.random() * Math.PI * 2,
+            speed: Math.random() * 0.03 + 0.01
         });
     }
 
-    let time = 0;
+    // --- Fireworks pool ---
+    const rockets = [];
 
-    function animate() {
-        if (!document.getElementById('semis-overlay').classList.contains('active')) return;
+    function spawnRocket() {
+        const clr = Math.random() > 0.45
+            ? [255, 210, 40]
+            : [220, 30, 10];
+        rockets.push({
+            x: Math.random() * W(),
+            y: H(),
+            ty: Math.random() * H() * 0.45 + 40,
+            v: Math.random() * 3 + 5,
+            clr,
+            sparks: [],
+            done: false
+        });
+    }
 
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        time++;
+    let t = 0;
 
-        // Draw embers
-        particles.forEach(p => {
-            const pulse = Math.sin(time * p.pulseSpeed + p.pulsePhase) * 0.3 + 0.7;
+    function loop() {
+        if (!ov.classList.contains('active')) return;
+        ctx.clearRect(0, 0, W(), H());
+        t++;
 
+        // Stars
+        stars.forEach(s => {
+            const a = (Math.sin(t * s.speed + s.phase) * 0.5 + 0.5) * 0.5;
+            ctx.globalAlpha = a;
+            ctx.fillStyle = '#fff';
             ctx.beginPath();
-            ctx.arc(p.x, p.y, p.size * pulse, 0, Math.PI * 2);
-            ctx.fillStyle = p.color;
+            ctx.arc(s.x, s.y, s.r, 0, 6.28);
+            ctx.fill();
+        });
+
+        // Embers
+        embers.forEach(e => {
+            const pulse = Math.sin(t * 0.02 + e.phase) * 0.35 + 0.65;
+            const r = e.r * pulse;
+            const alpha = e.gold ? 0.5 * pulse : 0.35 * pulse;
+            const c = e.gold ? '255,200,40' : '255,100,20';
+
+            ctx.globalAlpha = alpha;
+            ctx.fillStyle = `rgb(${c})`;
+            ctx.beginPath();
+            ctx.arc(e.x, e.y, r, 0, 6.28);
             ctx.fill();
 
-            // Glow
+            // glow
+            ctx.globalAlpha = alpha * 0.3;
+            const g = ctx.createRadialGradient(e.x, e.y, 0, e.x, e.y, r * 5);
+            g.addColorStop(0, `rgba(${c},0.4)`);
+            g.addColorStop(1, 'transparent');
+            ctx.fillStyle = g;
             ctx.beginPath();
-            ctx.arc(p.x, p.y, p.size * 3 * pulse, 0, Math.PI * 2);
-            const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size * 3 * pulse);
-            gradient.addColorStop(0, p.color);
-            gradient.addColorStop(1, 'transparent');
-            ctx.fillStyle = gradient;
+            ctx.arc(e.x, e.y, r * 5, 0, 6.28);
             ctx.fill();
 
-            p.x += p.speedX;
-            p.y += p.speedY;
-
-            if (p.y < -10) { p.y = canvas.height + 10; p.x = Math.random() * canvas.width; }
-            if (p.x < -10) p.x = canvas.width + 10;
-            if (p.x > canvas.width + 10) p.x = -10;
+            e.x += e.vx;
+            e.y += e.vy;
+            if (e.y < -10) { e.y = H() + 10; e.x = Math.random() * W(); }
+            if (e.x < -10) e.x = W() + 10;
+            if (e.x > W() + 10) e.x = -10;
         });
 
-        // Draw speed lines / sparks
-        sparks.forEach(s => {
-            ctx.beginPath();
-            ctx.moveTo(s.x, s.y);
-            ctx.lineTo(s.x - s.length * s.direction, s.y);
-            ctx.strokeStyle = `rgba(255, 255, 255, ${s.opacity * 0.3})`;
-            ctx.lineWidth = 1;
-            ctx.stroke();
+        ctx.globalAlpha = 1;
 
-            s.x += s.speed * s.direction;
-            if (s.direction > 0 && s.x > canvas.width + s.length) { s.x = -s.length; s.y = Math.random() * canvas.height; }
-            if (s.direction < 0 && s.x < -s.length) { s.x = canvas.width + s.length; s.y = Math.random() * canvas.height; }
-        });
+        // Fireworks (only after first ~3 seconds)
+        if (t > 180 && Math.random() < 0.035) spawnRocket();
 
-        semisParticlesRAF = requestAnimationFrame(animate);
+        for (let i = rockets.length - 1; i >= 0; i--) {
+            const rk = rockets[i];
+            if (!rk.done) {
+                rk.y -= rk.v;
+                // trail
+                ctx.fillStyle = `rgba(${rk.clr.join(',')},0.7)`;
+                ctx.beginPath();
+                ctx.arc(rk.x, rk.y, 2.5, 0, 6.28);
+                ctx.fill();
+
+                if (rk.y <= rk.ty) {
+                    // explode
+                    rk.done = true;
+                    const n = 50 + Math.random() * 40 | 0;
+                    for (let j = 0; j < n; j++) {
+                        const a = (6.28 / n) * j;
+                        const spd = Math.random() * 3 + 1.5;
+                        rk.sparks.push({
+                            x: rk.x, y: rk.y,
+                            vx: Math.cos(a) * spd,
+                            vy: Math.sin(a) * spd,
+                            life: 60 + Math.random() * 40 | 0,
+                            max: 100,
+                            r: Math.random() * 1.8 + 0.8
+                        });
+                    }
+                }
+            } else {
+                // draw sparks
+                for (let j = rk.sparks.length - 1; j >= 0; j--) {
+                    const sp = rk.sparks[j];
+                    sp.x += sp.vx;
+                    sp.y += sp.vy;
+                    sp.vy += 0.06;
+                    sp.life--;
+                    const a = sp.life / sp.max;
+                    ctx.globalAlpha = a;
+                    ctx.fillStyle = `rgb(${rk.clr.join(',')})`;
+                    ctx.beginPath();
+                    ctx.arc(sp.x, sp.y, sp.r, 0, 6.28);
+                    ctx.fill();
+                    if (sp.life <= 0) rk.sparks.splice(j, 1);
+                }
+                ctx.globalAlpha = 1;
+                if (rk.sparks.length === 0) rockets.splice(i, 1);
+            }
+        }
+
+        _fRAF = requestAnimationFrame(loop);
     }
-
-    animate();
-
-    // Handle resize
-    window.addEventListener('resize', () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    });
+    loop();
 }
 
-// ========================================
-// HOOK INTO SEMIS BUTTON
-// ========================================
-
+/* ============================
+   Hook into FINAL button
+   ============================ */
 document.addEventListener('DOMContentLoaded', function() {
-    // Skip button
-    const skipBtn = document.getElementById('semis-skip');
+    // Skip
+    const skipBtn = document.getElementById('final-skip');
     if (skipBtn) {
         skipBtn.addEventListener('click', function(e) {
             e.stopPropagation();
-            closeSemisOverlay();
-            // Show the actual semis content behind
+            closeFinalOverlay();
             modoEliminatoria = true;
-            eliminatoriaActual = 'semis';
-            cambiarEliminatoria('semis');
+            eliminatoriaActual = 'final';
+            cambiarEliminatoria('final');
         });
     }
 
-    // Intercept semis button click
-    const semisBtn = document.querySelector('.eliminatoria-btn[data-eliminatoria="semis"]');
-    if (semisBtn) {
-        // Remove the original event listener by cloning
-        const newBtn = semisBtn.cloneNode(true);
-        semisBtn.parentNode.replaceChild(newBtn, semisBtn);
+    // Intercept final button
+    const btn = document.querySelector('.eliminatoria-btn[data-eliminatoria="final"]');
+    if (btn) {
+        const clone = btn.cloneNode(true);
+        btn.parentNode.replaceChild(clone, btn);
 
-        newBtn.addEventListener('click', function() {
-            // Always show the animation
+        clone.addEventListener('click', function() {
             modoEliminatoria = true;
-            eliminatoriaActual = 'semis';
-            cambiarEliminatoria('semis');
-
-            // Launch the cinematic animation
-            launchSemisAnimation();
+            eliminatoriaActual = 'final';
+            cambiarEliminatoria('final');
+            launchFinalAnimation();
         });
     }
 });
