@@ -1,5 +1,6 @@
 // ========================================
 // SPANISH RACING SERIES - DATA
+// Temporada 35
 // ========================================
 
 // Colores para los equipos/pilotos
@@ -13,228 +14,95 @@ const colores = [
     '#b0c4de'
 ];
 
-// Datos de los pilotos/equipos
+// Datos de los pilotos/equipos — T35
 const pilotos = [
-    { pos: 1, nombre: "Alexis Iceman", equipo: "00 CRT Competition", puntos: 15, color: colores[1] },
-    { pos: 2, nombre: "Sergio Solano", equipo: "Furia Andalusí", puntos: 15, color: colores[2] },
-    { pos: 3, nombre: "Cristian Ezpeleta", equipo: "Campos Racing F1 Ezpeleta", puntos: 15, color: colores[0] },
-    { pos: 4, nombre: "Eduardo Calvo", equipo: "Foxtrot GP", puntos: 15, color: colores[3] },
-    { pos: 5, nombre: "Johans Gormaz", equipo: "F1 FORD MUSTANG", puntos: 15, color: colores[25] },
-    { pos: 6, nombre: "Marc cr Rayo", equipo: "Rayito Team", puntos: 15, color: colores[9] },
-    { pos: 7, nombre: "André Pov", equipo: "Tortuga", puntos: 12, color: colores[29] },
-    { pos: 8, nombre: "Leonardo Castro", equipo: "07 CRT Competition", puntos: 12, color: colores[5] },
-    { pos: 9, nombre: "Frank White", equipo: "Frank White", puntos: 12, color: colores[21] },
-    { pos: 10, nombre: "Vasvo Lao", equipo: "Subaru F1 Team", puntos: 12, color: colores[30] },
-    { pos: 11, nombre: "Valdi CT", equipo: "El Nano", puntos: 12, color: colores[28] },
-    { pos: 12, nombre: "Christian Horny", equipo: "15 Fénix Racing Team", puntos: 12, color: colores[18] },
-    { pos: 13, nombre: "Alejandro Alonso", equipo: "BMW F1 Team", puntos: 12, color: colores[7] },
-    { pos: 14, nombre: "Mauro Reyes Hernández", equipo: "Canary Racing Team SRS", puntos: 12, color: colores[26] },
-    { pos: 15, nombre: "Álvaro Redondo", equipo: "72 Akina SpeedStars Fujiwara", puntos: 9, color: colores[4] },
-    { pos: 16, nombre: "Clais Racing", equipo: "Clais Racing team", puntos: 9, color: colores[24] },
-    { pos: 17, nombre: "Samuel Guevara Salazar", equipo: "HONDA", puntos: 9, color: colores[12] },
-    { pos: 18, nombre: "Francisco Martínez", equipo: "Renfe Cercanías RT", puntos: 9, color: colores[20] },
-    { pos: 19, nombre: "Cristóbal Farías Galleguillos", equipo: "18 ZETTA RACING", puntos: 9, color: colores[10] },
-    { pos: 20, nombre: "Alfonso Laguera", equipo: "70 Benetton Corse", puntos: 9, color: colores[11] },
-    { pos: 21, nombre: "Eduardo Scarpanti Flores", equipo: "ESFX Red Bull Ferrari", puntos: 9, color: colores[0] },
-    { pos: 22, nombre: "Blake Ezeh", equipo: "Deco27 HoloLive Racing Team", puntos: 9, color: colores[17] },
-    { pos: 23, nombre: "Luis Rivera", equipo: "28 BRAWN GP", puntos: 9, color: colores[27] },
-    { pos: 24, nombre: "Nelson David Quiroz", equipo: "9 ART Grand prix", puntos: 6, color: colores[8] },
-    { pos: 25, nombre: "Antonio Pinillos", equipo: "Red Bull Pinkustercia F1 Team", puntos: 6, color: colores[6] },
-    { pos: 26, nombre: "Saúl González", equipo: "99 León Racing Team", puntos: 6, color: colores[23] },
-    { pos: 27, nombre: "Giacomina Leclerc", equipo: "jacqui09sikes615978", puntos: 6, color: colores[16] },
-    { pos: 28, nombre: "Pablo Parada", equipo: "BMT Alpine F1 Team", puntos: 0, color: colores[14] },
-    { pos: 29, nombre: "David Palomo", equipo: "Alunk Works", puntos: 0, color: colores[15] },
-    { pos: 30, nombre: "La Gacela Del Deporte", equipo: "La Gacela del Deporte", puntos: 0, color: colores[22] },
-    { pos: 31, nombre: "Fab Man", equipo: "Racing CLub", puntos: 0, color: colores[19] },
-    { pos: 32, nombre: "Offline Account", equipo: "offlineaccount", puntos: 0, color: colores[13] }
-
+    { pos: 1,  nombre: "Eduardo Calvo",              equipo: "Foxtrot GP",                        puntos: 3, color: colores[0] },
+    { pos: 2,  nombre: "Sergio Solano",              equipo: "Furia Andalusí",                    puntos: 3, color: colores[1] },
+    { pos: 3,  nombre: "Vasvo Lao",                  equipo: "Subaru F1 Team",                    puntos: 3, color: colores[2] },
+    { pos: 4,  nombre: "André Prov",                 equipo: "Tortuga",                           puntos: 3, color: colores[3] },
+    { pos: 5,  nombre: "Cristian Ezpeleta",          equipo: "Campos Racing F1 Ezpeleta",         puntos: 3, color: colores[4] },
+    { pos: 6,  nombre: "Alexis Iceman",              equipo: "00 CRT Competition",                puntos: 0, color: colores[5] },
+    { pos: 7,  nombre: "Valdi CT",                   equipo: "El Nano",                           puntos: 3, color: colores[6] },
+    { pos: 8,  nombre: "Ruben Medina",               equipo: "Team Chuis",                        puntos: 3, color: colores[7] },
+    { pos: 9,  nombre: "Frank White",                equipo: "69 CRT Competition",                puntos: 3, color: colores[8] },
+    { pos: 10, nombre: "Johans Gormaz",              equipo: "01 FORD MUSTANG",                   puntos: 3, color: colores[9] },
+    { pos: 11, nombre: "Marc cr Rayo",               equipo: "Rayito Team",                       puntos: 3, color: colores[10] },
+    { pos: 12, nombre: "Nelson David Quiroz",        equipo: "9 ART Grand prix",                  puntos: 3, color: colores[11] },
+    { pos: 13, nombre: "Leoo Castro",                equipo: "07 CRT Competition",                puntos: 3, color: colores[12] },
+    { pos: 14, nombre: "Antonio Pinillos",           equipo: "Red Bull Pinkustercia F1 Team",     puntos: 0, color: colores[13] },
+    { pos: 15, nombre: "Alvaro Redondo",             equipo: "72 Akina SpeedStars Fujiwara",      puntos: 3, color: colores[14] },
+    { pos: 16, nombre: "Blake Ezeh",                 equipo: "Deco27 HoloLive Racing Team",       puntos: 0, color: colores[15] },
+    { pos: 17, nombre: "Clais Racing",               equipo: "Clais Racing team",                 puntos: 0, color: colores[16] },
+    { pos: 18, nombre: "Francisco Martínez",         equipo: "Renfe Cercanías RT",                puntos: 0, color: colores[17] },
+    { pos: 19, nombre: "Marco Rodriguez",            equipo: "94 Pagani Renault",                 puntos: 3, color: colores[18] },
+    { pos: 20, nombre: "Alfonso Laguera",            equipo: "70 Benetton Camel",                 puntos: 0, color: colores[19] },
+    { pos: 21, nombre: "Eduardo Scarpati Flores",    equipo: "ESFX Red Bull Ferrari",             puntos: 0, color: colores[20] },
+    { pos: 22, nombre: "Cristóbal Farias",           equipo: "18 ZETTA RACING",                   puntos: 0, color: colores[21] },
+    { pos: 23, nombre: "Christian Horny",            equipo: "15 Fénix Racing Team",              puntos: 0, color: colores[22] },
+    { pos: 24, nombre: "Alejandro Alonso",           equipo: "BMW F1 TEAM",                       puntos: 0, color: colores[23] },
+    { pos: 25, nombre: "Samuel Guevara Salazar",     equipo: "HONDA",                             puntos: 0, color: colores[24] },
+    { pos: 26, nombre: "Templario VCR",              equipo: "Hispania Racing Team",              puntos: 0, color: colores[25] },
+    { pos: 27, nombre: "Giacomina Leclerc",          equipo: "jacqui09sikes615978",               puntos: 0, color: colores[26] }
 ];
 
-// Datos de las jornadas (Fase de Grupos)
+// Datos de las jornadas (Fase de Grupos) — T35
+// 10 jornadas, 27 pilotos → 13 partidos + 1 libre por jornada
+// J1: Leoo Castro libre como campeón de la T34 (+3 puntos)
 const jornadas = {
     1: {
-        fecha: "02/02/2026",
+        fecha: "06 de Marzo",
         partidos: [
-            { local: "Alexis Iceman", golesLocal: 0, golesVisitante: 1, visitante: "Cristian Ezpeleta", dsq: false },
-            { local: "Sergio Solano", golesLocal: 0, golesVisitante: 1, visitante: "Eduardo Calvo", dsq: false },
-            { local: "Leonardo Castro", golesLocal: 0, golesVisitante: 1, visitante: "Álvaro Redondo", dsq: false },
-            { local: "Luis Rivera", golesLocal: 1, golesVisitante: 0, visitante: "Antonio Pinillos", dsq: false },
-            { local: "Alejandro Alonso", golesLocal: 1, golesVisitante: 0, visitante: "Nelson David Quiroz", dsq: false },
-            { local: "Marc cr Rayo", golesLocal: 1, golesVisitante: 0, visitante: "Cristóbal Farías Galleguillos", dsq: false },
-            { local: "Alfonso Laguera", golesLocal: 0, golesVisitante: 1, visitante: "Samuel Guevara Salazar", dsq: false },
-            { local: "Valdi CT", golesLocal: 1, golesVisitante: 0, visitante: "Jorge Nevado Barbero", dsq: false },
-            { local: "André Pov", golesLocal: 0, golesVisitante: 0, visitante: "Pablo Parada", dsq: true },
-            { local: "David Palomo", golesLocal: 0, golesVisitante: 0, visitante: "Giacomina Leclerc", dsq: true },
-            { local: "Vasvo Lao", golesLocal: 1, golesVisitante: 0, visitante: "Blake Ezeh", dsq: false },
-            { local: "Christian Horny", golesLocal: 0, golesVisitante: 0, visitante: "Fab Man", dsq: true },
-            { local: "Francisco Martínez", golesLocal: 0, golesVisitante: 1, visitante: "Frank White", dsq: false },
-            { local: "La Gacela Del Deporte", golesLocal: 0, golesVisitante: 0, visitante: "Eduardo Scarpanti Flores", dsq: true },
-            { local: "Saúl González", golesLocal: 0, golesVisitante: 1, visitante: "Clais Racing", dsq: false },
-            { local: "Johans Gormaz", golesLocal: 1, golesVisitante: 0, visitante: "Mauro Reyes Hernández", dsq: false }
+            { local: "Sergio Solano",              visitante: "Cristóbal Farias",            golesLocal: "P3", golesVisitante: "P23" },
+            { local: "Vasvo Lao",                  visitante: "Templario VCR",               golesLocal: "P5", golesVisitante: "P22" },
+            { local: "André Prov",                 visitante: "Blake Ezeh",                  golesLocal: "P6", golesVisitante: "P21" },
+            { local: "Eduardo Calvo",              visitante: "Samuel Guevara Salazar",      golesLocal: "P1", golesVisitante: "P2" },
+            { local: "Alexis Iceman",              visitante: "Marco Rodriguez",             golesLocal: "RET", golesVisitante: "P18" },
+            { local: "Cristian Ezpeleta",          visitante: "Giacomina Leclerc",           golesLocal: "P11", golesVisitante: "P27" },
+            { local: "Valdi CT",                   visitante: "Francisco Martínez",          golesLocal: "P12", golesVisitante: "P19" },
+            { local: "Ruben Medina",               visitante: "Alfonso Laguera",             golesLocal: "P10", golesVisitante: "RET" },
+            { local: "Frank White",                visitante: "Antonio Pinillos",            golesLocal: "P8", golesVisitante: "P20" },
+            { local: "Johans Gormaz",              visitante: "Christian Horny",              golesLocal: "P9", golesVisitante: "P17" },
+            { local: "Marc cr Rayo",               visitante: "Alejandro Alonso",            golesLocal: "P14", golesVisitante: "P15" },
+            { local: "Nelson David Quiroz",        visitante: "Eduardo Scarpati Flores",     golesLocal: "P13", golesVisitante: "P16" },
+            { local: "Alvaro Redondo",             visitante: "Clais Racing",                golesLocal: "P7", golesVisitante: "P24" }
         ]
     },
+    // J2: Clais Racing descansa (libre), recibe 3 puntos
     2: {
-        fecha: "06/02/2026",
+        fecha: "9 de Marzo",
         partidos: [
-            { local: "Cristian Ezpeleta", golesLocal: 0, golesVisitante: 1, visitante: "Eduardo Calvo", dsq: false },
-            { local: "Alexis Iceman", golesLocal: 1, golesVisitante: 0, visitante: "Álvaro Redondo", dsq: false },
-            { local: "Sergio Solano", golesLocal: 1, golesVisitante: 0, visitante: "Antonio Pinillos", dsq: false },
-            { local: "Leonardo Castro", golesLocal: 1, golesVisitante: 0, visitante: "Nelson David Quiroz", dsq: false },
-            { local: "Luis Rivera", golesLocal: 0, golesVisitante: 1, visitante: "Cristóbal Farías Galleguillos", dsq: false },
-            { local: "Alejandro Alonso", golesLocal: 1, golesVisitante: 0, visitante: "Samuel Guevara Salazar", dsq: false },
-            { local: "Marc cr Rayo", golesLocal: 1, golesVisitante: 0, visitante: "Jorge Nevado Barbero", dsq: true },
-            { local: "Alfonso Laguera", golesLocal: 0, golesVisitante: 0, visitante: "Pablo Parada", dsq: true },
-            { local: "Valdi CT", golesLocal: 1, golesVisitante: 0, visitante: "Giacomina Leclerc", dsq: false },
-            { local: "André Pov", golesLocal: 1, golesVisitante: 0, visitante: "Blake Ezeh", dsq: false },
-            { local: "David Palomo", golesLocal: 0, golesVisitante: 0, visitante: "Fab Man", dsq: true },
-            { local: "Vasvo Lao", golesLocal: 0, golesVisitante: 1, visitante: "Frank White", dsq: false },
-            { local: "Christian Horny", golesLocal: 1, golesVisitante: 0, visitante: "Eduardo Scarpanti Flores", dsq: false },
-            { local: "Francisco Martínez", golesLocal: 1, golesVisitante: 0, visitante: "Clais Racing", dsq: false },
-            { local: "La Gacela Del Deporte", golesLocal: 0, golesVisitante: 0, visitante: "Mauro Reyes Hernández", dsq: true },
-            { local: "Saúl González", golesLocal: 0, golesVisitante: 1, visitante: "Johans Gormaz", dsq: false }
+            { local: "Eduardo Calvo",              visitante: "Leoo Castro",                 golesLocal: "", golesVisitante: "" },
+            { local: "Sergio Solano",              visitante: "Frank White",                 golesLocal: "", golesVisitante: "" },
+            { local: "Vasvo Lao",                  visitante: "Alfonso Laguera",             golesLocal: "", golesVisitante: "" },
+            { local: "André Prov",                 visitante: "Giacomina Leclerc",           golesLocal: "", golesVisitante: "" },
+            { local: "Cristian Ezpeleta",          visitante: "Templario VCR",               golesLocal: "", golesVisitante: "" },
+            { local: "Alexis Iceman",              visitante: "Nelson David Quiroz",         golesLocal: "", golesVisitante: "" },
+            { local: "Valdi CT",                   visitante: "Samuel Guevara Salazar",      golesLocal: "", golesVisitante: "" },
+            { local: "Ruben Medina",               visitante: "Alejandro Alonso",            golesLocal: "", golesVisitante: "" },
+            { local: "Johans Gormaz",              visitante: "Blake Ezeh",                  golesLocal: "", golesVisitante: "" },
+            { local: "Marc cr Rayo",               visitante: "Eduardo Scarpati Flores",     golesLocal: "", golesVisitante: "" },
+            { local: "Alvaro Redondo",             visitante: "Marco Rodriguez",             golesLocal: "", golesVisitante: "" },
+            { local: "Antonio Pinillos",           visitante: "Cristóbal Farias",            golesLocal: "", golesVisitante: "" },
+            { local: "Francisco Martínez",         visitante: "Christian Horny",             golesLocal: "", golesVisitante: "" }
         ]
     },
-    3: {
-        fecha: "09/02/2026",
-        partidos: [
-            { local: "Eduardo Calvo", golesLocal: 5, golesVisitante: 6, visitante: "Álvaro Redondo", dsq: false },
-            { local: "Cristian Ezpeleta", golesLocal: 2, golesVisitante: 15, visitante: "Antonio Pinillos", dsq: false },
-            { local: "Alexis Iceman", golesLocal: 1, golesVisitante: 28, visitante: "Nelson David Quiroz", dsq: false },
-            { local: "Sergio Solano", golesLocal: 4, golesVisitante: 17, visitante: "Cristóbal Farías Galleguillos", dsq: false },
-            { local: "Leonardo Castro", golesLocal: 3, golesVisitante: 24, visitante: "Samuel Guevara Salazar", dsq: false },
-            { local: "Luis Rivera", golesLocal: 22, golesVisitante: 0, visitante: "Jorge Nevado Barbero", dsq: true },
-            { local: "Alejandro Alonso", golesLocal: 7, golesVisitante: 0, visitante: "Pablo Parada", dsq: true },
-            { local: "Marc cr Rayo", golesLocal: 9, golesVisitante: 25, visitante: "Giacomina Leclerc", dsq: false },
-            { local: "Alfonso Laguera", golesLocal: 29, golesVisitante: 26, visitante: "Blake Ezeh", dsq: false },
-            { local: "Valdi CT", golesLocal: 10, golesVisitante: 0, visitante: "Fab Man", dsq: true },
-            { local: "André Pov", golesLocal: 14, golesVisitante: 11, visitante: "Frank White", dsq: false },
-            { local: "David Palomo", golesLocal: 0, golesVisitante: 21, visitante: "Eduardo Scarpanti Flores", dsq: true },
-            { local: "Vasvo Lao", golesLocal: 8, golesVisitante: 16, visitante: "Clais Racing", dsq: false },
-            { local: "Christian Horny", golesLocal: 30, golesVisitante: 20, visitante: "Mauro Reyes Hernández", dsq: false },
-            { local: "Francisco Martínez", golesLocal: 18, golesVisitante: 12, visitante: "Johans Gormaz", dsq: false },
-            { local: "La Gacela Del Deporte", golesLocal: 0, golesVisitante: 19, visitante: "Saúl González", dsq: true }
-        ]
-    },
-    4: {
-        fecha: "11/02/2026",
-        partidos: [
-            { local: "Eduardo Calvo", golesLocal: 2, golesVisitante: 1, visitante: "Alexis Iceman", dsq: false },
-            { local: "Álvaro Redondo", golesLocal: 6, golesVisitante: 3, visitante: "Cristian Ezpeleta", dsq: false },
-            { local: "Antonio Pinillos", golesLocal: 17, golesVisitante: 5, visitante: "Leonardo Castro", dsq: false },
-            { local: "Nelson David Quiroz", golesLocal: 27, golesVisitante: 4, visitante: "Sergio Solano", dsq: false },
-            { local: "Cristóbal Farías Galleguillos", golesLocal: 22, golesVisitante: 10, visitante: "Alejandro Alonso", dsq: false },
-            { local: "Samuel Guevara Salazar", golesLocal: 15, golesVisitante: 28, visitante: "Luis Rivera", dsq: false },
-            { local: "Pablo Parada", golesLocal: 0, golesVisitante: 9, visitante: "Marc cr Rayo", dsq: true },
-            { local: "Giacomina Leclerc", golesLocal: 23, golesVisitante: 26, visitante: "Alfonso Laguera", dsq: false },
-            { local: "Blake Ezeh", golesLocal: 24, golesVisitante: 0, visitante: "David Palomo", dsq: true },
-            { local: "Fab Man", golesLocal: 0, golesVisitante: 12, visitante: "André Pov", dsq: true },
-            { local: "Frank White", golesLocal: 14, golesVisitante: 11, visitante: "Christian Horny", dsq: false },
-            { local: "Eduardo Scarpanti Flores", golesLocal: 21, golesVisitante: 7, visitante: "Vasvo Lao", dsq: false },
-            { local: "Clais Racing", golesLocal: 16, golesVisitante: 0, visitante: "La Gacela Del Deporte", dsq: true },
-            { local: "Mauro Reyes Hernández", golesLocal: 18, golesVisitante: 19, visitante: "Francisco Martínez", dsq: false },
-            { local: "Saúl González", golesLocal: 20, golesVisitante: 13, visitante: "Valdi CT", dsq: false },
-            { local: "Johans Gormaz", golesLocal: 8, golesVisitante: 0, visitante: "Jorge Nevado Barbero", dsq: true }
-        ]
-    },
-    5: {
-        fecha: "13/02/2026",
-        partidos: [
-            { local: "Marc cr Rayo", golesLocal: 8, golesVisitante: 1, visitante: "Alexis Iceman", dsq: false },
-            { local: "Alejandro Alonso", golesLocal: 24, golesVisitante: 2, visitante: "Leonardo Castro", dsq: false },
-            { local: "Johans Gormaz", golesLocal: 10, golesVisitante: 9, visitante: "Eduardo Calvo", dsq: false },
-            { local: "Valdi CT", golesLocal: 18, golesVisitante: 6, visitante: "Sergio Solano", dsq: false },
-            { local: "Nelson David Quiroz", golesLocal: 4, golesVisitante: 0, visitante: "Fab Man", dsq: true },
-            { local: "Antonio Pinillos", golesLocal: 17, golesVisitante: 0, visitante: "Pablo Parada", dsq: true },
-            { local: "Álvaro Redondo", golesLocal: 3, golesVisitante: 0, visitante: "David Palomo", dsq: true },
-            { local: "Cristóbal Farías Galleguillos", golesLocal: 19, golesVisitante: 0, visitante: "La Gacela Del Deporte", dsq: true },
-            { local: "Cristian Ezpeleta", golesLocal: 5, golesVisitante: 7, visitante: "André Pov", dsq: false },
-            { local: "Vasvo Lao", golesLocal: 12, golesVisitante: 13, visitante: "Frank White", dsq: false },
-            { local: "Mauro Reyes Hernández", golesLocal: 21, golesVisitante: 27, visitante: "Luis Rivera", dsq: false },
-            { local: "Christian Horny", golesLocal: 11, golesVisitante: 15, visitante: "Clais Racing", dsq: false },
-            { local: "Samuel Guevara Salazar", golesLocal: 14, golesVisitante: 25, visitante: "Giacomina Leclerc", dsq: false },
-            { local: "Eduardo Scarpanti Flores", golesLocal: 23, golesVisitante: 26, visitante: "Blake Ezeh", dsq: false },
-            { local: "Alfonso Laguera", golesLocal: 22, golesVisitante: 16, visitante: "Francisco Martínez", dsq: false },
-            { local: "Saúl González", golesLocal: 20, golesVisitante: 0, visitante: "Offline Account", dsq: true }
-        ]
-    },
-    6: {
-        fecha: "17/02/2026",
-        partidos: [
-            { local: "Antonio Pinillos", golesLocal: 15, golesVisitante: 0, visitante: "David Palomo", dsq: true },
-            { local: "Nelson David Quiroz", golesLocal: 12, golesVisitante: 0, visitante: "La Gacela Del Deporte", dsq: true },
-            { local: "Cristóbal Farías Galleguillos", golesLocal: 19, golesVisitante: 0, visitante: "Pablo Parada", dsq: true },
-            { local: "Luis Rivera", golesLocal: 29, golesVisitante: 0, visitante: "Fab Man", dsq: true },
-            { local: "Alfonso Laguera", golesLocal: 20, golesVisitante: 0, visitante: "Offline Account", dsq: true },
-            { local: "Marc cr Rayo", golesLocal: 13, golesVisitante: 21, visitante: "Alejandro Alonso", dsq: false },
-            { local: "Johans Gormaz", golesLocal: 10, golesVisitante: 14, visitante: "Valdi CT", dsq: false },
-            { local: "Alexis Iceman", golesLocal: 1, golesVisitante: 7, visitante: "Leonardo Castro", dsq: false },
-            { local: "Christian Horny", golesLocal: 16, golesVisitante: 2, visitante: "Sergio Solano", dsq: false },
-            { local: "Eduardo Calvo", golesLocal: 4, golesVisitante: 9, visitante: "Vasvo Lao", dsq: false },
-            { local: "Mauro Reyes Hernández", golesLocal: 30, golesVisitante: 6, visitante: "André Pov", dsq: false },
-            { local: "Cristian Ezpeleta", golesLocal: 3, golesVisitante: 17, visitante: "Samuel Guevara Salazar", dsq: false },
-            { local: "Clais Racing", golesLocal: 11, golesVisitante: 5, visitante: "Álvaro Redondo", dsq: false },
-            { local: "Eduardo Scarpanti Flores", golesLocal: 25, golesVisitante: 18, visitante: "Francisco Martínez", dsq: false },
-            { local: "Frank White", golesLocal: 8, golesVisitante: 23, visitante: "Saúl González", dsq: false },
-            { local: "Giacomina Leclerc", golesLocal: 28, golesVisitante: 27, visitante: "Blake Ezeh", dsq: false }
-        ]
-    }
+    3:  { fecha: "11 de Marzo", partidos: [] },
+    4:  { fecha: "13 de Marzo", partidos: [] },
+    5:  { fecha: "16 de Marzo", partidos: [] },
+    6:  { fecha: "18 de Marzo", partidos: [] },
+    7:  { fecha: "20 de Marzo", partidos: [] },
+    8:  { fecha: "23 de Marzo", partidos: [] },
+    9:  { fecha: "25 de Marzo", partidos: [] },
+    10: { fecha: "27 de Marzo", partidos: [] }
 };
 
-// Datos de las eliminatorias
+// Datos de las eliminatorias — T35
+// Sin playoffs: los 16 mejores van directamente a octavos
 const eliminatorias = {
-    playoff: {
-        nombre: "Play Off",
-        fecha: "18/02/2026",
-        partidos: [
-            { local: "Frank White", golesLocal: 11, golesVisitante: 27, visitante: "Nelson David Quiroz", dsq: false },
-            { local: "Vasvo Lao", golesLocal: 8, golesVisitante: 29, visitante: "Luis Rivera", dsq: false },
-            { local: "Valdi CT", golesLocal: 13, golesVisitante: 24, visitante: "Blake Ezeh", dsq: false },
-            { local: "Christian Horny", golesLocal: 12, golesVisitante: 20, visitante: "Eduardo Scarpanti Flores", dsq: false },
-            { local: "Alejandro Alonso", golesLocal: 9, golesVisitante: 6, visitante: "Alfonso Laguera", dsq: false },
-            { local: "Mauro Reyes Hernández", golesLocal: 30, golesVisitante: 18, visitante: "Cristóbal Farías Galleguillos", dsq: false },
-            { local: "Álvaro Redondo", golesLocal: 7, golesVisitante: 19, visitante: "Francisco Martínez", dsq: false },
-            { local: "Clais Racing", golesLocal: 17, golesVisitante: 14, visitante: "Samuel Guevara Salazar", dsq: false }
-        ]
-    },
-    octavos: {
-        nombre: "Octavos de Final",
-        fecha: "23/02/2026",
-        partidos: [
-            { local: "Alexis Iceman", golesLocal: 4, golesVisitante: 18, visitante: "Samuel Guevara Salazar", dsq: false },
-            { local: "Sergio Solano", golesLocal: 3, golesVisitante: 12, visitante: "Álvaro Redondo", dsq: false },
-            { local: "Cristian Ezpeleta", golesLocal: 5, golesVisitante: 15, visitante: "Cristóbal Farías Galleguillos", dsq: false },
-            { local: "Eduardo Calvo", golesLocal: 2, golesVisitante: 23, visitante: "Alfonso Laguera", dsq: false },
-            { local: "Johans Gormaz", golesLocal: 7, golesVisitante: 13, visitante: "Christian Horny", dsq: false },
-            { local: "Marc cr Rayo", golesLocal: 11, golesVisitante: 10, visitante: "Valdi CT", dsq: false },
-            { local: "André Pov", golesLocal: 8, golesVisitante: 6, visitante: "Vasvo Lao", dsq: false },
-            { local: "Leonardo Castro", golesLocal: 1, golesVisitante: 9, visitante: "69 CRT Competition", dsq: false }
-        ]
-    },
-    cuartos: {
-        nombre: "Cuartos de Final",
-        fecha: "25/02/2026",
-        partidos: [
-            { local: "Alexis Iceman", golesLocal: 27, golesVisitante: 11, visitante: "Leonardo Castro", dsq: false },
-            { local: "Sergio Solano", golesLocal: 2, golesVisitante: 6, visitante: "Vasvo Lao", dsq: false },
-            { local: "Cristian Ezpeleta", golesLocal: 3, golesVisitante: 9, visitante: "Valdi CT", dsq: false },
-            { local: "Eduardo Calvo", golesLocal: 1, golesVisitante: 5, visitante: "Johans Gormaz", dsq: false }
-        ]
-    },
-    semis: {
-        nombre: "Semifinales",
-        fecha: "27/02/2026",
-        partidos: [
-            { local: "Leonardo Castro", golesLocal: 1, golesVisitante: 2, visitante: "Eduardo Calvo", dsq: false },
-            { local: "Sergio Solano", golesLocal: 6, golesVisitante: 9, visitante: "Cristian Ezpeleta", dsq: false }
-        ]
-    },
-    final: {
-        nombre: "Gran Final",
-        fecha: "03/03/2026",
-        partidos: [
-            { local: "Leonardo Castro", golesLocal: 0, golesVisitante: 0, visitante: "Sergio Solano", dsq: false}
-        ]
-    }
+    octavos: { nombre: "Octavos de Final", fecha: "30 de Marzo", partidos: [] },
+    cuartos: { nombre: "Cuartos de Final", fecha: "1 de Abril", partidos: [] },
+    semis:   { nombre: "Semifinales", fecha: "3 de Abril", partidos: [] },
+    final:   { nombre: "Gran Final", fecha: "6 de Abril", partidos: [] }
 };
 
 // Función para obtener las iniciales de un nombre

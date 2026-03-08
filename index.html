@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spanish Racing Series - Temporada 34</title>
+    <title>Spanish Racing Series - Temporada 35</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+
     <!-- Header -->
     <header class="main-header">
         <div class="header-container">
@@ -25,14 +30,13 @@
                 <ul>
                     <li><a href="#inicio" class="active"><i class="fas fa-home"></i> Inicio</a></li>
                     <li><a href="#jornadas"><i class="fas fa-calendar-alt"></i> Jornadas</a></li>
-                    <li><a href="#pilotos"><i class="fas fa-user-astronaut"></i> Pilotos</a></li>
                     <li><a href="#clasificacion"><i class="fas fa-trophy"></i> Clasificación</a></li>
                 </ul>
             </nav>
             <div class="header-info">
                 <div class="season-badge">
                     <span class="season-label">TEMPORADA</span>
-                    <span class="season-number">34</span>
+                    <span class="season-number">35</span>
                 </div>
             </div>
         </div>
@@ -42,24 +46,24 @@
     <section id="inicio" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-badge">🏆 GRAN FINAL - 03/03/2026</div>
+            <div class="hero-badge">🏁 TEMPORADA 35</div>
             <h1 class="hero-title">SPANISH RACING<br><span>SERIES</span></h1>
-            <p class="hero-subtitle">LA BATALLA DEFINITIVA. Leonardo Castro vs Sergio Solano. Un campeón será coronado.</p>
+            <p class="hero-subtitle">27 pilotos, 10 jornadas, 1 campeón. ¿Quién se alzará con la corona?</p>
             <div class="hero-stats">
                 <div class="stat-item">
-                    <span class="stat-number">32</span>
+                    <span class="stat-number">27</span>
                     <span class="stat-label">Pilotos</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">6</span>
+                    <span class="stat-number">10</span>
                     <span class="stat-label">Jornadas</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">5</span>
+                    <span class="stat-number">4</span>
                     <span class="stat-label">Eliminatorias</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">T34</span>
+                    <span class="stat-number">T35</span>
                     <span class="stat-label">Temporada</span>
                 </div>
             </div>
@@ -92,9 +96,12 @@
                 <button class="jornada-btn" data-jornada="4">J4</button>
                 <button class="jornada-btn" data-jornada="5">J5</button>
                 <button class="jornada-btn" data-jornada="6">J6</button>
+                <button class="jornada-btn" data-jornada="7">J7</button>
+                <button class="jornada-btn" data-jornada="8">J8</button>
+                <button class="jornada-btn" data-jornada="9">J9</button>
+                <button class="jornada-btn" data-jornada="10">J10</button>
                 <span class="nav-separator"></span>
                 <span class="nav-label">Eliminatorias</span>
-                <button class="jornada-btn eliminatoria-btn" data-eliminatoria="playoff">Play Off</button>
                 <button class="jornada-btn eliminatoria-btn" data-eliminatoria="octavos">Octavos</button>
                 <button class="jornada-btn eliminatoria-btn" data-eliminatoria="cuartos">Cuartos</button>
                 <button class="jornada-btn eliminatoria-btn" data-eliminatoria="semis">Semis</button>
@@ -104,26 +111,11 @@
             <div class="jornada-content">
                 <div class="jornada-header">
                     <h3 class="jornada-title">JORNADA 1</h3>
-                    <span class="jornada-date"><i class="fas fa-calendar"></i> 02/02/2026</span>
+                    <span class="jornada-date"><i class="fas fa-calendar"></i> 06/03</span>
                 </div>
                 <div class="partidos-grid" id="partidos-grid">
                     <!-- Se genera dinámicamente con JS -->
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pilotos Section -->
-    <section id="pilotos" class="section pilotos-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-icon"><i class="fas fa-user-astronaut"></i></div>
-                <h2 class="section-title">PILOTOS</h2>
-                <p class="section-subtitle">Los 27 competidores activos de la Spanish Racing Series</p>
-            </div>
-
-            <div class="pilotos-grid" id="pilotos-grid">
-                <!-- Se genera dinámicamente con JS -->
             </div>
         </div>
     </section>
@@ -134,9 +126,9 @@
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-trophy"></i></div>
                 <h2 class="section-title">CLASIFICACIÓN GENERAL</h2>
-                <p class="section-subtitle">Temporada 34 - Actualizado: 25/02/2026</p>
+                <p class="section-subtitle">Temporada 35</p>
             </div>
-            
+
             <div class="clasificacion-container">
                 <div class="clasificacion-header">
                     <span class="col-pos">POS</span>
@@ -160,7 +152,7 @@
                             <i class="fas fa-flag-checkered"></i>
                             <span>SPANISH RACING SERIES</span>
                         </div>
-                        <p>La competición de carreras más emocionante de España. 32 pilotos compiten por la gloria en la Temporada 34.</p>
+                        <p>La competición de carreras más emocionante de España. Temporada 35.</p>
                         <div class="social-links">
                             <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -200,79 +192,17 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2026 Spanish Racing Series. Todos los derechos reservados. | Temporada 34</p>
+                <p>&copy; 2026 Spanish Racing Series. Todos los derechos reservados. | Temporada 35</p>
                 <div class="footer-badges">
                     <span class="badge"><i class="fas fa-flag-checkered"></i> Official</span>
-                    <span class="badge"><i class="fas fa-star"></i> T34</span>
+                    <span class="badge"><i class="fas fa-star"></i> T35</span>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Fullscreen FINAL Animation Overlay -->
-    <div id="final-overlay" class="final-overlay">
-        <canvas id="final-canvas"></canvas>
-        <div class="final-content">
-            <!-- ACT 1: Darkness + Heartbeat countdown -->
-            <div class="final-act final-act-1" id="final-act-1">
-                <div class="final-heartbeat-ring"></div>
-                <div class="final-countdown-num" id="final-countdown-num">3</div>
-            </div>
-
-            <!-- ACT 2: Title Explosion -->
-            <div class="final-act final-act-2" id="final-act-2" style="display:none">
-                <div class="final-flash" id="final-flash"></div>
-                <div class="final-title-wrap">
-                    <div class="final-crown"><i class="fas fa-crown"></i></div>
-                    <h1 class="final-title">GRAN FINAL</h1>
-                    <p class="final-tagline">SPANISH RACING SERIES — TEMPORADA 34</p>
-                </div>
-            </div>
-
-            <!-- ACT 3: Fighter Cards -->
-            <div class="final-act final-act-3" id="final-act-3" style="display:none">
-                <div class="final-matchup">
-                    <div class="final-card final-card-left" id="final-card-left">
-                        <div class="final-card-glow"></div>
-                        <div class="final-card-label">FINALISTA</div>
-                        <div class="final-card-avatar" id="fc-avatar-1"></div>
-                        <div class="final-card-name" id="fc-name-1">Leonardo Castro</div>
-                        <div class="final-card-team" id="fc-team-1">07 CRT Competition</div>
-                        <div class="final-card-path">
-                            <span class="final-path-item">Semis: 1º <i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="final-vs" id="final-vs">
-                        <span>VS</span>
-                    </div>
-
-                    <div class="final-card final-card-right" id="final-card-right">
-                        <div class="final-card-glow"></div>
-                        <div class="final-card-label">FINALISTA</div>
-                        <div class="final-card-avatar" id="fc-avatar-2"></div>
-                        <div class="final-card-name" id="fc-name-2">Sergio Solano</div>
-                        <div class="final-card-team" id="fc-team-2">Furia Andalusí</div>
-                        <div class="final-card-path">
-                            <span class="final-path-item">Semis: 1º <i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="final-date" id="final-date">
-                    <i class="fas fa-calendar-alt"></i> 03 DE MARZO DE 2026
-                </div>
-                <div class="final-bottom-text" id="final-bottom-text">
-                    Solo uno será campeón.
-                </div>
-            </div>
-        </div>
-        <button class="final-skip-btn" id="final-skip"><i class="fas fa-forward"></i> Saltar</button>
-        <div class="final-close-hint" id="final-close-hint" style="display:none">
-            Toca en cualquier lugar para continuar
-        </div>
-    </div>
-
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
 </body>
+
 </html>
