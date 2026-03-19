@@ -39,6 +39,15 @@
 
 html {
     scroll-behavior: smooth;
+    zoom: 0.67;
+}
+
+@supports not (zoom: 1) {
+    html {
+        transform: scale(0.67);
+        transform-origin: top left;
+        width: 149.2537%;
+    }
 }
 
 body {
@@ -184,6 +193,7 @@ body {
     position: relative;
     background: var(--bg-gradient);
     overflow: hidden;
+    padding-top: 130px;
 }
 
 .hero-overlay {
@@ -1046,6 +1056,10 @@ body {
         flex-wrap: wrap;
         gap: 15px;
     }
+
+    .hero {
+        padding-top: 190px;
+    }
     
     .main-nav ul {
         order: 3;
@@ -1108,6 +1122,10 @@ body {
     
     .section {
         padding: 60px 0;
+    }
+
+    .hero {
+        padding-top: 150px;
     }
     
     .section-title {

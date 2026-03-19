@@ -11,42 +11,46 @@ const colores = [
     '#4169e1', '#dc143c', '#2e8b57', '#ff8c00', '#9400d3',
     '#00bfff', '#ff7f50', '#6495ed', '#dda0dd', '#f0e68c',
     '#add8e6', '#90ee90', '#ffb6c1', '#87ceeb', '#deb887',
-    '#b0c4de'
+    '#b0c4de', '#cd853f', '#98fb98', '#db7093', '#f4a460'
 ];
 
 // Datos de los pilotos/equipos — T35
+// 30 pilotos (expulsados: TJ LEE, Alfiansyah Reza, Alfonso Laguera, Marco Antonio)
 const pilotos = [
-    { pos: 1,  nombre: "Eduardo Calvo",              equipo: "Foxtrot GP",                        puntos: 3, color: colores[0] },
-    { pos: 2,  nombre: "Sergio Solano",              equipo: "Furia Andalusí",                    puntos: 3, color: colores[1] },
-    { pos: 3,  nombre: "Vasvo Lao",                  equipo: "Subaru F1 Team",                    puntos: 3, color: colores[2] },
-    { pos: 4,  nombre: "André Prov",                 equipo: "Tortuga",                           puntos: 3, color: colores[3] },
-    { pos: 5,  nombre: "Cristian Ezpeleta",          equipo: "Campos Racing F1 Ezpeleta",         puntos: 3, color: colores[4] },
-    { pos: 6,  nombre: "Alexis Iceman",              equipo: "00 CRT Competition",                puntos: 0, color: colores[5] },
-    { pos: 7,  nombre: "Valdi CT",                   equipo: "El Nano",                           puntos: 3, color: colores[6] },
-    { pos: 8,  nombre: "Ruben Medina",               equipo: "Team Chuis",                        puntos: 3, color: colores[7] },
-    { pos: 9,  nombre: "Frank White",                equipo: "69 CRT Competition",                puntos: 3, color: colores[8] },
-    { pos: 10, nombre: "Johans Gormaz",              equipo: "01 FORD MUSTANG",                   puntos: 3, color: colores[9] },
-    { pos: 11, nombre: "Marc cr Rayo",               equipo: "Rayito Team",                       puntos: 3, color: colores[10] },
-    { pos: 12, nombre: "Nelson David Quiroz",        equipo: "9 ART Grand prix",                  puntos: 3, color: colores[11] },
-    { pos: 13, nombre: "Leoo Castro",                equipo: "07 CRT Competition",                puntos: 3, color: colores[12] },
-    { pos: 14, nombre: "Antonio Pinillos",           equipo: "Red Bull Pinkustercia F1 Team",     puntos: 0, color: colores[13] },
-    { pos: 15, nombre: "Alvaro Redondo",             equipo: "72 Akina SpeedStars Fujiwara",      puntos: 3, color: colores[14] },
-    { pos: 16, nombre: "Blake Ezeh",                 equipo: "Deco27 HoloLive Racing Team",       puntos: 0, color: colores[15] },
-    { pos: 17, nombre: "Clais Racing",               equipo: "Clais Racing team",                 puntos: 0, color: colores[16] },
-    { pos: 18, nombre: "Francisco Martínez",         equipo: "Renfe Cercanías RT",                puntos: 0, color: colores[17] },
-    { pos: 19, nombre: "Marco Rodriguez",            equipo: "94 Pagani Renault",                 puntos: 3, color: colores[18] },
-    { pos: 20, nombre: "Alfonso Laguera",            equipo: "70 Benetton Camel",                 puntos: 0, color: colores[19] },
-    { pos: 21, nombre: "Eduardo Scarpati Flores",    equipo: "ESFX Red Bull Ferrari",             puntos: 0, color: colores[20] },
-    { pos: 22, nombre: "Cristóbal Farias",           equipo: "18 ZETTA RACING",                   puntos: 0, color: colores[21] },
-    { pos: 23, nombre: "Christian Horny",            equipo: "15 Fénix Racing Team",              puntos: 0, color: colores[22] },
-    { pos: 24, nombre: "Alejandro Alonso",           equipo: "BMW F1 TEAM",                       puntos: 0, color: colores[23] },
-    { pos: 25, nombre: "Samuel Guevara Salazar",     equipo: "HONDA",                             puntos: 0, color: colores[24] },
-    { pos: 26, nombre: "Templario VCR",              equipo: "Hispania Racing Team",              puntos: 0, color: colores[25] },
-    { pos: 27, nombre: "Giacomina Leclerc",          equipo: "jacqui09sikes615978",               puntos: 0, color: colores[26] }
+    { pos: 1,  nombre: "Cristian Ezpeleta",          equipo: "Campos Racing F1 Ezpeleta",         puntos: 18, color: colores[0] },
+    { pos: 2,  nombre: "Valdi CT",                   equipo: "El Nano",                           puntos: 18, color: colores[1] },
+    { pos: 3,  nombre: "Leoo Castro",                equipo: "07 CRT Competition",                puntos: 18, color: colores[2] },
+    { pos: 4,  nombre: "Sergio Solano",              equipo: "Furia Andalusí",                    puntos: 12, color: colores[3] },
+    { pos: 5,  nombre: "Vasvo Lao",                  equipo: "Subaru F1 Team",                    puntos: 15, color: colores[4] },
+    { pos: 6,  nombre: "Alexis Iceman",              equipo: "00 CRT Competition",                puntos: 12, color: colores[5] },
+    { pos: 7,  nombre: "Ruben Medina",               equipo: "Team Chuis",                        puntos: 15, color: colores[6] },
+    { pos: 8,  nombre: "André Prov",                 equipo: "Tortuga",                           puntos: 18, color: colores[7] },
+    { pos: 9,  nombre: "Frank White",                equipo: "69 CRT Competition",                puntos: 9, color: colores[8] },
+    { pos: 10, nombre: "Marco Rodriguez",            equipo: "94 Pagani Renault",                 puntos: 12, color: colores[9] },
+    { pos: 11, nombre: "Eduardo Calvo",              equipo: "Foxtrot GP",                        puntos: 12, color: colores[10] },
+    { pos: 12, nombre: "Samuel Guevara Salazar",     equipo: "HONDA",                             puntos: 12, color: colores[11] },
+    { pos: 13, nombre: "Nelson David Quiroz",        equipo: "9 ART Grand prix",                  puntos: 6, color: colores[12] },
+    { pos: 14, nombre: "Eduardo Scarpati Flores",    equipo: "ESFX Red Bull Ferrari",             puntos: 3, color: colores[13] },
+    { pos: 15, nombre: "Templario VCR",              equipo: "Hispania Racing Team",              puntos: 6, color: colores[14] },
+    { pos: 16, nombre: "Johans Gormaz",              equipo: "01 FORD MUSTANG",                   puntos: 12, color: colores[15] },
+    { pos: 17, nombre: "Marc cr Rayo",               equipo: "Rayito Team",                       puntos: 12, color: colores[16] },
+    { pos: 18, nombre: "Antonio Pinillos",           equipo: "Red Bull Pinkustercia F1 Team",     puntos: 9, color: colores[17] },
+    { pos: 19, nombre: "Alvaro Redondo",             equipo: "72 Akina SpeedStars Fujiwara",      puntos: 9, color: colores[18] },
+    { pos: 20, nombre: "Francisco Martínez",         equipo: "Renfe Cercanías RT",                puntos: 6, color: colores[19] },
+    { pos: 21, nombre: "Cristóbal Farias",           equipo: "18 ZETTA RACING",                   puntos: 6, color: colores[20] },
+    { pos: 22, nombre: "Markel Diaz",                equipo: "Cadillac KTM F5",                   puntos: 6, color: colores[21] },
+    { pos: 23, nombre: "Nicolo Civera",              equipo: "ncivera94792820",                   puntos: 6, color: colores[22] },
+    { pos: 24, nombre: "Blake Ezeh",                 equipo: "Deco27 HoloLive Racing Team",       puntos: 6, color: colores[23] },
+    { pos: 25, nombre: "Alfonso Laguera",            equipo: "70 Benetton Camel",                 puntos: 0, color: colores[24], expulsado: true },
+    { pos: 26, nombre: "Christian Horny",            equipo: "15 Fénix Racing Team",              puntos: 3, color: colores[25] },
+    { pos: 27, nombre: "Alejandro Alonso",           equipo: "BMW F1 TEAM",                       puntos: 0, color: colores[26] },
+    { pos: 28, nombre: "Giacomina Leclerc",          equipo: "jacqui09sikes615978",               puntos: 0, color: colores[27] },
+    { pos: 29, nombre: "Clais Racing",               equipo: "Clais Racing team",                 puntos: 0, color: colores[28] },
+    { pos: 30, nombre: "Marco Antonio",              equipo: "217488549770",                      puntos: 0, color: colores[29], expulsado: true }
 ];
 
 // Datos de las jornadas (Fase de Grupos) — T35
-// 10 jornadas, 27 pilotos → 13 partidos + 1 libre por jornada
+// 10 jornadas, 30 pilotos (TJ LEE y Alfiansyah Reza expulsados desde J3; Alfonso Laguera y Marco Antonio desde J4)
 // J1: Leoo Castro libre como campeón de la T34 (+3 puntos)
 const jornadas = {
     1: {
@@ -67,33 +71,182 @@ const jornadas = {
             { local: "Alvaro Redondo",             visitante: "Clais Racing",                golesLocal: "P7", golesVisitante: "P24" }
         ]
     },
-    // J2: Clais Racing descansa (libre), recibe 3 puntos
+    // J2: 32 pilotos → 16 partidos, nadie se libra
     2: {
         fecha: "9 de Marzo",
         partidos: [
-            { local: "Eduardo Calvo",              visitante: "Leoo Castro",                 golesLocal: "", golesVisitante: "" },
-            { local: "Sergio Solano",              visitante: "Frank White",                 golesLocal: "", golesVisitante: "" },
-            { local: "Vasvo Lao",                  visitante: "Alfonso Laguera",             golesLocal: "", golesVisitante: "" },
-            { local: "André Prov",                 visitante: "Giacomina Leclerc",           golesLocal: "", golesVisitante: "" },
-            { local: "Cristian Ezpeleta",          visitante: "Templario VCR",               golesLocal: "", golesVisitante: "" },
-            { local: "Alexis Iceman",              visitante: "Nelson David Quiroz",         golesLocal: "", golesVisitante: "" },
-            { local: "Valdi CT",                   visitante: "Samuel Guevara Salazar",      golesLocal: "", golesVisitante: "" },
-            { local: "Ruben Medina",               visitante: "Alejandro Alonso",            golesLocal: "", golesVisitante: "" },
-            { local: "Johans Gormaz",              visitante: "Blake Ezeh",                  golesLocal: "", golesVisitante: "" },
-            { local: "Marc cr Rayo",               visitante: "Eduardo Scarpati Flores",     golesLocal: "", golesVisitante: "" },
-            { local: "Alvaro Redondo",             visitante: "Marco Rodriguez",             golesLocal: "", golesVisitante: "" },
-            { local: "Antonio Pinillos",           visitante: "Cristóbal Farias",            golesLocal: "", golesVisitante: "" },
-            { local: "Francisco Martínez",         visitante: "Christian Horny",             golesLocal: "", golesVisitante: "" }
+            { local: "Eduardo Calvo",              visitante: "Leoo Castro",                 golesLocal: "P2", golesVisitante: "P1" },
+            { local: "Sergio Solano",              visitante: "Alvaro Redondo",              golesLocal: "P8", golesVisitante: "P3" },
+            { local: "Vasvo Lao",                  visitante: "Marco Rodriguez",             golesLocal: "P18", golesVisitante: "P11" },
+            { local: "André Prov",                 visitante: "Christian Horny",             golesLocal: "P4", golesVisitante: "P24" },
+            { local: "Cristian Ezpeleta",          visitante: "Alfonso Laguera",             golesLocal: "P6", golesVisitante: "P19" },
+            { local: "Alexis Iceman",              visitante: "TJ LEE",                     golesLocal: "P12", golesVisitante: "P30" },
+            { local: "Valdi CT",                   visitante: "Nicolo Civera",               golesLocal: "P7", golesVisitante: "P29" },
+            { local: "Ruben Medina",               visitante: "Giacomina Leclerc",           golesLocal: "P5", golesVisitante: "P22" },
+            { local: "Frank White",                visitante: "Templario VCR",               golesLocal: "P16", golesVisitante: "P23" },
+            { local: "Johans Gormaz",              visitante: "Clais Racing",                golesLocal: "P9", golesVisitante: "P28" },
+            { local: "Marc cr Rayo",               visitante: "Samuel Guevara Salazar",      golesLocal: "P13", golesVisitante: "P25" },
+            { local: "Nelson David Quiroz",        visitante: "Markel Diaz",                 golesLocal: "P27", golesVisitante: "P26" },
+            { local: "Antonio Pinillos",           visitante: "Alfiansyah Reza",             golesLocal: "P10", golesVisitante: "P31" },
+            { local: "Blake Ezeh",                 visitante: "Eduardo Scarpati Flores",     golesLocal: "P15", golesVisitante: "P21" },
+            { local: "Francisco Martínez",         visitante: "Marco Antonio",               golesLocal: "P20", golesVisitante: "P32" },
+            { local: "Cristóbal Farias",           visitante: "Alejandro Alonso",            golesLocal: "P14", golesVisitante: "P17" }
         ]
     },
-    3:  { fecha: "11 de Marzo", partidos: [] },
-    4:  { fecha: "13 de Marzo", partidos: [] },
-    5:  { fecha: "16 de Marzo", partidos: [] },
-    6:  { fecha: "18 de Marzo", partidos: [] },
-    7:  { fecha: "20 de Marzo", partidos: [] },
-    8:  { fecha: "23 de Marzo", partidos: [] },
-    9:  { fecha: "25 de Marzo", partidos: [] },
-    10: { fecha: "27 de Marzo", partidos: [] }
+    3: {
+        fecha: "11 de Marzo",
+        partidos: [
+            { local: "Eduardo Calvo",              visitante: "Cristian Ezpeleta",           golesLocal: "P8",  golesVisitante: "P4" },
+            { local: "Sergio Solano",              visitante: "Ruben Medina",                golesLocal: "P2",  golesVisitante: "P11" },
+            { local: "Vasvo Lao",                  visitante: "Frank White",                 golesLocal: "P1",  golesVisitante: "P7" },
+            { local: "André Prov",                 visitante: "Johans Gormaz",               golesLocal: "P9",  golesVisitante: "P10" },
+            { local: "Leoo Castro",                visitante: "Alvaro Redondo",              golesLocal: "P5",  golesVisitante: "P6" },
+            { local: "Valdi CT",                   visitante: "Marc cr Rayo",                golesLocal: "P12", golesVisitante: "P14" },
+            { local: "Alexis Iceman",              visitante: "Nelson David Quiroz",         golesLocal: "P3",  golesVisitante: "P24" },
+            { local: "Marco Rodriguez",            visitante: "Antonio Pinillos",            golesLocal: "RET", golesVisitante: "P13" },
+            { local: "Blake Ezeh",                 visitante: "Francisco Martínez",          golesLocal: "P21", golesVisitante: "P19" },
+            { local: "Cristóbal Farias",           visitante: "Giacomina Leclerc",           golesLocal: "P16", golesVisitante: "P22" },
+            { local: "Alfonso Laguera",            visitante: "Templario VCR",               golesLocal: "RET", golesVisitante: "P20" },
+            { local: "Christian Horny",            visitante: "Samuel Guevara Salazar",      golesLocal: "P18", golesVisitante: "P15" },
+            { local: "Eduardo Scarpati Flores",    visitante: "Clais Racing",                golesLocal: "P17", golesVisitante: "P26" },
+            { local: "Alejandro Alonso",           visitante: "Nicolo Civera",               golesLocal: "P27", golesVisitante: "P25" },
+            { local: "Markel Diaz",                visitante: "Marco Antonio",               golesLocal: "P23", golesVisitante: "P30" }
+        ]
+    },
+    4: {
+        fecha: "13 de Marzo",
+        partidos: [
+            { local: "Vasvo Lao",                  visitante: "Christian Horny",             golesLocal: "P4", golesVisitante: "P17" },
+            { local: "Cristian Ezpeleta",          visitante: "Marco Antonio",               golesLocal: "P16", golesVisitante: "DSQ", dsq: true },
+            { local: "André Prov",                 visitante: "Clais Racing",                golesLocal: "P1", golesVisitante: "P22" },
+            { local: "Leoo Castro",                visitante: "Nelson David Quiroz",         golesLocal: "P5", golesVisitante: "P10" },
+            { local: "Valdi CT",                   visitante: "Alfonso Laguera",             golesLocal: "P11", golesVisitante: "DSQ", dsq: true },
+            { local: "Sergio Solano",              visitante: "Giacomina Leclerc",           golesLocal: "P6", golesVisitante: "P24" },
+            { local: "Alexis Iceman",              visitante: "Templario VCR",               golesLocal: "P2", golesVisitante: "P21" },
+            { local: "Antonio Pinillos",           visitante: "Eduardo Scarpati Flores",     golesLocal: "P9", golesVisitante: "P19" },
+            { local: "Francisco Martínez",         visitante: "Alvaro Redondo",              golesLocal: "P18", golesVisitante: "P8" },
+            { local: "Cristóbal Farias",           visitante: "Eduardo Calvo",               golesLocal: "P25", golesVisitante: "P3" },
+            { local: "Markel Diaz",                visitante: "Johans Gormaz",               golesLocal: "P28", golesVisitante: "P7" },
+            { local: "Marco Rodriguez",            visitante: "Nicolo Civera",               golesLocal: "RET", golesVisitante: "P23" },
+            { local: "Frank White",                visitante: "Samuel Guevara Salazar",      golesLocal: "P26", golesVisitante: "P13" },
+            { local: "Ruben Medina",               visitante: "Blake Ezeh",                  golesLocal: "P12", golesVisitante: "P20" },
+            { local: "Marc cr Rayo",               visitante: "Alejandro Alonso",            golesLocal: "P14", golesVisitante: "P15" }
+        ]
+    },
+    5: {
+        fecha: "16 de Marzo",
+        partidos: [
+            { local: "Valdi CT",                   visitante: "Christian Horny",             golesLocal: "P7", golesVisitante: "P20" },
+            { local: "André Prov",                 visitante: "Eduardo Scarpati Flores",     golesLocal: "P10", golesVisitante: "P17" },
+            { local: "Antonio Pinillos",           visitante: "Leoo Castro",                 golesLocal: "P9", golesVisitante: "P3" },
+            { local: "Nelson David Quiroz",        visitante: "Alejandro Alonso",            golesLocal: "P13", golesVisitante: "RET" },
+            { local: "Alvaro Redondo",             visitante: "Vasvo Lao",                   golesLocal: "P8", golesVisitante: "P5" },
+            { local: "Marc cr Rayo",               visitante: "Eduardo Calvo",               golesLocal: "P16", golesVisitante: "P4" },
+            { local: "Markel Diaz",                visitante: "Ruben Medina",                golesLocal: "P26", golesVisitante: "P19" },
+            { local: "Samuel Guevara Salazar",     visitante: "Giacomina Leclerc",           golesLocal: "P12", golesVisitante: "P25" },
+            { local: "Nicolo Civera",              visitante: "Sergio Solano",               golesLocal: "RET", golesVisitante: "P2" },
+            { local: "Francisco Martínez",         visitante: "Frank White",                 golesLocal: "P22", golesVisitante: "P11" },
+            { local: "Johans Gormaz",              visitante: "Templario VCR",               golesLocal: "P27", golesVisitante: "P23" },
+            { local: "Marco Rodriguez",            visitante: "Cristóbal Farias",            golesLocal: "P14", golesVisitante: "P15" },
+            { local: "Cristian Ezpeleta",          visitante: "Clais Racing",                golesLocal: "P6", golesVisitante: "P21" },
+            { local: "Alexis Iceman",              visitante: "Blake Ezeh",                  golesLocal: "P1", golesVisitante: "RET" }
+        ]
+    },
+    6: {
+        fecha: "18 de Marzo",
+        partidos: [
+            { local: "Leoo Castro",                visitante: "Cristóbal Farias",            golesLocal: "P2",  golesVisitante: "P22" },
+            { local: "Cristian Ezpeleta",          visitante: "Frank White",                 golesLocal: "P5",  golesVisitante: "P7" },
+            { local: "Nelson David Quiroz",        visitante: "Sergio Solano",               golesLocal: "P9",  golesVisitante: "P1" },
+            { local: "Clais Racing",               visitante: "Vasvo Lao",                   golesLocal: "P27", golesVisitante: "P3" },
+            { local: "Blake Ezeh",                 visitante: "Markel Diaz",                 golesLocal: "P18", golesVisitante: "P28" },
+            { local: "Johans Gormaz",              visitante: "Eduardo Scarpati Flores",     golesLocal: "P13", golesVisitante: "P16" },
+            { local: "Valdi CT",                   visitante: "Alejandro Alonso",            golesLocal: "P8",  golesVisitante: "P12" },
+            { local: "Marc cr Rayo",               visitante: "Antonio Pinillos",            golesLocal: "P15", golesVisitante: "P24" },
+            { local: "André Prov",                 visitante: "Alvaro Redondo",              golesLocal: "P6",  golesVisitante: "P14" },
+            { local: "Templario VCR",              visitante: "Christian Horny",             golesLocal: "P20", golesVisitante: "P17" },
+            { local: "Ruben Medina",               visitante: "Giacomina Leclerc",           golesLocal: "P19", golesVisitante: "P26" },
+            { local: "Nicolo Civera",              visitante: "Eduardo Calvo",               golesLocal: "RET", golesVisitante: "P4" },
+            { local: "Francisco Martínez",         visitante: "Marco Rodriguez",             golesLocal: "P11", golesVisitante: "P10" },
+            { local: "Alexis Iceman",              visitante: "Samuel Guevara Salazar",      golesLocal: "P31", golesVisitante: "P21" }
+        ]
+    },
+    7: {
+        fecha: "20 de Marzo",
+        partidos: [
+            { local: "Marco Rodriguez",            visitante: "Valdi CT",                    golesLocal: "", golesVisitante: "" },
+            { local: "Vasvo Lao",                  visitante: "Antonio Pinillos",            golesLocal: "", golesVisitante: "" },
+            { local: "Cristóbal Farias",           visitante: "Alexis Iceman",               golesLocal: "", golesVisitante: "" },
+            { local: "Samuel Guevara Salazar",     visitante: "Cristian Ezpeleta",           golesLocal: "", golesVisitante: "" },
+            { local: "Eduardo Scarpati Flores",    visitante: "Christian Horny",             golesLocal: "", golesVisitante: "" },
+            { local: "Alvaro Redondo",             visitante: "Templario VCR",               golesLocal: "", golesVisitante: "" },
+            { local: "Frank White",                visitante: "Nelson David Quiroz",         golesLocal: "", golesVisitante: "" },
+            { local: "Eduardo Calvo",              visitante: "Marc cr Rayo",                golesLocal: "", golesVisitante: "" },
+            { local: "Nicolo Civera",              visitante: "Johans Gormaz",               golesLocal: "", golesVisitante: "" },
+            { local: "Blake Ezeh",                 visitante: "André Prov",                  golesLocal: "", golesVisitante: "" },
+            { local: "Alejandro Alonso",           visitante: "Leoo Castro",                 golesLocal: "", golesVisitante: "" },
+            { local: "Francisco Martínez",         visitante: "Clais Racing",                golesLocal: "", golesVisitante: "" },
+            { local: "Ruben Medina",               visitante: "Markel Diaz",                 golesLocal: "", golesVisitante: "" },
+            { local: "Giacomina Leclerc",          visitante: "Sergio Solano",               golesLocal: "", golesVisitante: "" }
+        ]
+    },
+    8: {
+        fecha: "23 de Marzo",
+        partidos: [
+            { local: "André Prov",                 visitante: "Samuel Guevara Salazar",      golesLocal: "", golesVisitante: "" },
+            { local: "Cristian Ezpeleta",          visitante: "Blake Ezeh",                  golesLocal: "", golesVisitante: "" },
+            { local: "Valdi CT",                   visitante: "Eduardo Calvo",               golesLocal: "", golesVisitante: "" },
+            { local: "Leoo Castro",                visitante: "Ruben Medina",                golesLocal: "", golesVisitante: "" },
+            { local: "Sergio Solano",              visitante: "Francisco Martínez",          golesLocal: "", golesVisitante: "" },
+            { local: "Vasvo Lao",                  visitante: "Nelson David Quiroz",         golesLocal: "", golesVisitante: "" },
+            { local: "Alexis Iceman",              visitante: "Marco Rodriguez",             golesLocal: "", golesVisitante: "" },
+            { local: "Johans Gormaz",              visitante: "Clais Racing",                golesLocal: "", golesVisitante: "" },
+            { local: "Marc cr Rayo",               visitante: "Alvaro Redondo",              golesLocal: "", golesVisitante: "" },
+            { local: "Antonio Pinillos",           visitante: "Cristóbal Farias",            golesLocal: "", golesVisitante: "" },
+            { local: "Frank White",                visitante: "Eduardo Scarpati Flores",     golesLocal: "", golesVisitante: "" },
+            { local: "Templario VCR",              visitante: "Nicolo Civera",               golesLocal: "", golesVisitante: "" },
+            { local: "Christian Horny",            visitante: "Alejandro Alonso",            golesLocal: "", golesVisitante: "" },
+            { local: "Markel Diaz",                visitante: "Giacomina Leclerc",           golesLocal: "", golesVisitante: "" }
+        ]
+    },
+    9: {
+        fecha: "25 de Marzo",
+        partidos: [
+            { local: "Nicolo Civera",              visitante: "Frank White",                 golesLocal: "", golesVisitante: "" },
+            { local: "Cristóbal Farias",           visitante: "Ruben Medina",                golesLocal: "", golesVisitante: "" },
+            { local: "Eduardo Calvo",              visitante: "Johans Gormaz",               golesLocal: "", golesVisitante: "" },
+            { local: "Alejandro Alonso",           visitante: "Cristian Ezpeleta",           golesLocal: "", golesVisitante: "" },
+            { local: "Samuel Guevara Salazar",     visitante: "Leoo Castro",                 golesLocal: "", golesVisitante: "" },
+            { local: "Giacomina Leclerc",          visitante: "Antonio Pinillos",            golesLocal: "", golesVisitante: "" },
+            { local: "Eduardo Scarpati Flores",    visitante: "Valdi CT",                    golesLocal: "", golesVisitante: "" },
+            { local: "Sergio Solano",              visitante: "Blake Ezeh",                  golesLocal: "", golesVisitante: "" },
+            { local: "Templario VCR",              visitante: "Marc cr Rayo",                golesLocal: "", golesVisitante: "" },
+            { local: "Marco Rodriguez",            visitante: "Alexis Iceman",               golesLocal: "", golesVisitante: "" },
+            { local: "Christian Horny",            visitante: "André Prov",                  golesLocal: "", golesVisitante: "" },
+            { local: "Vasvo Lao",                  visitante: "Markel Diaz",                 golesLocal: "", golesVisitante: "" },
+            { local: "Francisco Martínez",         visitante: "Alvaro Redondo",              golesLocal: "", golesVisitante: "" },
+            { local: "Clais Racing",               visitante: "Nelson David Quiroz",         golesLocal: "", golesVisitante: "" }
+        ]
+    },
+    10: {
+        fecha: "27 de Marzo",
+        partidos: [
+            { local: "Leoo Castro",                visitante: "Nelson David Quiroz",         golesLocal: "", golesVisitante: "" },
+            { local: "André Prov",                 visitante: "Cristóbal Farias",            golesLocal: "", golesVisitante: "" },
+            { local: "Cristian Ezpeleta",          visitante: "Nicolo Civera",               golesLocal: "", golesVisitante: "" },
+            { local: "Valdi CT",                   visitante: "Blake Ezeh",                  golesLocal: "", golesVisitante: "" },
+            { local: "Marc cr Rayo",               visitante: "Clais Racing",                golesLocal: "", golesVisitante: "" },
+            { local: "Sergio Solano",              visitante: "Markel Diaz",                 golesLocal: "", golesVisitante: "" },
+            { local: "Vasvo Lao",                  visitante: "Eduardo Scarpati Flores",     golesLocal: "", golesVisitante: "" },
+            { local: "Alexis Iceman",              visitante: "Ruben Medina",                golesLocal: "", golesVisitante: "" },
+            { local: "Johans Gormaz",              visitante: "Alvaro Redondo",              golesLocal: "", golesVisitante: "" },
+            { local: "Antonio Pinillos",           visitante: "Frank White",                 golesLocal: "", golesVisitante: "" },
+            { local: "Francisco Martínez",         visitante: "Samuel Guevara Salazar",      golesLocal: "", golesVisitante: "" },
+            { local: "Marco Rodriguez",            visitante: "Eduardo Calvo",               golesLocal: "", golesVisitante: "" },
+            { local: "Templario VCR",              visitante: "Alejandro Alonso",            golesLocal: "", golesVisitante: "" },
+            { local: "Christian Horny",            visitante: "Giacomina Leclerc",           golesLocal: "", golesVisitante: "" }
+        ]
+    }
 };
 
 // Datos de las eliminatorias — T35

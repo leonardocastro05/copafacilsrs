@@ -4,7 +4,7 @@
 // ========================================
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar la aplicación
+    // Inicializar la aplicaciÃ³n
     initClasificacion();
     initJornadas();
     initPilotos();
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ========================================
-// CLASIFICACIÓN
+// CLASIFICACIÃ“N
 // ========================================
 
 function initClasificacion() {
@@ -25,14 +25,16 @@ function initClasificacion() {
             <div style="text-align: center; padding: 60px 20px;">
                 <i class="fas fa-hourglass-half" style="font-size: 3rem; color: var(--text-muted); margin-bottom: 15px;"></i>
                 <h3 style="color: var(--text-secondary); margin-bottom: 10px;">Sin pilotos registrados</h3>
-                <p style="color: var(--text-muted);">La Temporada 35 aún no ha comenzado.</p>
+                <p style="color: var(--text-muted);">La Temporada 35 aÃºn no ha comenzado.</p>
             </div>
         `;
         return;
     }
 
-    // Ordenar pilotos por puntos (descendente) y luego por posición
-    const pilotosOrdenados = [...pilotos].sort((a, b) => {
+    // Excluir expulsados de la clasificaciÃ³n y ordenar por puntos (descendente)
+    const pilotosClasificacion = pilotos.filter(p => !p.expulsado);
+
+    const pilotosOrdenados = [...pilotosClasificacion].sort((a, b) => {
         if (b.puntos !== a.puntos) return b.puntos - a.puntos;
         return a.pos - b.pos;
     });
@@ -102,16 +104,16 @@ function initJornadas() {
 function cambiarJornada(jornada) {
     jornadaActual = jornada;
     
-    // Actualizar botón activo (quitar de todos)
+    // Actualizar botÃ³n activo (quitar de todos)
     document.querySelectorAll('.jornada-btn').forEach(btn => {
         btn.classList.remove('active');
     });
     
-    // Activar el botón correcto
+    // Activar el botÃ³n correcto
     const btnActivo = document.querySelector(`.jornada-btn[data-jornada="${jornada}"]`);
     if (btnActivo) btnActivo.classList.add('active');
     
-    // Actualizar título
+    // Actualizar tÃ­tulo
     document.querySelector('.jornada-title').textContent = `JORNADA ${jornada}`;
     
     // Actualizar fecha
@@ -123,19 +125,19 @@ function cambiarJornada(jornada) {
 }
 
 function cambiarEliminatoria(eliminatoria) {
-    // Actualizar botón activo (quitar de todos)
+    // Actualizar botÃ³n activo (quitar de todos)
     document.querySelectorAll('.jornada-btn').forEach(btn => {
         btn.classList.remove('active');
     });
     
-    // Activar el botón correcto
+    // Activar el botÃ³n correcto
     const btnActivo = document.querySelector(`.eliminatoria-btn[data-eliminatoria="${eliminatoria}"]`);
     if (btnActivo) btnActivo.classList.add('active');
     
     // Obtener datos de la eliminatoria
     const eliminatoriaData = eliminatorias[eliminatoria];
     
-    // Actualizar título
+    // Actualizar tÃ­tulo
     document.querySelector('.jornada-title').textContent = eliminatoriaData.nombre.toUpperCase();
     
     // Actualizar fecha
@@ -154,20 +156,20 @@ function renderEliminatoria(eliminatoria) {
     if (!eliminatoriaData || eliminatoriaData.partidos.length === 0) {
         let icono = 'fa-hourglass-half';
         let mensaje = 'Partidos por definir';
-        let submensaje = 'Los enfrentamientos se determinarán según los resultados de la fase de grupos.';
+        let submensaje = 'Los enfrentamientos se determinarÃ¡n segÃºn los resultados de la fase de grupos.';
         
         if (eliminatoria === 'final') {
             icono = 'fa-trophy';
-            mensaje = '🏆 LA GRAN FINAL';
-            submensaje = 'Los dos mejores se enfrentarán aquí por el título de campeón.';
+            mensaje = 'ðŸ† LA GRAN FINAL';
+            submensaje = 'Los dos mejores se enfrentarÃ¡n aquÃ­ por el tÃ­tulo de campeÃ³n.';
         } else if (eliminatoria === 'semis') {
             icono = 'fa-fire';
             mensaje = 'Semifinales';
-            submensaje = 'Los 4 mejores lucharán por un puesto en la final.';
+            submensaje = 'Los 4 mejores lucharÃ¡n por un puesto en la final.';
         } else if (eliminatoria === 'cuartos') {
             icono = 'fa-bolt';
             mensaje = 'Cuartos de Final';
-            submensaje = 'Los 8 clasificados competirán en eliminación directa.';
+            submensaje = 'Los 8 clasificados competirÃ¡n en eliminaciÃ³n directa.';
         } else if (eliminatoria === 'octavos') {
             icono = 'fa-flag-checkered';
             mensaje = 'Octavos de Final';
@@ -230,7 +232,7 @@ function renderJornada(jornada) {
             <div class="no-partidos" style="grid-column: 1/-1; text-align: center; padding: 60px 20px;">
                 <i class="fas fa-calendar-times" style="font-size: 4rem; color: var(--text-muted); margin-bottom: 20px;"></i>
                 <h3 style="color: var(--text-secondary); margin-bottom: 10px;">Sin partidos programados</h3>
-                <p style="color: var(--text-muted);">Los enfrentamientos de esta jornada aún no han sido definidos.</p>
+                <p style="color: var(--text-muted);">Los enfrentamientos de esta jornada aÃºn no han sido definidos.</p>
             </div>
         `;
         return;
@@ -280,7 +282,7 @@ function initPilotos() {
             <div style="grid-column: 1/-1; text-align: center; padding: 60px 20px;">
                 <i class="fas fa-user-slash" style="font-size: 3rem; color: var(--text-muted); margin-bottom: 15px;"></i>
                 <h3 style="color: var(--text-secondary); margin-bottom: 10px;">Sin pilotos registrados</h3>
-                <p style="color: var(--text-muted);">Los pilotos de la Temporada 35 aún no han sido confirmados.</p>
+                <p style="color: var(--text-muted);">Los pilotos de la Temporada 35 aÃºn no han sido confirmados.</p>
             </div>
         `;
         return;
@@ -322,11 +324,11 @@ function initPilotos() {
 }
 
 // ========================================
-// NAVEGACIÓN
+// NAVEGACIÃ“N
 // ========================================
 
 function initNavigation() {
-    // Navegación suave
+    // NavegaciÃ³n suave
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -409,7 +411,7 @@ function initScrollEffects() {
 // ========================================
 
 function actualizarPuntos(nombrePiloto, nuevosPuntos) {
-    const piloto = pilotos.find(p => p.nombre === nombrePiloto);
+    const piloto = pilotos.find(p => p.nombre === nombrePiloto)
     if (piloto) {
         piloto.puntos = nuevosPuntos;
         initClasificacion();
@@ -427,6 +429,6 @@ function agregarResultado(jornada, indexPartido, golesLocal, golesVisitante) {
 }
 
 // Console log
-console.log('🏎️ Spanish Racing Series - Temporada 35 cargada correctamente');
-console.log(`📊 ${pilotos.length} pilotos registrados`);
-console.log(`📅 ${Object.keys(jornadas).length} jornadas de fase de grupos`);
+console.log('ðŸŽï¸ Spanish Racing Series - Temporada 35 cargada correctamente');
+console.log(`ðŸ“Š ${pilotos.length} pilotos registrados`);
+console.log(`ðŸ“… ${Object.keys(jornadas).length} jornadas de fase de grupos`);
