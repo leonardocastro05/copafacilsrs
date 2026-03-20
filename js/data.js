@@ -20,7 +20,7 @@ const pilotos = [
     { pos: 1,  nombre: "Cristian Ezpeleta",          equipo: "Campos Racing F1 Ezpeleta",         puntos: 18, color: colores[0] },
     { pos: 2,  nombre: "Valdi CT",                   equipo: "El Nano",                           puntos: 18, color: colores[1] },
     { pos: 3,  nombre: "Leoo Castro",                equipo: "07 CRT Competition",                puntos: 18, color: colores[2] },
-    { pos: 4,  nombre: "Sergio Solano",              equipo: "Furia Andalusí",                    puntos: 12, color: colores[3] },
+    { pos: 4,  nombre: "Sergio Solano",              equipo: "Furia Andalusí",                    puntos: 15, color: colores[3] },
     { pos: 5,  nombre: "Vasvo Lao",                  equipo: "Subaru F1 Team",                    puntos: 15, color: colores[4] },
     { pos: 6,  nombre: "Alexis Iceman",              equipo: "00 CRT Competition",                puntos: 12, color: colores[5] },
     { pos: 7,  nombre: "Ruben Medina",               equipo: "Team Chuis",                        puntos: 15, color: colores[6] },
@@ -173,22 +173,9 @@ const jornadas = {
     },
     7: {
         fecha: "20 de Marzo",
-        partidos: [
-            { local: "Marco Rodriguez",            visitante: "Valdi CT",                    golesLocal: "", golesVisitante: "" },
-            { local: "Vasvo Lao",                  visitante: "Antonio Pinillos",            golesLocal: "", golesVisitante: "" },
-            { local: "Cristóbal Farias",           visitante: "Alexis Iceman",               golesLocal: "", golesVisitante: "" },
-            { local: "Samuel Guevara Salazar",     visitante: "Cristian Ezpeleta",           golesLocal: "", golesVisitante: "" },
-            { local: "Eduardo Scarpati Flores",    visitante: "Christian Horny",             golesLocal: "", golesVisitante: "" },
-            { local: "Alvaro Redondo",             visitante: "Templario VCR",               golesLocal: "", golesVisitante: "" },
-            { local: "Frank White",                visitante: "Nelson David Quiroz",         golesLocal: "", golesVisitante: "" },
-            { local: "Eduardo Calvo",              visitante: "Marc cr Rayo",                golesLocal: "", golesVisitante: "" },
-            { local: "Nicolo Civera",              visitante: "Johans Gormaz",               golesLocal: "", golesVisitante: "" },
-            { local: "Blake Ezeh",                 visitante: "André Prov",                  golesLocal: "", golesVisitante: "" },
-            { local: "Alejandro Alonso",           visitante: "Leoo Castro",                 golesLocal: "", golesVisitante: "" },
-            { local: "Francisco Martínez",         visitante: "Clais Racing",                golesLocal: "", golesVisitante: "" },
-            { local: "Ruben Medina",               visitante: "Markel Diaz",                 golesLocal: "", golesVisitante: "" },
-            { local: "Giacomina Leclerc",          visitante: "Sergio Solano",               golesLocal: "", golesVisitante: "" }
-        ]
+        cancelada: true,
+        mensajeCancelacion: "Jornada 7 cancelada por problemas in-game",
+        partidos: []
     },
     8: {
         fecha: "23 de Marzo",
@@ -199,8 +186,8 @@ const jornadas = {
             { local: "Leoo Castro",                visitante: "Ruben Medina",                golesLocal: "", golesVisitante: "" },
             { local: "Sergio Solano",              visitante: "Francisco Martínez",          golesLocal: "", golesVisitante: "" },
             { local: "Vasvo Lao",                  visitante: "Nelson David Quiroz",         golesLocal: "", golesVisitante: "" },
-            { local: "Alexis Iceman",              visitante: "Marco Rodriguez",             golesLocal: "", golesVisitante: "" },
-            { local: "Johans Gormaz",              visitante: "Clais Racing",                golesLocal: "", golesVisitante: "" },
+            { local: "Alexis Iceman",              visitante: "Clais Racing",                golesLocal: "", golesVisitante: "" },
+            { local: "Johans Gormaz",              visitante: "Marco Rodriguez",             golesLocal: "", golesVisitante: "" },
             { local: "Marc cr Rayo",               visitante: "Alvaro Redondo",              golesLocal: "", golesVisitante: "" },
             { local: "Antonio Pinillos",           visitante: "Cristóbal Farias",            golesLocal: "", golesVisitante: "" },
             { local: "Frank White",                visitante: "Eduardo Scarpati Flores",     golesLocal: "", golesVisitante: "" },
@@ -221,17 +208,17 @@ const jornadas = {
             { local: "Eduardo Scarpati Flores",    visitante: "Valdi CT",                    golesLocal: "", golesVisitante: "" },
             { local: "Sergio Solano",              visitante: "Blake Ezeh",                  golesLocal: "", golesVisitante: "" },
             { local: "Templario VCR",              visitante: "Marc cr Rayo",                golesLocal: "", golesVisitante: "" },
-            { local: "Marco Rodriguez",            visitante: "Alexis Iceman",               golesLocal: "", golesVisitante: "" },
-            { local: "Christian Horny",            visitante: "André Prov",                  golesLocal: "", golesVisitante: "" },
+            { local: "Marco Rodriguez",            visitante: "Christian Horny",             golesLocal: "", golesVisitante: "" },
+            { local: "Alexis Iceman",              visitante: "Alvaro Redondo",              golesLocal: "", golesVisitante: "" },
             { local: "Vasvo Lao",                  visitante: "Markel Diaz",                 golesLocal: "", golesVisitante: "" },
-            { local: "Francisco Martínez",         visitante: "Alvaro Redondo",              golesLocal: "", golesVisitante: "" },
+            { local: "André Prov",                 visitante: "Francisco Martínez",          golesLocal: "", golesVisitante: "" },
             { local: "Clais Racing",               visitante: "Nelson David Quiroz",         golesLocal: "", golesVisitante: "" }
         ]
     },
     10: {
         fecha: "27 de Marzo",
         partidos: [
-            { local: "Leoo Castro",                visitante: "Nelson David Quiroz",         golesLocal: "", golesVisitante: "" },
+            { local: "Leoo Castro",                visitante: "Frank White",                 golesLocal: "", golesVisitante: "" },
             { local: "André Prov",                 visitante: "Cristóbal Farias",            golesLocal: "", golesVisitante: "" },
             { local: "Cristian Ezpeleta",          visitante: "Nicolo Civera",               golesLocal: "", golesVisitante: "" },
             { local: "Valdi CT",                   visitante: "Blake Ezeh",                  golesLocal: "", golesVisitante: "" },
@@ -240,7 +227,7 @@ const jornadas = {
             { local: "Vasvo Lao",                  visitante: "Eduardo Scarpati Flores",     golesLocal: "", golesVisitante: "" },
             { local: "Alexis Iceman",              visitante: "Ruben Medina",                golesLocal: "", golesVisitante: "" },
             { local: "Johans Gormaz",              visitante: "Alvaro Redondo",              golesLocal: "", golesVisitante: "" },
-            { local: "Antonio Pinillos",           visitante: "Frank White",                 golesLocal: "", golesVisitante: "" },
+            { local: "Antonio Pinillos",           visitante: "Nelson David Quiroz",         golesLocal: "", golesVisitante: "" },
             { local: "Francisco Martínez",         visitante: "Samuel Guevara Salazar",      golesLocal: "", golesVisitante: "" },
             { local: "Marco Rodriguez",            visitante: "Eduardo Calvo",               golesLocal: "", golesVisitante: "" },
             { local: "Templario VCR",              visitante: "Alejandro Alonso",            golesLocal: "", golesVisitante: "" },

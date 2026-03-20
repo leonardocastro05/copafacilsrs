@@ -226,6 +226,17 @@ function renderJornada(jornada) {
     if (!container) return;
 
     const jornadaData = jornadas[jornada];
+
+    if (jornadaData && jornadaData.cancelada) {
+        container.innerHTML = `
+            <div class="no-partidos" style="grid-column: 1/-1; text-align: center; padding: 60px 20px; border: 1px solid var(--primary); border-radius: 14px; background: rgba(225, 6, 0, 0.08);">
+                <i class="fas fa-ban" style="font-size: 4rem; color: var(--primary); margin-bottom: 20px;"></i>
+                <h3 style="color: var(--primary); margin-bottom: 10px;">Jornada cancelada</h3>
+                <p style="color: #ff8a8a;">${jornadaData.mensajeCancelacion || 'Esta jornada ha sido cancelada por problemas in-game.'}</p>
+            </div>
+        `;
+        return;
+    }
     
     if (!jornadaData || jornadaData.partidos.length === 0) {
         container.innerHTML = `
