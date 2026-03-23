@@ -173,9 +173,22 @@ const jornadas = {
     },
     7: {
         fecha: "20 de Marzo",
-        cancelada: true,
-        mensajeCancelacion: "Jornada 7 cancelada por problemas in-game",
-        partidos: []
+        partidos: [
+            { local: "Marco Rodriguez",            visitante: "Valdi CT",                    golesLocal: "", golesVisitante: "" },
+            { local: "Vasvo Lao",                  visitante: "Antonio Pinillos",            golesLocal: "", golesVisitante: "" },
+            { local: "Cristóbal Farias",           visitante: "Alexis Iceman",               golesLocal: "", golesVisitante: "" },
+            { local: "Samuel Guevara Salazar",     visitante: "Cristian Ezpeleta",           golesLocal: "", golesVisitante: "" },
+            { local: "Eduardo Scarpati Flores",    visitante: "Christian Horny",             golesLocal: "", golesVisitante: "" },
+            { local: "Alvaro Redondo",             visitante: "Templario VCR",               golesLocal: "", golesVisitante: "" },
+            { local: "Frank White",                visitante: "Nelson David Quiroz",         golesLocal: "", golesVisitante: "" },
+            { local: "Eduardo Calvo",              visitante: "Markel Diaz",                 golesLocal: "", golesVisitante: "" },
+            { local: "Nicolo Civera",              visitante: "Johans Gormaz",               golesLocal: "", golesVisitante: "" },
+            { local: "Blake Ezeh",                 visitante: "Giacomina Leclerc",           golesLocal: "", golesVisitante: "" },
+            { local: "Alejandro Alonso",           visitante: "Leoo Castro",                 golesLocal: "", golesVisitante: "" },
+            { local: "Francisco Martínez",         visitante: "Clais Racing",                golesLocal: "", golesVisitante: "" },
+            { local: "Ruben Medina",               visitante: "Marc cr Rayo",                golesLocal: "", golesVisitante: "" },
+            { local: "André Prov",                 visitante: "Sergio Solano",               golesLocal: "", golesVisitante: "" }
+        ]
     },
     8: {
         fecha: "23 de Marzo",
