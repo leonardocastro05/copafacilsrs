@@ -35,6 +35,8 @@ function initClasificacion() {
     const pilotosClasificacion = pilotos.filter(p => !p.expulsado);
 
     const pilotosOrdenados = [...pilotosClasificacion].sort((a, b) => {
+        if (a.dsq && !b.dsq) return 1;
+        if (!a.dsq && b.dsq) return -1;
         if (b.puntos !== a.puntos) return b.puntos - a.puntos;
         return a.pos - b.pos;
     });
@@ -59,7 +61,7 @@ function initClasificacion() {
                         <span class="piloto-equipo">${piloto.equipo}</span>
                     </div>
                 </div>
-                <div class="puntos-badge">${piloto.puntos}</div>
+                <div class="puntos-badge ${piloto.dsq ? 'dsq' : ''}">${piloto.dsq ? 'DSQ' : piloto.puntos}</div>
             </div>
         `;
     });
@@ -315,7 +317,7 @@ function initPilotos() {
                 </div>
                 <div class="piloto-card-stats">
                     <div class="piloto-stat">
-                        <span class="piloto-stat-value">${piloto.puntos}</span>
+                        <span class="piloto-stat-value">${piloto.dsq ? 'DSQ' : piloto.puntos}</span>
                         <span class="piloto-stat-label">Puntos</span>
                     </div>
                     <div class="piloto-stat">

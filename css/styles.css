@@ -530,6 +530,12 @@ body {
     font-size: 1.2rem;
 }
 
+.puntos-badge.dsq {
+    background: rgba(225, 6, 0, 0.18);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
 /* ========================================
    JORNADAS SECTION
    ======================================== */
