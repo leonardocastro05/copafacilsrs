@@ -17,33 +17,33 @@ const colores = [
 // Datos de los pilotos/equipos — T35
 // 30 pilotos (expulsados: TJ LEE, Alfiansyah Reza, Alfonso Laguera, Marco Antonio)
 const pilotos = [
-    { pos: 1,  nombre: "Cristian Ezpeleta",          equipo: "Campos Racing F1 Ezpeleta",         puntos: 27, color: colores[0] },
-    { pos: 2,  nombre: "Valdi CT",                   equipo: "El Nano",                           puntos: 24, color: colores[1] },
-    { pos: 3,  nombre: "Leoo Castro",                equipo: "07 CRT Competition",                puntos: 27, color: colores[2] },
-    { pos: 4,  nombre: "Sergio Solano",              equipo: "Furia Andalusí",                    puntos: 24, color: colores[3] },
-    { pos: 5,  nombre: "Vasvo Lao",                  equipo: "Subaru F1 Team",                    puntos: 24, color: colores[4] },
-    { pos: 6,  nombre: "Alexis Iceman",              equipo: "00 CRT Competition",                puntos: 21, color: colores[5] },
+    { pos: 1,  nombre: "Cristian Ezpeleta",          equipo: "Campos Racing F1 Ezpeleta",         puntos: 30, color: colores[0] },
+    { pos: 2,  nombre: "Valdi CT",                   equipo: "El Nano",                           puntos: 27, color: colores[1] },
+    { pos: 3,  nombre: "Leoo Castro",                equipo: "07 CRT Competition",                puntos: 30, color: colores[2] },
+    { pos: 4,  nombre: "Sergio Solano",              equipo: "Furia Andalusí",                    puntos: 27, color: colores[3] },
+    { pos: 5,  nombre: "Vasvo Lao",                  equipo: "Subaru F1 Team",                    puntos: 27, color: colores[4] },
+    { pos: 6,  nombre: "Alexis Iceman",              equipo: "00 CRT Competition",                puntos: 24, color: colores[5] },
     { pos: 7,  nombre: "Ruben Medina",               equipo: "Team Chuis",                        puntos: 15, color: colores[6] },
     { pos: 8,  nombre: "André Prov",                 equipo: "Tortuga",                           puntos: 24, color: colores[7] },
     { pos: 9,  nombre: "Frank White",                equipo: "69 CRT Competition",                puntos: 12, color: colores[8] },
     { pos: 10, nombre: "Marco Rodriguez",            equipo: "94 Pagani Renault",                 puntos: 18, color: colores[9] },
-    { pos: 11, nombre: "Eduardo Calvo",              equipo: "Foxtrot GP",                        puntos: 21, color: colores[10] },
-    { pos: 12, nombre: "Samuel Guevara Salazar",     equipo: "HONDA",                             puntos: 12, color: colores[11] },
+    { pos: 11, nombre: "Eduardo Calvo",              equipo: "Foxtrot GP",                        puntos: 24, color: colores[10] },
+    { pos: 12, nombre: "Samuel Guevara Salazar",     equipo: "HONDA",                             puntos: 15, color: colores[11] },
     { pos: 13, nombre: "Nelson David Quiroz",        equipo: "9 ART Grand prix",                  puntos: 12, color: colores[12] },
     { pos: 14, nombre: "Eduardo Scarpati Flores",    equipo: "ESFX Red Bull Ferrari",             puntos: 6, color: colores[13] },
     { pos: 15, nombre: "Templario VCR",              equipo: "Hispania Racing Team",              puntos: 9, color: colores[14] },
     { pos: 16, nombre: "Johans Gormaz",              equipo: "01 FORD MUSTANG",                   puntos: 0, color: colores[15], dsq: true },
-    { pos: 17, nombre: "Marc cr Rayo",               equipo: "Rayito Team",                       puntos: 15, color: colores[16] },
-    { pos: 18, nombre: "Antonio Pinillos",           equipo: "Red Bull Pinkustercia F1 Team",     puntos: 15, color: colores[17] },
-    { pos: 19, nombre: "Alvaro Redondo",             equipo: "72 Akina SpeedStars Fujiwara",      puntos: 15, color: colores[18] },
+    { pos: 17, nombre: "Marc cr Rayo",               equipo: "Rayito Team",                       puntos: 18, color: colores[16] },
+    { pos: 18, nombre: "Antonio Pinillos",           equipo: "Red Bull Pinkustercia F1 Team",     puntos: 18, color: colores[17] },
+    { pos: 19, nombre: "Alvaro Redondo",             equipo: "72 Akina SpeedStars Fujiwara",      puntos: 18, color: colores[18] },
     { pos: 20, nombre: "Francisco Martínez",         equipo: "Renfe Cercanías RT",                puntos: 9, color: colores[19] },
-    { pos: 21, nombre: "Cristóbal Farias",           equipo: "18 ZETTA RACING",                   puntos: 9, color: colores[20] },
+    { pos: 21, nombre: "Cristóbal Farias",           equipo: "18 ZETTA RACING",                   puntos: 12, color: colores[20] },
     { pos: 22, nombre: "Markel Diaz",                equipo: "Cadillac KTM F5",                   puntos: 9, color: colores[21] },
     { pos: 23, nombre: "Nicolo Civera",              equipo: "ncivera94792820",                   puntos: 9, color: colores[22] },
     { pos: 24, nombre: "Blake Ezeh",                 equipo: "Deco27 HoloLive Racing Team",       puntos: 9, color: colores[23] },
     { pos: 25, nombre: "Alfonso Laguera",            equipo: "70 Benetton Camel",                 puntos: 0, color: colores[24], expulsado: true },
-    { pos: 26, nombre: "Christian Horny",            equipo: "15 Fénix Racing Team",              puntos: 9, color: colores[25] },
-    { pos: 27, nombre: "Alejandro Alonso",           equipo: "BMW F1 TEAM",                       puntos: 0, color: colores[26] },
+    { pos: 26, nombre: "Christian Horny",            equipo: "15 Fénix Racing Team",              puntos: 12, color: colores[25] },
+    { pos: 27, nombre: "Alejandro Alonso",           equipo: "BMW F1 TEAM",                       puntos: 3, color: colores[26] },
     { pos: 28, nombre: "Giacomina Leclerc",          equipo: "jacqui09sikes615978",               puntos: 3, color: colores[27] },
     { pos: 29, nombre: "Clais Racing",               equipo: "Clais Racing team",                 puntos: 3, color: colores[28] },
     { pos: 30, nombre: "Marco Antonio",              equipo: "217488549770",                      puntos: 0, color: colores[29], expulsado: true }
@@ -231,20 +231,20 @@ const jornadas = {
     10: {
         fecha: "27 de Marzo",
         partidos: [
-            { local: "Leoo Castro",                visitante: "Frank White",                 golesLocal: "", golesVisitante: "" },
-            { local: "André Prov",                 visitante: "Cristóbal Farias",            golesLocal: "", golesVisitante: "" },
-            { local: "Cristian Ezpeleta",          visitante: "Nicolo Civera",               golesLocal: "", golesVisitante: "" },
-            { local: "Valdi CT",                   visitante: "Blake Ezeh",                  golesLocal: "", golesVisitante: "" },
-            { local: "Marc cr Rayo",               visitante: "Clais Racing",                golesLocal: "", golesVisitante: "" },
-            { local: "Sergio Solano",              visitante: "Markel Diaz",                 golesLocal: "", golesVisitante: "" },
-            { local: "Vasvo Lao",                  visitante: "Eduardo Scarpati Flores",     golesLocal: "", golesVisitante: "" },
-            { local: "Alexis Iceman",              visitante: "Ruben Medina",                golesLocal: "", golesVisitante: "" },
-            { local: "Johans Gormaz",              visitante: "Alvaro Redondo",              golesLocal: "", golesVisitante: "" },
-            { local: "Antonio Pinillos",           visitante: "Nelson David Quiroz",         golesLocal: "", golesVisitante: "" },
-            { local: "Francisco Martínez",         visitante: "Samuel Guevara Salazar",      golesLocal: "", golesVisitante: "" },
-            { local: "Marco Rodriguez",            visitante: "Eduardo Calvo",               golesLocal: "", golesVisitante: "" },
-            { local: "Templario VCR",              visitante: "Alejandro Alonso",            golesLocal: "", golesVisitante: "" },
-            { local: "Christian Horny",            visitante: "Giacomina Leclerc",           golesLocal: "", golesVisitante: "" }
+            { local: "Leoo Castro",                visitante: "Frank White",                 golesLocal: "P1", golesVisitante: "P6" },
+            { local: "André Prov",                 visitante: "Cristóbal Farias",            golesLocal: "P28", golesVisitante: "P15" },
+            { local: "Cristian Ezpeleta",          visitante: "Nicolo Civera",               golesLocal: "P13", golesVisitante: "RET" },
+            { local: "Valdi CT",                   visitante: "Blake Ezeh",                  golesLocal: "P3", golesVisitante: "P17" },
+            { local: "Marc cr Rayo",               visitante: "Clais Racing",                golesLocal: "P16", golesVisitante: "RET" },
+            { local: "Sergio Solano",              visitante: "Markel Diaz",                 golesLocal: "P5", golesVisitante: "RET" },
+            { local: "Vasvo Lao",                  visitante: "Eduardo Scarpati Flores",     golesLocal: "P7", golesVisitante: "P20" },
+            { local: "Alexis Iceman",              visitante: "Ruben Medina",                golesLocal: "P4", golesVisitante: "RET" },
+            { local: "Johans Gormaz",              visitante: "Alvaro Redondo",              golesLocal: "DSQ", golesVisitante: "P12", dsq: true },
+            { local: "Antonio Pinillos",           visitante: "Nelson David Quiroz",         golesLocal: "P8", golesVisitante: "P10" },
+            { local: "Francisco Martínez",         visitante: "Samuel Guevara Salazar",      golesLocal: "P19", golesVisitante: "P11" },
+            { local: "Marco Rodriguez",            visitante: "Eduardo Calvo",               golesLocal: "P9", golesVisitante: "P2" },
+            { local: "Templario VCR",              visitante: "Alejandro Alonso",            golesLocal: "P25", golesVisitante: "P14" },
+            { local: "Christian Horny",            visitante: "Giacomina Leclerc",           golesLocal: "P21", golesVisitante: "P24" }
         ]
     }
 };
@@ -252,7 +252,20 @@ const jornadas = {
 // Datos de las eliminatorias — T35
 // Sin playoffs: los 16 mejores van directamente a octavos
 const eliminatorias = {
-    octavos: { nombre: "Octavos de Final", fecha: "30 de Marzo", partidos: [] },
+    octavos: {
+        nombre: "Octavos de Final",
+        fecha: "30 de Marzo",
+        partidos: [
+            { local: "Cristian Ezpeleta",      visitante: "Nelson David Quiroz",        golesLocal: "", golesVisitante: "" },
+            { local: "Leoo Castro",            visitante: "Frank White",                golesLocal: "", golesVisitante: "" },
+            { local: "Valdi CT",               visitante: "Samuel Guevara Salazar",     golesLocal: "", golesVisitante: "" },
+            { local: "Sergio Solano",          visitante: "Ruben Medina",               golesLocal: "", golesVisitante: "" },
+            { local: "Vasvo Lao",              visitante: "Alvaro Redondo",             golesLocal: "", golesVisitante: "" },
+            { local: "Alexis Iceman",          visitante: "Antonio Pinillos",           golesLocal: "", golesVisitante: "" },
+            { local: "André Prov",             visitante: "Marc cr Rayo",               golesLocal: "", golesVisitante: "" },
+            { local: "Eduardo Calvo",          visitante: "Marco Rodriguez",            golesLocal: "", golesVisitante: "" }
+        ]
+    },
     cuartos: { nombre: "Cuartos de Final", fecha: "1 de Abril", partidos: [] },
     semis:   { nombre: "Semifinales", fecha: "3 de Abril", partidos: [] },
     final:   { nombre: "Gran Final", fecha: "6 de Abril", partidos: [] }

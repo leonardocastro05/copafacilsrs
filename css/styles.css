@@ -39,14 +39,14 @@
 
 html {
     scroll-behavior: smooth;
-    zoom: 0.67;
+    zoom: 0.9;
 }
 
 @supports not (zoom: 1) {
     html {
-        transform: scale(0.67);
+        transform: scale(0.9);
         transform-origin: top left;
-        width: 149.2537%;
+        width: 125%;
     }
 }
 
