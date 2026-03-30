@@ -5,7 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Inicializar la aplicaciÃ³n
-    initClasificacion();
+    // initClasificacion();
     initJornadas();
     initPilotos();
     initNavigation();
@@ -78,8 +78,12 @@ let modoEliminatoria = false;
 let eliminatoriaActual = null;
 
 function initJornadas() {
-    renderJornada(jornadaActual);
-    
+    // Mostrar solo eliminatorias por defecto.
+    modoEliminatoria = true;
+    eliminatoriaActual = 'octavos';
+    cambiarEliminatoria(eliminatoriaActual);
+
+    /*
     // Event listeners para los botones de jornada (fase de grupos)
     const botonesJornada = document.querySelectorAll('.jornada-btn:not(.eliminatoria-btn)');
     botonesJornada.forEach(btn => {
@@ -90,6 +94,7 @@ function initJornadas() {
             cambiarJornada(jornada);
         });
     });
+    */
 
     // Event listeners para los botones de eliminatorias
     const botonesEliminatoria = document.querySelectorAll('.eliminatoria-btn');

@@ -425,6 +425,139 @@ body {
 }
 
 /* ========================================
+   SUPERCOPA SECTION
+   ======================================== */
+
+.supercopa-section {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(0, 212, 255, 0.16), transparent 48%),
+        radial-gradient(circle at 85% 10%, rgba(255, 215, 0, 0.14), transparent 42%),
+        linear-gradient(155deg, #080b13 0%, #121826 60%, #141c2f 100%);
+}
+
+.supercopa-banner {
+    position: relative;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(255, 215, 0, 0.08) 100%);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 35px;
+    overflow: hidden;
+}
+
+.supercopa-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.08) 45%, transparent 100%);
+    transform: translateX(-100%);
+    animation: supercopaSweep 4.5s ease-in-out infinite;
+}
+
+.supercopa-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(10, 10, 15, 0.7);
+    border: 1px solid rgba(255, 215, 0, 0.35);
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 1.2px;
+    color: var(--accent);
+    margin-bottom: 16px;
+}
+
+.supercopa-banner h3 {
+    position: relative;
+    z-index: 1;
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.supercopa-banner p {
+    position: relative;
+    z-index: 1;
+    color: var(--text-secondary);
+    max-width: 700px;
+    font-size: 1.05rem;
+}
+
+.supercopa-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.supercopa-card {
+    background: rgba(8, 10, 18, 0.88);
+    border-radius: 18px;
+    border: 1px solid var(--border-color);
+    padding: 26px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-slow);
+}
+
+.supercopa-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--card-accent, var(--accent-blue));
+}
+
+.supercopa-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--card-accent, var(--accent-blue));
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.42);
+}
+
+.supercopa-card.mundial { --card-accent: #00d4ff; }
+.supercopa-card.copa { --card-accent: #ffd700; }
+.supercopa-card.qualys { --card-accent: #ff6b35; }
+
+.supercopa-card-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    background: color-mix(in srgb, var(--card-accent) 25%, #0b0f1c 75%);
+    color: var(--card-accent);
+    border: 1px solid color-mix(in srgb, var(--card-accent) 50%, #ffffff 50%);
+}
+
+.supercopa-card-label {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    font-size: 0.78rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.supercopa-card-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.supercopa-card-note {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* ========================================
    CLASIFICACIÓN SECTION
    ======================================== */
 
@@ -1078,6 +1211,10 @@ body {
         grid-template-columns: 60px 1fr 100px;
         padding: 12px 20px;
     }
+
+    .supercopa-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1171,6 +1308,16 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes supercopaSweep {
+    0% {
+        transform: translateX(-100%);
+    }
+    45%,
+    100% {
+        transform: translateX(140%);
     }
 }
 

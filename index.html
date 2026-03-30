@@ -30,8 +30,9 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="#inicio" class="active"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#supercopa"><i class="fas fa-medal"></i> Supercopa</a></li>
                     <li><a href="#jornadas"><i class="fas fa-calendar-alt"></i> Jornadas</a></li>
-                    <li><a href="#clasificacion"><i class="fas fa-trophy"></i> Clasificación</a></li>
+                    <!-- <li><a href="#clasificacion"><i class="fas fa-trophy"></i> Clasificación</a></li> -->
                 </ul>
             </nav>
             <div class="header-info">
@@ -90,6 +91,7 @@
             </div>
 
             <div class="jornadas-nav">
+                <!--
                 <span class="nav-label">Fase de Grupos</span>
                 <button class="jornada-btn active" data-jornada="1">J1</button>
                 <button class="jornada-btn" data-jornada="2">J2</button>
@@ -102,8 +104,9 @@
                 <button class="jornada-btn" data-jornada="9">J9</button>
                 <button class="jornada-btn" data-jornada="10">J10</button>
                 <span class="nav-separator"></span>
+                -->
                 <span class="nav-label">Eliminatorias</span>
-                <button class="jornada-btn eliminatoria-btn" data-eliminatoria="octavos">Octavos</button>
+                <button class="jornada-btn eliminatoria-btn active" data-eliminatoria="octavos">Octavos</button>
                 <button class="jornada-btn eliminatoria-btn" data-eliminatoria="cuartos">Cuartos</button>
                 <button class="jornada-btn eliminatoria-btn" data-eliminatoria="semis">Semis</button>
                 <button class="jornada-btn eliminatoria-btn" data-eliminatoria="final">🏆 FINAL</button>
@@ -111,8 +114,8 @@
 
             <div class="jornada-content">
                 <div class="jornada-header">
-                    <h3 class="jornada-title">JORNADA 1</h3>
-                    <span class="jornada-date"><i class="fas fa-calendar"></i> 6 de Marzo</span>
+                    <h3 class="jornada-title">OCTAVOS DE FINAL</h3>
+                    <span class="jornada-date"><i class="fas fa-calendar"></i> 30 de Marzo</span>
                 </div>
                 <div class="partidos-grid" id="partidos-grid">
                     <!-- Se genera dinámicamente con JS -->
@@ -121,7 +124,7 @@
         </div>
     </section>
 
-    <!-- Clasificación Section -->
+    <!-- Clasificación Section
     <section id="clasificacion" class="section clasificacion-section">
         <div class="container">
             <div class="section-header">
@@ -139,6 +142,50 @@
                 <div class="clasificacion-list" id="clasificacion-list">
                     <!-- Se genera dinámicamente con JS -->
                 </div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Supercopa Section -->
+    <section id="supercopa" class="section supercopa-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-medal"></i></div>
+                <h2 class="section-title">SUPERCOPA SRS</h2>
+                <p class="section-subtitle">Primera carrera de la próxima season</p>
+            </div>
+
+            <div class="supercopa-banner">
+                <div class="supercopa-badge">
+                    <i class="fas fa-flag-checkered"></i>
+                    <span>APERTURA OFICIAL T36</span>
+                </div>
+                <h3>Duelo de campeones: Mundial vs Copa vs Qualys</h3>
+                <p>La Supercopa se disputará con los tres campeones de la temporada anterior. Participantes aún por confirmar.</p>
+            </div>
+
+            <div class="supercopa-grid">
+                <article class="supercopa-card mundial">
+                    <div class="supercopa-card-icon"><i class="fas fa-globe-europe"></i></div>
+                    <span class="supercopa-card-label">Campeón del Mundial</span>
+                    <strong class="supercopa-card-name">Por definir</strong>
+                    <small class="supercopa-card-note">Clasificado automáticamente</small>
+                </article>
+
+                <article class="supercopa-card copa">
+                    <div class="supercopa-card-icon"><i class="fas fa-trophy"></i></div>
+                    <span class="supercopa-card-label">Campeón de la Copa</span>
+                    <strong class="supercopa-card-name">Por definir</strong>
+                    <small class="supercopa-card-note">Accede por título copero</small>
+                </article>
+
+                <article class="supercopa-card qualys">
+                    <div class="supercopa-card-icon"><i class="fas fa-stopwatch"></i></div>
+                    <span class="supercopa-card-label">Campeón de las Qualys</span>
+                    <strong class="supercopa-card-name">Por definir</strong>
+                    <small class="supercopa-card-note">Accede por rendimiento a una vuelta</small>
+                </article>
             </div>
         </div>
     </section>
@@ -166,9 +213,10 @@
                         <h4>Enlaces Rápidos</h4>
                         <ul>
                             <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#supercopa">Supercopa</a></li>
                             <li><a href="#jornadas">Jornadas</a></li>
                             <li><a href="#pilotos">Pilotos</a></li>
-                            <li><a href="#clasificacion">Clasificación</a></li>
+                            <!-- <li><a href="#clasificacion">Clasificación</a></li> -->
                         </ul>
                     </div>
                     <div class="footer-links">

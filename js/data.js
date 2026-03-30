@@ -256,19 +256,41 @@ const eliminatorias = {
         nombre: "Octavos de Final",
         fecha: "30 de Marzo",
         partidos: [
-            { local: "Cristian Ezpeleta",      visitante: "Nelson David Quiroz",        golesLocal: "", golesVisitante: "" },
-            { local: "Leoo Castro",            visitante: "Frank White",                golesLocal: "", golesVisitante: "" },
-            { local: "Valdi CT",               visitante: "Samuel Guevara Salazar",     golesLocal: "", golesVisitante: "" },
-            { local: "Sergio Solano",          visitante: "Ruben Medina",               golesLocal: "", golesVisitante: "" },
-            { local: "Vasvo Lao",              visitante: "Alvaro Redondo",             golesLocal: "", golesVisitante: "" },
-            { local: "Alexis Iceman",          visitante: "Antonio Pinillos",           golesLocal: "", golesVisitante: "" },
-            { local: "André Prov",             visitante: "Marc cr Rayo",               golesLocal: "", golesVisitante: "" },
-            { local: "Eduardo Calvo",          visitante: "Marco Rodriguez",            golesLocal: "", golesVisitante: "" }
+            { local: "Cristian Ezpeleta",      visitante: "Nelson David Quiroz",        golesLocal: "P3",  golesVisitante: "P10" },
+            { local: "Leoo Castro",            visitante: "Frank White",                golesLocal: "P1",  golesVisitante: "P8" },
+            { local: "Valdi CT",               visitante: "Samuel Guevara Salazar",     golesLocal: "P5",  golesVisitante: "P19" },
+            { local: "Sergio Solano",          visitante: "Ruben Medina",               golesLocal: "P7",  golesVisitante: "RET" },
+            { local: "Vasvo Lao",              visitante: "Alvaro Redondo",             golesLocal: "P4",  golesVisitante: "P11" },
+            { local: "Alexis Iceman",          visitante: "Antonio Pinillos",           golesLocal: "P9",  golesVisitante: "P12" },
+            { local: "André Prov",             visitante: "Marc cr Rayo",               golesLocal: "P6",  golesVisitante: "P13" },
+            { local: "Eduardo Calvo",          visitante: "Marco Rodriguez",            golesLocal: "P2",  golesVisitante: "P15" }
         ]
     },
-    cuartos: { nombre: "Cuartos de Final", fecha: "1 de Abril", partidos: [] },
-    semis:   { nombre: "Semifinales", fecha: "3 de Abril", partidos: [] },
-    final:   { nombre: "Gran Final", fecha: "6 de Abril", partidos: [] }
+    cuartos: {
+        nombre: "Cuartos de Final",
+        fecha: "1 de Abril",
+        partidos: [
+            { local: "Leoo Castro",            visitante: "André Prov",                 golesLocal: "", golesVisitante: "" },
+            { local: "Eduardo Calvo",          visitante: "Alexis Iceman",              golesLocal: "", golesVisitante: "" },
+            { local: "Cristian Ezpeleta",      visitante: "Vasvo Lao",                  golesLocal: "", golesVisitante: "" },
+            { local: "Valdi CT",               visitante: "Sergio Solano",              golesLocal: "", golesVisitante: "" }
+        ]
+    },
+    semis: {
+        nombre: "Semifinales",
+        fecha: "3 de Abril",
+        partidos: [
+            { local: "Leoo Castro",            visitante: "Ganador André Prov vs Alexis Iceman", golesLocal: "", golesVisitante: "" },
+            { local: "Ganador Cristian Ezpeleta vs Vasvo Lao", visitante: "Ganador Valdi CT vs Sergio Solano", golesLocal: "", golesVisitante: "" }
+        ]
+    },
+    final: {
+        nombre: "Gran Final",
+        fecha: "6 de Abril",
+        partidos: [
+            { local: "Leoo Castro",            visitante: "Finalista más débil restante", golesLocal: "", golesVisitante: "" }
+        ]
+    }
 };
 
 // Función para obtener las iniciales de un nombre
