@@ -270,25 +270,25 @@ const eliminatorias = {
         nombre: "Cuartos de Final",
         fecha: "1 de Abril",
         partidos: [
-            { local: "Leoo Castro",            visitante: "André Prov",                 golesLocal: "", golesVisitante: "" },
-            { local: "Eduardo Calvo",          visitante: "Alexis Iceman",              golesLocal: "", golesVisitante: "" },
-            { local: "Cristian Ezpeleta",      visitante: "Vasvo Lao",                  golesLocal: "", golesVisitante: "" },
-            { local: "Valdi CT",               visitante: "Sergio Solano",              golesLocal: "", golesVisitante: "" }
+            { local: "Leoo Castro",            visitante: "André Prov",                 golesLocal: "P1", golesVisitante: "P5" },
+            { local: "Eduardo Calvo",          visitante: "Alexis Iceman",              golesLocal: "P2", golesVisitante: "P31" },
+            { local: "Cristian Ezpeleta",      visitante: "Vasvo Lao",                  golesLocal: "P10", golesVisitante: "P3" },
+            { local: "Valdi CT",               visitante: "Sergio Solano",              golesLocal: "P6", golesVisitante: "P8" }
         ]
     },
     semis: {
         nombre: "Semifinales",
         fecha: "3 de Abril",
         partidos: [
-            { local: "Leoo Castro",            visitante: "Ganador André Prov vs Alexis Iceman", golesLocal: "", golesVisitante: "" },
-            { local: "Ganador Cristian Ezpeleta vs Vasvo Lao", visitante: "Ganador Valdi CT vs Sergio Solano", golesLocal: "", golesVisitante: "" }
+            { local: "Leoo Castro",            visitante: "Eduardo Calvo", golesLocal: "", golesVisitante: "" },
+            { local: "Vasvo Lao", visitante: "Valdi CT", golesLocal: "", golesVisitante: "" }
         ]
     },
     final: {
         nombre: "Gran Final",
         fecha: "6 de Abril",
         partidos: [
-            { local: "Leoo Castro",            visitante: "Finalista más débil restante", golesLocal: "", golesVisitante: "" }
+            { local: "",            visitante: "", golesLocal: "", golesVisitante: "" }
         ]
     }
 };
