@@ -1,4 +1,4 @@
-// ========================================
+﻿// ========================================
 // SPANISH RACING SERIES - APP
 // Temporada 35
 // ========================================
@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initPilotos();
     initNavigation();
     initScrollEffects();
+    initCinematicIntro();
 });
 
 // ========================================
@@ -104,8 +105,227 @@ function initJornadas() {
             modoEliminatoria = true;
             eliminatoriaActual = eliminatoria;
             cambiarEliminatoria(eliminatoria);
+
+            if (eliminatoria === 'semis' || eliminatoria === 'final') {
+                showCinematicIntro(eliminatoria);
+            }
         });
     });
+}
+
+let cinematicIntroTimer = null;
+let cinematicStepTimers = [];
+
+function initCinematicIntro() {
+    const overlay = document.getElementById('cinema-intro');
+    const closeBtn = document.getElementById('cinema-close');
+
+    if (!overlay) return;
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeCinematicIntro);
+    }
+
+    overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) {
+            closeCinematicIntro();
+        }
+    });
+
+}
+
+function getMatchWinner(partido) {
+    if (!partido) return null;
+
+    const pilotoAScore = String(partido.resultadoA || '').trim().toUpperCase();
+    const pilotoBScore = String(partido.resultadoB || '').trim().toUpperCase();
+
+    const parsePosition = (score) => {
+        const match = score.match(/^P\s*(\d+)$/i);
+        return match ? parseInt(match[1], 10) : null;
+    };
+
+    if (!pilotoAScore && !pilotoBScore) return null;
+
+    if (pilotoAScore === 'DSQ' && pilotoBScore !== 'DSQ') return partido.pilotoB || null;
+    if (pilotoBScore === 'DSQ' && pilotoAScore !== 'DSQ') return partido.pilotoA || null;
+
+    if (pilotoAScore === 'RET' && pilotoBScore !== 'RET') return partido.pilotoB || null;
+    if (pilotoBScore === 'RET' && pilotoAScore !== 'RET') return partido.pilotoA || null;
+
+    const pilotoAPosition = parsePosition(pilotoAScore);
+    const pilotoBPosition = parsePosition(pilotoBScore);
+
+    if (pilotoAPosition === null || pilotoBPosition === null) return null;
+    if (pilotoAPosition === pilotoBPosition) return null;
+
+    return pilotoAPosition < pilotoBPosition ? partido.pilotoA : partido.pilotoB;
+}
+
+function getCinematicDuels(eliminatoria) {
+    if (eliminatoria === 'final') {
+        const finalPartido = eliminatorias?.final?.partidos?.[0];
+        if (finalPartido && finalPartido.pilotoA && finalPartido.pilotoB) {
+            return [finalPartido];
+        }
+
+        const semifinales = eliminatorias?.semis?.partidos || [];
+        const winners = semifinales.map(getMatchWinner).filter(Boolean);
+
+        return [{
+            pilotoA: winners[0] || 'Ganador SF1',
+            pilotoB: winners[1] || 'Ganador SF2',
+            resultadoA: '',
+            resultadoB: '',
+            placeholder: winners.length < 2
+        }];
+    }
+
+    const duels = eliminatorias?.semis?.partidos || [];
+    return duels.filter(d => d.pilotoA && d.pilotoB).slice(0, 2);
+}
+
+function renderCinematicDuels(eliminatoria) {
+    const duelsContainer = document.getElementById('cinema-duels');
+    if (!duelsContainer) return;
+
+    const duels = getCinematicDuels(eliminatoria);
+    if (duels.length === 0) {
+        duelsContainer.innerHTML = `
+            <div class="cinema-duel revealed">
+                <div class="cinema-pilot">
+                    <div class="cinema-avatar" style="background: var(--primary)">??</div>
+                    <div class="cinema-pilot-info">
+                        <span class="cinema-pilot-name">PILOTO</span>
+                        <span class="cinema-pilot-team">Final pendiente</span>
+                    </div>
+                </div>
+                <div class="cinema-vs">VS</div>
+                <div class="cinema-pilot right">
+                    <div class="cinema-avatar" style="background: var(--accent-blue)">??</div>
+                    <div class="cinema-pilot-info">
+                        <span class="cinema-pilot-name">PILOTO</span>
+                        <span class="cinema-pilot-team">Final pendiente</span>
+                    </div>
+                </div>
+            </div>
+        `;
+        return;
+    }
+
+    let html = '';
+    duels.forEach((duel, index) => {
+        const leftColor = getColorByName(duel.pilotoA);
+        const rightColor = getColorByName(duel.pilotoB);
+        const finalPlaceholder = duel.placeholder;
+        html += `
+            <div class="cinema-duel ${eliminatoria === 'final' ? 'final-duel' : ''}" data-intro-duel="${index}">
+                <div class="cinema-pilot">
+                    <div class="cinema-avatar" style="background: ${finalPlaceholder ? 'var(--primary)' : leftColor}">${getInitials(duel.pilotoA)}</div>
+                    <div class="cinema-pilot-info">
+                        <span class="cinema-pilot-name">${duel.pilotoA}</span>
+                        <span class="cinema-pilot-team">${finalPlaceholder ? 'Ganador de semifinal pendiente' : getEquipoByName(duel.pilotoA)}</span>
+                    </div>
+                </div>
+                <div class="cinema-vs">VS</div>
+                <div class="cinema-pilot right">
+                    <div class="cinema-avatar" style="background: ${finalPlaceholder ? 'var(--accent)' : rightColor}">${getInitials(duel.pilotoB)}</div>
+                    <div class="cinema-pilot-info">
+                        <span class="cinema-pilot-name">${duel.pilotoB}</span>
+                        <span class="cinema-pilot-team">${finalPlaceholder ? 'Ganador de semifinal pendiente' : getEquipoByName(duel.pilotoB)}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+    duelsContainer.innerHTML = html;
+}
+
+function runCinematicSequence(eliminatoria) {
+    cinematicStepTimers.forEach(timer => clearTimeout(timer));
+    cinematicStepTimers = [];
+
+    const titlePhase = document.getElementById('cinema-title-phase');
+    const duelPhase = document.getElementById('cinema-duel-phase');
+    const duels = document.querySelectorAll('.cinema-duel');
+
+    if (titlePhase) titlePhase.classList.remove('revealed');
+    if (duelPhase) duelPhase.classList.remove('revealed');
+
+    const titleTimer = setTimeout(() => {
+        if (titlePhase) titlePhase.classList.add('revealed');
+    }, 120);
+    cinematicStepTimers.push(titleTimer);
+
+    const duelPhaseTimer = setTimeout(() => {
+        if (duelPhase) duelPhase.classList.add('revealed');
+    }, eliminatoria === 'final' ? 1750 : 1900);
+    cinematicStepTimers.push(duelPhaseTimer);
+
+    duels.forEach((duel, index) => {
+        duel.classList.remove('revealed');
+        const revealTimer = setTimeout(() => {
+            duel.classList.add('revealed');
+        }, (eliminatoria === 'final' ? 2050 : 2200) + (index * 450));
+        cinematicStepTimers.push(revealTimer);
+    });
+}
+
+function showCinematicIntro(eliminatoria = 'semis') {
+    const overlay = document.getElementById('cinema-intro');
+    const titleLabel = document.getElementById('cinema-phase-title');
+    const dateLabel = document.getElementById('cinema-phase-date');
+    const tagline = document.getElementById('cinema-phase-tagline');
+    const helper = document.getElementById('cinema-phase-helper');
+    const crownIcon = document.querySelector('#cinema-title-phase .cinema-crown i');
+    if (!overlay) return;
+
+    const eliminatoriaData = eliminatorias?.[eliminatoria];
+    renderCinematicDuels(eliminatoria);
+
+    if (titleLabel && eliminatoriaData?.nombre) {
+        titleLabel.textContent = eliminatoriaData.nombre.toUpperCase();
+    }
+
+    if (dateLabel && eliminatoriaData?.fecha) {
+        dateLabel.textContent = `${eliminatoriaData.fecha.toUpperCase()} DE 2026`;
+    }
+
+    if (tagline) {
+        tagline.textContent = eliminatoria === 'final' ? 'SOLO UNO SERA CAMPEON' : 'LOS CUATRO BUSCAN SU SITIO EN LA FINAL';
+    }
+
+    if (helper) {
+        helper.textContent = eliminatoria === 'final' ? 'Pulsa Final para repetir esta intro.' : 'Pulsa Semis para repetir esta intro.';
+    }
+
+    if (crownIcon) {
+        crownIcon.className = eliminatoria === 'final' ? 'fas fa-trophy' : 'fas fa-crown';
+    }
+
+    overlay.classList.toggle('final-phase', eliminatoria === 'final');
+    overlay.classList.add('show');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('celebration-open');
+    runCinematicSequence(eliminatoria);
+
+    if (cinematicIntroTimer) {
+        clearTimeout(cinematicIntroTimer);
+    }
+    cinematicIntroTimer = setTimeout(closeCinematicIntro, eliminatoria === 'final' ? 10000 : 9000);
+}
+
+function closeCinematicIntro() {
+    const overlay = document.getElementById('cinema-intro');
+    if (!overlay) return;
+
+    cinematicStepTimers.forEach(timer => clearTimeout(timer));
+    cinematicStepTimers = [];
+
+    overlay.classList.remove('show');
+    overlay.classList.remove('final-phase');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('celebration-open');
 }
 
 function cambiarJornada(jornada) {
@@ -199,26 +419,24 @@ function renderEliminatoria(eliminatoria) {
     // Si hay partidos, renderizarlos
     let html = '';
     eliminatoriaData.partidos.forEach((partido, index) => {
-        const colorLocal = getColorByName(partido.local);
-        const colorVisitante = getColorByName(partido.visitante);
-        const equipoLocal = getEquipoByName(partido.local);
-        const equipoVisitante = getEquipoByName(partido.visitante);
+        const equipoPilotoA = getEquipoByName(partido.pilotoA);
+        const equipoPilotoB = getEquipoByName(partido.pilotoB);
         
         html += `
             <div class="partido-card ${partido.dsq ? 'dsq' : ''} ${eliminatoria === 'final' ? 'final-match' : ''}" style="animation-delay: ${index * 0.05}s">
                 <div class="partido-content">
                     <div class="partido-piloto left">
-                        <span class="partido-piloto-nombre">${partido.local}</span>
-                        <span class="partido-piloto-equipo">${equipoLocal}</span>
+                        <span class="partido-piloto-nombre">${partido.pilotoA}</span>
+                        <span class="partido-piloto-equipo">${equipoPilotoA}</span>
                     </div>
                     <div class="partido-resultado">
-                        <span class="partido-score">${partido.golesLocal}</span>
+                        <span class="partido-score">${partido.resultadoA}</span>
                         <span class="partido-vs">VS</span>
-                        <span class="partido-score ${partido.dsq ? 'dsq' : ''}">${partido.golesVisitante}</span>
+                        <span class="partido-score ${partido.dsq ? 'dsq' : ''}">${partido.resultadoB}</span>
                     </div>
                     <div class="partido-piloto right">
-                        <span class="partido-piloto-nombre" ${partido.dsq ? 'style="color: var(--primary)"' : ''}>${partido.visitante}</span>
-                        <span class="partido-piloto-equipo">${equipoVisitante}</span>
+                        <span class="partido-piloto-nombre" ${partido.dsq ? 'style="color: var(--primary)"' : ''}>${partido.pilotoB}</span>
+                        <span class="partido-piloto-equipo">${equipoPilotoB}</span>
                     </div>
                 </div>
             </div>
@@ -258,26 +476,24 @@ function renderJornada(jornada) {
 
     let html = '';
     jornadaData.partidos.forEach((partido, index) => {
-        const colorLocal = getColorByName(partido.local);
-        const colorVisitante = getColorByName(partido.visitante);
-        const equipoLocal = getEquipoByName(partido.local);
-        const equipoVisitante = getEquipoByName(partido.visitante);
+        const equipoPilotoA = getEquipoByName(partido.pilotoA);
+        const equipoPilotoB = getEquipoByName(partido.pilotoB);
         
         html += `
             <div class="partido-card ${partido.dsq ? 'dsq' : ''}" style="animation-delay: ${index * 0.05}s">
                 <div class="partido-content">
                     <div class="partido-piloto left">
-                        <span class="partido-piloto-nombre">${partido.local}</span>
-                        <span class="partido-piloto-equipo">${equipoLocal}</span>
+                        <span class="partido-piloto-nombre">${partido.pilotoA}</span>
+                        <span class="partido-piloto-equipo">${equipoPilotoA}</span>
                     </div>
                     <div class="partido-resultado">
-                        <span class="partido-score">${partido.golesLocal}</span>
+                        <span class="partido-score">${partido.resultadoA}</span>
                         <span class="partido-vs">VS</span>
-                        <span class="partido-score ${partido.dsq ? 'dsq' : ''}">${partido.golesVisitante}</span>
+                        <span class="partido-score ${partido.dsq ? 'dsq' : ''}">${partido.resultadoB}</span>
                     </div>
                     <div class="partido-piloto right">
-                        <span class="partido-piloto-nombre" ${partido.dsq ? 'style="color: var(--primary)"' : ''}>${partido.visitante}</span>
-                        <span class="partido-piloto-equipo">${equipoVisitante}</span>
+                        <span class="partido-piloto-nombre" ${partido.dsq ? 'style="color: var(--primary)"' : ''}>${partido.pilotoB}</span>
+                        <span class="partido-piloto-equipo">${equipoPilotoB}</span>
                     </div>
                 </div>
             </div>
@@ -436,10 +652,10 @@ function actualizarPuntos(nombrePiloto, nuevosPuntos) {
     }
 }
 
-function agregarResultado(jornada, indexPartido, golesLocal, golesVisitante) {
+function agregarResultado(jornada, indexPartido, resultadoA, resultadoB) {
     if (jornadas[jornada] && jornadas[jornada].partidos[indexPartido]) {
-        jornadas[jornada].partidos[indexPartido].golesLocal = golesLocal;
-        jornadas[jornada].partidos[indexPartido].golesVisitante = golesVisitante;
+        jornadas[jornada].partidos[indexPartido].resultadoA = resultadoA;
+        jornadas[jornada].partidos[indexPartido].resultadoB = resultadoB;
         if (jornadaActual === jornada) {
             renderJornada(jornada);
         }

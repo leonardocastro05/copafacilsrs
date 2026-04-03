@@ -153,7 +153,7 @@
             <div class="section-header">
                 <div class="section-icon"><i class="fas fa-medal"></i></div>
                 <h2 class="section-title">SUPERCOPA SRS</h2>
-                <p class="section-subtitle">Primera carrera de la próxima season</p>
+                <p class="section-subtitle">Primera carrera de la próxima season con 4 campeones</p>
             </div>
 
             <div class="supercopa-banner">
@@ -161,15 +161,15 @@
                     <i class="fas fa-flag-checkered"></i>
                     <span>APERTURA OFICIAL T36</span>
                 </div>
-                <h3>Duelo de campeones: Mundial vs Copa vs Qualys</h3>
-                <p>La Supercopa se disputará con los tres campeones de la temporada anterior. Participantes aún por confirmar.</p>
+                <h3>Torneo de campeones: Mundial + Copa + Qualy + Supercopa</h3>
+                <p>Leoo Castro y Francisco Martínez ya están confirmados. El campeón de la Copa se anunciará el lunes y se suma Cristian Ezpeleta como vigente campeón de la Supercopa.</p>
             </div>
 
             <div class="supercopa-grid">
                 <article class="supercopa-card mundial">
                     <div class="supercopa-card-icon"><i class="fas fa-globe-europe"></i></div>
                     <span class="supercopa-card-label">Campeón del Mundial</span>
-                    <strong class="supercopa-card-name">Por definir</strong>
+                    <strong class="supercopa-card-name">Leoo Castro</strong>
                     <small class="supercopa-card-note">Clasificado automáticamente</small>
                 </article>
 
@@ -177,14 +177,21 @@
                     <div class="supercopa-card-icon"><i class="fas fa-trophy"></i></div>
                     <span class="supercopa-card-label">Campeón de la Copa</span>
                     <strong class="supercopa-card-name">Por definir</strong>
-                    <small class="supercopa-card-note">Accede por título copero</small>
+                    <small class="supercopa-card-note">Se anunciará el lunes</small>
                 </article>
 
                 <article class="supercopa-card qualys">
                     <div class="supercopa-card-icon"><i class="fas fa-stopwatch"></i></div>
-                    <span class="supercopa-card-label">Campeón de las Qualys</span>
-                    <strong class="supercopa-card-name">Por definir</strong>
+                    <span class="supercopa-card-label">Campeón de la Qualy</span>
+                    <strong class="supercopa-card-name">Francisco Martínez</strong>
                     <small class="supercopa-card-note">Accede por rendimiento a una vuelta</small>
+                </article>
+
+                <article class="supercopa-card supercopa">
+                    <div class="supercopa-card-icon"><i class="fas fa-shield-halved"></i></div>
+                    <span class="supercopa-card-label">Campeón vigente Supercopa</span>
+                    <strong class="supercopa-card-name">Cristian Ezpeleta</strong>
+                    <small class="supercopa-card-note">Defiende el título de la Supercopa</small>
                 </article>
             </div>
         </div>
@@ -249,6 +256,34 @@
             </div>
         </div>
     </footer>
+
+    <!-- Cinematic Intro Overlay -->
+    <div class="cinema-intro" id="cinema-intro" aria-hidden="true">
+        <div class="cinema-intro-bg"></div>
+        <div class="cinema-intro-panel">
+            <button class="cinema-close" id="cinema-close" aria-label="Cerrar intro">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="cinema-title-phase" id="cinema-title-phase">
+                <div class="cinema-crown"><i class="fas fa-crown"></i></div>
+                <h3 id="cinema-phase-title">SEMIFINALES</h3>
+            </div>
+
+            <div class="cinema-duel-phase" id="cinema-duel-phase">
+                <div class="cinema-duels" id="cinema-duels"></div>
+
+                <div class="cinema-date-chip" id="cinema-date-chip">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span id="cinema-phase-date">03 DE ABRIL DE 2026</span>
+                </div>
+
+                <div class="cinema-tagline" id="cinema-phase-tagline">SOLO UNO SERA CAMPEON</div>
+            </div>
+
+            <small id="cinema-phase-helper">Pulsa Semis o Final para repetir esta intro.</small>
+        </div>
+    </div>
 
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>

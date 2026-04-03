@@ -1,4 +1,4 @@
-// ========================================
+﻿// ========================================
 // SPANISH RACING SERIES - DATA
 // Temporada 35
 // ========================================
@@ -56,195 +56,195 @@ const jornadas = {
     1: {
         fecha: "06 de Marzo",
         partidos: [
-            { local: "Sergio Solano",              visitante: "Cristóbal Farias",            golesLocal: "P3", golesVisitante: "P23" },
-            { local: "Vasvo Lao",                  visitante: "Templario VCR",               golesLocal: "P5", golesVisitante: "P22" },
-            { local: "André Prov",                 visitante: "Blake Ezeh",                  golesLocal: "P6", golesVisitante: "P21" },
-            { local: "Eduardo Calvo",              visitante: "Samuel Guevara Salazar",      golesLocal: "P1", golesVisitante: "P2" },
-            { local: "Alexis Iceman",              visitante: "Marco Rodriguez",             golesLocal: "RET", golesVisitante: "P18" },
-            { local: "Cristian Ezpeleta",          visitante: "Giacomina Leclerc",           golesLocal: "P11", golesVisitante: "P27" },
-            { local: "Valdi CT",                   visitante: "Francisco Martínez",          golesLocal: "P12", golesVisitante: "P19" },
-            { local: "Ruben Medina",               visitante: "Alfonso Laguera",             golesLocal: "P10", golesVisitante: "RET" },
-            { local: "Frank White",                visitante: "Antonio Pinillos",            golesLocal: "P8", golesVisitante: "P20" },
-            { local: "Johans Gormaz",              visitante: "Christian Horny",              golesLocal: "P9", golesVisitante: "P17" },
-            { local: "Marc cr Rayo",               visitante: "Alejandro Alonso",            golesLocal: "P14", golesVisitante: "P15" },
-            { local: "Nelson David Quiroz",        visitante: "Eduardo Scarpati Flores",     golesLocal: "P13", golesVisitante: "P16" },
-            { local: "Alvaro Redondo",             visitante: "Clais Racing",                golesLocal: "P7", golesVisitante: "P24" }
+            { pilotoA: "Sergio Solano",              pilotoB: "Cristóbal Farias",            resultadoA: "P3", resultadoB: "P23" },
+            { pilotoA: "Vasvo Lao",                  pilotoB: "Templario VCR",               resultadoA: "P5", resultadoB: "P22" },
+            { pilotoA: "André Prov",                 pilotoB: "Blake Ezeh",                  resultadoA: "P6", resultadoB: "P21" },
+            { pilotoA: "Eduardo Calvo",              pilotoB: "Samuel Guevara Salazar",      resultadoA: "P1", resultadoB: "P2" },
+            { pilotoA: "Alexis Iceman",              pilotoB: "Marco Rodriguez",             resultadoA: "RET", resultadoB: "P18" },
+            { pilotoA: "Cristian Ezpeleta",          pilotoB: "Giacomina Leclerc",           resultadoA: "P11", resultadoB: "P27" },
+            { pilotoA: "Valdi CT",                   pilotoB: "Francisco Martínez",          resultadoA: "P12", resultadoB: "P19" },
+            { pilotoA: "Ruben Medina",               pilotoB: "Alfonso Laguera",             resultadoA: "P10", resultadoB: "RET" },
+            { pilotoA: "Frank White",                pilotoB: "Antonio Pinillos",            resultadoA: "P8", resultadoB: "P20" },
+            { pilotoA: "Johans Gormaz",              pilotoB: "Christian Horny",              resultadoA: "P9", resultadoB: "P17" },
+            { pilotoA: "Marc cr Rayo",               pilotoB: "Alejandro Alonso",            resultadoA: "P14", resultadoB: "P15" },
+            { pilotoA: "Nelson David Quiroz",        pilotoB: "Eduardo Scarpati Flores",     resultadoA: "P13", resultadoB: "P16" },
+            { pilotoA: "Alvaro Redondo",             pilotoB: "Clais Racing",                resultadoA: "P7", resultadoB: "P24" }
         ]
     },
     // J2: 32 pilotos → 16 partidos, nadie se libra
     2: {
         fecha: "9 de Marzo",
         partidos: [
-            { local: "Eduardo Calvo",              visitante: "Leoo Castro",                 golesLocal: "P2", golesVisitante: "P1" },
-            { local: "Sergio Solano",              visitante: "Alvaro Redondo",              golesLocal: "P8", golesVisitante: "P3" },
-            { local: "Vasvo Lao",                  visitante: "Marco Rodriguez",             golesLocal: "P18", golesVisitante: "P11" },
-            { local: "André Prov",                 visitante: "Christian Horny",             golesLocal: "P4", golesVisitante: "P24" },
-            { local: "Cristian Ezpeleta",          visitante: "Alfonso Laguera",             golesLocal: "P6", golesVisitante: "P19" },
-            { local: "Alexis Iceman",              visitante: "TJ LEE",                     golesLocal: "P12", golesVisitante: "P30" },
-            { local: "Valdi CT",                   visitante: "Nicolo Civera",               golesLocal: "P7", golesVisitante: "P29" },
-            { local: "Ruben Medina",               visitante: "Giacomina Leclerc",           golesLocal: "P5", golesVisitante: "P22" },
-            { local: "Frank White",                visitante: "Templario VCR",               golesLocal: "P16", golesVisitante: "P23" },
-            { local: "Johans Gormaz",              visitante: "Clais Racing",                golesLocal: "P9", golesVisitante: "P28" },
-            { local: "Marc cr Rayo",               visitante: "Samuel Guevara Salazar",      golesLocal: "P13", golesVisitante: "P25" },
-            { local: "Nelson David Quiroz",        visitante: "Markel Diaz",                 golesLocal: "P27", golesVisitante: "P26" },
-            { local: "Antonio Pinillos",           visitante: "Alfiansyah Reza",             golesLocal: "P10", golesVisitante: "P31" },
-            { local: "Blake Ezeh",                 visitante: "Eduardo Scarpati Flores",     golesLocal: "P15", golesVisitante: "P21" },
-            { local: "Francisco Martínez",         visitante: "Marco Antonio",               golesLocal: "P20", golesVisitante: "P32" },
-            { local: "Cristóbal Farias",           visitante: "Alejandro Alonso",            golesLocal: "P14", golesVisitante: "P17" }
+            { pilotoA: "Eduardo Calvo",              pilotoB: "Leoo Castro",                 resultadoA: "P2", resultadoB: "P1" },
+            { pilotoA: "Sergio Solano",              pilotoB: "Alvaro Redondo",              resultadoA: "P8", resultadoB: "P3" },
+            { pilotoA: "Vasvo Lao",                  pilotoB: "Marco Rodriguez",             resultadoA: "P18", resultadoB: "P11" },
+            { pilotoA: "André Prov",                 pilotoB: "Christian Horny",             resultadoA: "P4", resultadoB: "P24" },
+            { pilotoA: "Cristian Ezpeleta",          pilotoB: "Alfonso Laguera",             resultadoA: "P6", resultadoB: "P19" },
+            { pilotoA: "Alexis Iceman",              pilotoB: "TJ LEE",                     resultadoA: "P12", resultadoB: "P30" },
+            { pilotoA: "Valdi CT",                   pilotoB: "Nicolo Civera",               resultadoA: "P7", resultadoB: "P29" },
+            { pilotoA: "Ruben Medina",               pilotoB: "Giacomina Leclerc",           resultadoA: "P5", resultadoB: "P22" },
+            { pilotoA: "Frank White",                pilotoB: "Templario VCR",               resultadoA: "P16", resultadoB: "P23" },
+            { pilotoA: "Johans Gormaz",              pilotoB: "Clais Racing",                resultadoA: "P9", resultadoB: "P28" },
+            { pilotoA: "Marc cr Rayo",               pilotoB: "Samuel Guevara Salazar",      resultadoA: "P13", resultadoB: "P25" },
+            { pilotoA: "Nelson David Quiroz",        pilotoB: "Markel Diaz",                 resultadoA: "P27", resultadoB: "P26" },
+            { pilotoA: "Antonio Pinillos",           pilotoB: "Alfiansyah Reza",             resultadoA: "P10", resultadoB: "P31" },
+            { pilotoA: "Blake Ezeh",                 pilotoB: "Eduardo Scarpati Flores",     resultadoA: "P15", resultadoB: "P21" },
+            { pilotoA: "Francisco Martínez",         pilotoB: "Marco Antonio",               resultadoA: "P20", resultadoB: "P32" },
+            { pilotoA: "Cristóbal Farias",           pilotoB: "Alejandro Alonso",            resultadoA: "P14", resultadoB: "P17" }
         ]
     },
     3: {
         fecha: "11 de Marzo",
         partidos: [
-            { local: "Eduardo Calvo",              visitante: "Cristian Ezpeleta",           golesLocal: "P8",  golesVisitante: "P4" },
-            { local: "Sergio Solano",              visitante: "Ruben Medina",                golesLocal: "P2",  golesVisitante: "P11" },
-            { local: "Vasvo Lao",                  visitante: "Frank White",                 golesLocal: "P1",  golesVisitante: "P7" },
-            { local: "André Prov",                 visitante: "Johans Gormaz",               golesLocal: "P9",  golesVisitante: "P10" },
-            { local: "Leoo Castro",                visitante: "Alvaro Redondo",              golesLocal: "P5",  golesVisitante: "P6" },
-            { local: "Valdi CT",                   visitante: "Marc cr Rayo",                golesLocal: "P12", golesVisitante: "P14" },
-            { local: "Alexis Iceman",              visitante: "Nelson David Quiroz",         golesLocal: "P3",  golesVisitante: "P24" },
-            { local: "Marco Rodriguez",            visitante: "Antonio Pinillos",            golesLocal: "RET", golesVisitante: "P13" },
-            { local: "Blake Ezeh",                 visitante: "Francisco Martínez",          golesLocal: "P21", golesVisitante: "P19" },
-            { local: "Cristóbal Farias",           visitante: "Giacomina Leclerc",           golesLocal: "P16", golesVisitante: "P22" },
-            { local: "Alfonso Laguera",            visitante: "Templario VCR",               golesLocal: "RET", golesVisitante: "P20" },
-            { local: "Christian Horny",            visitante: "Samuel Guevara Salazar",      golesLocal: "P18", golesVisitante: "P15" },
-            { local: "Eduardo Scarpati Flores",    visitante: "Clais Racing",                golesLocal: "P17", golesVisitante: "P26" },
-            { local: "Alejandro Alonso",           visitante: "Nicolo Civera",               golesLocal: "P27", golesVisitante: "P25" },
-            { local: "Markel Diaz",                visitante: "Marco Antonio",               golesLocal: "P23", golesVisitante: "P30" }
+            { pilotoA: "Eduardo Calvo",              pilotoB: "Cristian Ezpeleta",           resultadoA: "P8",  resultadoB: "P4" },
+            { pilotoA: "Sergio Solano",              pilotoB: "Ruben Medina",                resultadoA: "P2",  resultadoB: "P11" },
+            { pilotoA: "Vasvo Lao",                  pilotoB: "Frank White",                 resultadoA: "P1",  resultadoB: "P7" },
+            { pilotoA: "André Prov",                 pilotoB: "Johans Gormaz",               resultadoA: "P9",  resultadoB: "P10" },
+            { pilotoA: "Leoo Castro",                pilotoB: "Alvaro Redondo",              resultadoA: "P5",  resultadoB: "P6" },
+            { pilotoA: "Valdi CT",                   pilotoB: "Marc cr Rayo",                resultadoA: "P12", resultadoB: "P14" },
+            { pilotoA: "Alexis Iceman",              pilotoB: "Nelson David Quiroz",         resultadoA: "P3",  resultadoB: "P24" },
+            { pilotoA: "Marco Rodriguez",            pilotoB: "Antonio Pinillos",            resultadoA: "RET", resultadoB: "P13" },
+            { pilotoA: "Blake Ezeh",                 pilotoB: "Francisco Martínez",          resultadoA: "P21", resultadoB: "P19" },
+            { pilotoA: "Cristóbal Farias",           pilotoB: "Giacomina Leclerc",           resultadoA: "P16", resultadoB: "P22" },
+            { pilotoA: "Alfonso Laguera",            pilotoB: "Templario VCR",               resultadoA: "RET", resultadoB: "P20" },
+            { pilotoA: "Christian Horny",            pilotoB: "Samuel Guevara Salazar",      resultadoA: "P18", resultadoB: "P15" },
+            { pilotoA: "Eduardo Scarpati Flores",    pilotoB: "Clais Racing",                resultadoA: "P17", resultadoB: "P26" },
+            { pilotoA: "Alejandro Alonso",           pilotoB: "Nicolo Civera",               resultadoA: "P27", resultadoB: "P25" },
+            { pilotoA: "Markel Diaz",                pilotoB: "Marco Antonio",               resultadoA: "P23", resultadoB: "P30" }
         ]
     },
     4: {
         fecha: "13 de Marzo",
         partidos: [
-            { local: "Vasvo Lao",                  visitante: "Christian Horny",             golesLocal: "P4", golesVisitante: "P17" },
-            { local: "Cristian Ezpeleta",          visitante: "Marco Antonio",               golesLocal: "P16", golesVisitante: "DSQ", dsq: true },
-            { local: "André Prov",                 visitante: "Clais Racing",                golesLocal: "P1", golesVisitante: "P22" },
-            { local: "Leoo Castro",                visitante: "Nelson David Quiroz",         golesLocal: "P5", golesVisitante: "P10" },
-            { local: "Valdi CT",                   visitante: "Alfonso Laguera",             golesLocal: "P11", golesVisitante: "DSQ", dsq: true },
-            { local: "Sergio Solano",              visitante: "Giacomina Leclerc",           golesLocal: "P6", golesVisitante: "P24" },
-            { local: "Alexis Iceman",              visitante: "Templario VCR",               golesLocal: "P2", golesVisitante: "P21" },
-            { local: "Antonio Pinillos",           visitante: "Eduardo Scarpati Flores",     golesLocal: "P9", golesVisitante: "P19" },
-            { local: "Francisco Martínez",         visitante: "Alvaro Redondo",              golesLocal: "P18", golesVisitante: "P8" },
-            { local: "Cristóbal Farias",           visitante: "Eduardo Calvo",               golesLocal: "P25", golesVisitante: "P3" },
-            { local: "Markel Diaz",                visitante: "Johans Gormaz",               golesLocal: "P28", golesVisitante: "P7" },
-            { local: "Marco Rodriguez",            visitante: "Nicolo Civera",               golesLocal: "RET", golesVisitante: "P23" },
-            { local: "Frank White",                visitante: "Samuel Guevara Salazar",      golesLocal: "P26", golesVisitante: "P13" },
-            { local: "Ruben Medina",               visitante: "Blake Ezeh",                  golesLocal: "P12", golesVisitante: "P20" },
-            { local: "Marc cr Rayo",               visitante: "Alejandro Alonso",            golesLocal: "P14", golesVisitante: "P15" }
+            { pilotoA: "Vasvo Lao",                  pilotoB: "Christian Horny",             resultadoA: "P4", resultadoB: "P17" },
+            { pilotoA: "Cristian Ezpeleta",          pilotoB: "Marco Antonio",               resultadoA: "P16", resultadoB: "DSQ", dsq: true },
+            { pilotoA: "André Prov",                 pilotoB: "Clais Racing",                resultadoA: "P1", resultadoB: "P22" },
+            { pilotoA: "Leoo Castro",                pilotoB: "Nelson David Quiroz",         resultadoA: "P5", resultadoB: "P10" },
+            { pilotoA: "Valdi CT",                   pilotoB: "Alfonso Laguera",             resultadoA: "P11", resultadoB: "DSQ", dsq: true },
+            { pilotoA: "Sergio Solano",              pilotoB: "Giacomina Leclerc",           resultadoA: "P6", resultadoB: "P24" },
+            { pilotoA: "Alexis Iceman",              pilotoB: "Templario VCR",               resultadoA: "P2", resultadoB: "P21" },
+            { pilotoA: "Antonio Pinillos",           pilotoB: "Eduardo Scarpati Flores",     resultadoA: "P9", resultadoB: "P19" },
+            { pilotoA: "Francisco Martínez",         pilotoB: "Alvaro Redondo",              resultadoA: "P18", resultadoB: "P8" },
+            { pilotoA: "Cristóbal Farias",           pilotoB: "Eduardo Calvo",               resultadoA: "P25", resultadoB: "P3" },
+            { pilotoA: "Markel Diaz",                pilotoB: "Johans Gormaz",               resultadoA: "P28", resultadoB: "P7" },
+            { pilotoA: "Marco Rodriguez",            pilotoB: "Nicolo Civera",               resultadoA: "RET", resultadoB: "P23" },
+            { pilotoA: "Frank White",                pilotoB: "Samuel Guevara Salazar",      resultadoA: "P26", resultadoB: "P13" },
+            { pilotoA: "Ruben Medina",               pilotoB: "Blake Ezeh",                  resultadoA: "P12", resultadoB: "P20" },
+            { pilotoA: "Marc cr Rayo",               pilotoB: "Alejandro Alonso",            resultadoA: "P14", resultadoB: "P15" }
         ]
     },
     5: {
         fecha: "16 de Marzo",
         partidos: [
-            { local: "Valdi CT",                   visitante: "Christian Horny",             golesLocal: "P7", golesVisitante: "P20" },
-            { local: "André Prov",                 visitante: "Eduardo Scarpati Flores",     golesLocal: "P10", golesVisitante: "P17" },
-            { local: "Antonio Pinillos",           visitante: "Leoo Castro",                 golesLocal: "P9", golesVisitante: "P3" },
-            { local: "Nelson David Quiroz",        visitante: "Alejandro Alonso",            golesLocal: "P13", golesVisitante: "RET" },
-            { local: "Alvaro Redondo",             visitante: "Vasvo Lao",                   golesLocal: "P8", golesVisitante: "P5" },
-            { local: "Marc cr Rayo",               visitante: "Eduardo Calvo",               golesLocal: "P16", golesVisitante: "P4" },
-            { local: "Markel Diaz",                visitante: "Ruben Medina",                golesLocal: "P26", golesVisitante: "P19" },
-            { local: "Samuel Guevara Salazar",     visitante: "Giacomina Leclerc",           golesLocal: "P12", golesVisitante: "P25" },
-            { local: "Nicolo Civera",              visitante: "Sergio Solano",               golesLocal: "RET", golesVisitante: "P2" },
-            { local: "Francisco Martínez",         visitante: "Frank White",                 golesLocal: "P22", golesVisitante: "P11" },
-            { local: "Johans Gormaz",              visitante: "Templario VCR",               golesLocal: "P27", golesVisitante: "P23" },
-            { local: "Marco Rodriguez",            visitante: "Cristóbal Farias",            golesLocal: "P14", golesVisitante: "P15" },
-            { local: "Cristian Ezpeleta",          visitante: "Clais Racing",                golesLocal: "P6", golesVisitante: "P21" },
-            { local: "Alexis Iceman",              visitante: "Blake Ezeh",                  golesLocal: "P1", golesVisitante: "RET" }
+            { pilotoA: "Valdi CT",                   pilotoB: "Christian Horny",             resultadoA: "P7", resultadoB: "P20" },
+            { pilotoA: "André Prov",                 pilotoB: "Eduardo Scarpati Flores",     resultadoA: "P10", resultadoB: "P17" },
+            { pilotoA: "Antonio Pinillos",           pilotoB: "Leoo Castro",                 resultadoA: "P9", resultadoB: "P3" },
+            { pilotoA: "Nelson David Quiroz",        pilotoB: "Alejandro Alonso",            resultadoA: "P13", resultadoB: "RET" },
+            { pilotoA: "Alvaro Redondo",             pilotoB: "Vasvo Lao",                   resultadoA: "P8", resultadoB: "P5" },
+            { pilotoA: "Marc cr Rayo",               pilotoB: "Eduardo Calvo",               resultadoA: "P16", resultadoB: "P4" },
+            { pilotoA: "Markel Diaz",                pilotoB: "Ruben Medina",                resultadoA: "P26", resultadoB: "P19" },
+            { pilotoA: "Samuel Guevara Salazar",     pilotoB: "Giacomina Leclerc",           resultadoA: "P12", resultadoB: "P25" },
+            { pilotoA: "Nicolo Civera",              pilotoB: "Sergio Solano",               resultadoA: "RET", resultadoB: "P2" },
+            { pilotoA: "Francisco Martínez",         pilotoB: "Frank White",                 resultadoA: "P22", resultadoB: "P11" },
+            { pilotoA: "Johans Gormaz",              pilotoB: "Templario VCR",               resultadoA: "P27", resultadoB: "P23" },
+            { pilotoA: "Marco Rodriguez",            pilotoB: "Cristóbal Farias",            resultadoA: "P14", resultadoB: "P15" },
+            { pilotoA: "Cristian Ezpeleta",          pilotoB: "Clais Racing",                resultadoA: "P6", resultadoB: "P21" },
+            { pilotoA: "Alexis Iceman",              pilotoB: "Blake Ezeh",                  resultadoA: "P1", resultadoB: "RET" }
         ]
     },
     6: {
         fecha: "18 de Marzo",
         partidos: [
-            { local: "Leoo Castro",                visitante: "Cristóbal Farias",            golesLocal: "P2",  golesVisitante: "P22" },
-            { local: "Cristian Ezpeleta",          visitante: "Frank White",                 golesLocal: "P5",  golesVisitante: "P7" },
-            { local: "Nelson David Quiroz",        visitante: "Sergio Solano",               golesLocal: "P9",  golesVisitante: "P1" },
-            { local: "Clais Racing",               visitante: "Vasvo Lao",                   golesLocal: "P27", golesVisitante: "P3" },
-            { local: "Blake Ezeh",                 visitante: "Markel Diaz",                 golesLocal: "P18", golesVisitante: "P28" },
-            { local: "Johans Gormaz",              visitante: "Eduardo Scarpati Flores",     golesLocal: "P13", golesVisitante: "P16" },
-            { local: "Valdi CT",                   visitante: "Alejandro Alonso",            golesLocal: "P8",  golesVisitante: "P12" },
-            { local: "Marc cr Rayo",               visitante: "Antonio Pinillos",            golesLocal: "P15", golesVisitante: "P24" },
-            { local: "André Prov",                 visitante: "Alvaro Redondo",              golesLocal: "P6",  golesVisitante: "P14" },
-            { local: "Templario VCR",              visitante: "Christian Horny",             golesLocal: "P20", golesVisitante: "P17" },
-            { local: "Ruben Medina",               visitante: "Giacomina Leclerc",           golesLocal: "P19", golesVisitante: "P26" },
-            { local: "Nicolo Civera",              visitante: "Eduardo Calvo",               golesLocal: "RET", golesVisitante: "P4" },
-            { local: "Francisco Martínez",         visitante: "Marco Rodriguez",             golesLocal: "P11", golesVisitante: "P10" },
-            { local: "Alexis Iceman",              visitante: "Samuel Guevara Salazar",      golesLocal: "P31", golesVisitante: "P21" }
+            { pilotoA: "Leoo Castro",                pilotoB: "Cristóbal Farias",            resultadoA: "P2",  resultadoB: "P22" },
+            { pilotoA: "Cristian Ezpeleta",          pilotoB: "Frank White",                 resultadoA: "P5",  resultadoB: "P7" },
+            { pilotoA: "Nelson David Quiroz",        pilotoB: "Sergio Solano",               resultadoA: "P9",  resultadoB: "P1" },
+            { pilotoA: "Clais Racing",               pilotoB: "Vasvo Lao",                   resultadoA: "P27", resultadoB: "P3" },
+            { pilotoA: "Blake Ezeh",                 pilotoB: "Markel Diaz",                 resultadoA: "P18", resultadoB: "P28" },
+            { pilotoA: "Johans Gormaz",              pilotoB: "Eduardo Scarpati Flores",     resultadoA: "P13", resultadoB: "P16" },
+            { pilotoA: "Valdi CT",                   pilotoB: "Alejandro Alonso",            resultadoA: "P8",  resultadoB: "P12" },
+            { pilotoA: "Marc cr Rayo",               pilotoB: "Antonio Pinillos",            resultadoA: "P15", resultadoB: "P24" },
+            { pilotoA: "André Prov",                 pilotoB: "Alvaro Redondo",              resultadoA: "P6",  resultadoB: "P14" },
+            { pilotoA: "Templario VCR",              pilotoB: "Christian Horny",             resultadoA: "P20", resultadoB: "P17" },
+            { pilotoA: "Ruben Medina",               pilotoB: "Giacomina Leclerc",           resultadoA: "P19", resultadoB: "P26" },
+            { pilotoA: "Nicolo Civera",              pilotoB: "Eduardo Calvo",               resultadoA: "RET", resultadoB: "P4" },
+            { pilotoA: "Francisco Martínez",         pilotoB: "Marco Rodriguez",             resultadoA: "P11", resultadoB: "P10" },
+            { pilotoA: "Alexis Iceman",              pilotoB: "Samuel Guevara Salazar",      resultadoA: "P31", resultadoB: "P21" }
         ]
     },
     7: {
         fecha: "23 de Marzo",
         partidos: [
-            { local: "Marco Rodriguez",            visitante: "Valdi CT",                    golesLocal: "P11", golesVisitante: "P7" },
-            { local: "Vasvo Lao",                  visitante: "Antonio Pinillos",            golesLocal: "P6", golesVisitante: "P14" },
-            { local: "Cristóbal Farias",           visitante: "Alexis Iceman",               golesLocal: "P21", golesVisitante: "P2" },
-            { local: "Samuel Guevara Salazar",     visitante: "Cristian Ezpeleta",           golesLocal: "P10", golesVisitante: "P3" },
-            { local: "Eduardo Scarpati Flores",    visitante: "Christian Horny",             golesLocal: "P20", golesVisitante: "P15" },
-            { local: "Alvaro Redondo",             visitante: "Templario VCR",               golesLocal: "P12", golesVisitante: "P19" },
-            { local: "Frank White",                visitante: "Nelson David Quiroz",         golesLocal: "RET", golesVisitante: "P9" },
-            { local: "Eduardo Calvo",              visitante: "Markel Diaz",                 golesLocal: "P4", golesVisitante: "RET" },
-            { local: "Nicolo Civera",              visitante: "Johans Gormaz",               golesLocal: "RET", golesVisitante: "DSQ", dsq: true },
-            { local: "Blake Ezeh",                 visitante: "Giacomina Leclerc",           golesLocal: "P17", golesVisitante: "P22" },
-            { local: "Alejandro Alonso",           visitante: "Leoo Castro",                 golesLocal: "P13", golesVisitante: "P1" },
-            { local: "Francisco Martínez",         visitante: "Clais Racing",                golesLocal: "P18", golesVisitante: "P25" },
-            { local: "Ruben Medina",               visitante: "Marc cr Rayo",                golesLocal: "P19", golesVisitante: "P16" },
-            { local: "André Prov",                 visitante: "Sergio Solano",               golesLocal: "P8", golesVisitante: "P5" }
+            { pilotoA: "Marco Rodriguez",            pilotoB: "Valdi CT",                    resultadoA: "P11", resultadoB: "P7" },
+            { pilotoA: "Vasvo Lao",                  pilotoB: "Antonio Pinillos",            resultadoA: "P6", resultadoB: "P14" },
+            { pilotoA: "Cristóbal Farias",           pilotoB: "Alexis Iceman",               resultadoA: "P21", resultadoB: "P2" },
+            { pilotoA: "Samuel Guevara Salazar",     pilotoB: "Cristian Ezpeleta",           resultadoA: "P10", resultadoB: "P3" },
+            { pilotoA: "Eduardo Scarpati Flores",    pilotoB: "Christian Horny",             resultadoA: "P20", resultadoB: "P15" },
+            { pilotoA: "Alvaro Redondo",             pilotoB: "Templario VCR",               resultadoA: "P12", resultadoB: "P19" },
+            { pilotoA: "Frank White",                pilotoB: "Nelson David Quiroz",         resultadoA: "RET", resultadoB: "P9" },
+            { pilotoA: "Eduardo Calvo",              pilotoB: "Markel Diaz",                 resultadoA: "P4", resultadoB: "RET" },
+            { pilotoA: "Nicolo Civera",              pilotoB: "Johans Gormaz",               resultadoA: "RET", resultadoB: "DSQ", dsq: true },
+            { pilotoA: "Blake Ezeh",                 pilotoB: "Giacomina Leclerc",           resultadoA: "P17", resultadoB: "P22" },
+            { pilotoA: "Alejandro Alonso",           pilotoB: "Leoo Castro",                 resultadoA: "P13", resultadoB: "P1" },
+            { pilotoA: "Francisco Martínez",         pilotoB: "Clais Racing",                resultadoA: "P18", resultadoB: "P25" },
+            { pilotoA: "Ruben Medina",               pilotoB: "Marc cr Rayo",                resultadoA: "P19", resultadoB: "P16" },
+            { pilotoA: "André Prov",                 pilotoB: "Sergio Solano",               resultadoA: "P8", resultadoB: "P5" }
         ]
     },
     8: {
         fecha: "24 de Marzo",
         partidos: [
-            { local: "André Prov",                 visitante: "Samuel Guevara Salazar",      golesLocal: "P6", golesVisitante: "P11" },
-            { local: "Cristian Ezpeleta",          visitante: "Blake Ezeh",                  golesLocal: "P8", golesVisitante: "P15" },
-            { local: "Valdi CT",                   visitante: "Eduardo Calvo",               golesLocal: "P7", golesVisitante: "P2" },
-            { local: "Leoo Castro",                visitante: "Ruben Medina",                golesLocal: "P1", golesVisitante: "RET" },
-            { local: "Sergio Solano",              visitante: "Francisco Martínez",          golesLocal: "P3", golesVisitante: "P14" },
-            { local: "Vasvo Lao",                  visitante: "Nelson David Quiroz",         golesLocal: "P5", golesVisitante: "RET" },
-            { local: "Alexis Iceman",              visitante: "Clais Racing",                golesLocal: "P4", golesVisitante: "P18" },
-            { local: "Johans Gormaz",              visitante: "Marco Rodriguez",             golesLocal: "DSQ", golesVisitante: "P19" },
-            { local: "Marc cr Rayo",               visitante: "Alvaro Redondo",              golesLocal: "P13", golesVisitante: "P9" },
-            { local: "Antonio Pinillos",           visitante: "Cristóbal Farias",            golesLocal: "P10", golesVisitante: "P17" },
-            { local: "Frank White",                visitante: "Eduardo Scarpati Flores",     golesLocal: "RET", golesVisitante: "P20" },
-            { local: "Templario VCR",              visitante: "Nicolo Civera",               golesLocal: "P12", golesVisitante: "RET" },
-            { local: "Christian Horny",            visitante: "Alejandro Alonso",            golesLocal: "RET", golesVisitante: "RET" },
-            { local: "Markel Diaz",                visitante: "Giacomina Leclerc",           golesLocal: "RET", golesVisitante: "P23" }
+            { pilotoA: "André Prov",                 pilotoB: "Samuel Guevara Salazar",      resultadoA: "P6", resultadoB: "P11" },
+            { pilotoA: "Cristian Ezpeleta",          pilotoB: "Blake Ezeh",                  resultadoA: "P8", resultadoB: "P15" },
+            { pilotoA: "Valdi CT",                   pilotoB: "Eduardo Calvo",               resultadoA: "P7", resultadoB: "P2" },
+            { pilotoA: "Leoo Castro",                pilotoB: "Ruben Medina",                resultadoA: "P1", resultadoB: "RET" },
+            { pilotoA: "Sergio Solano",              pilotoB: "Francisco Martínez",          resultadoA: "P3", resultadoB: "P14" },
+            { pilotoA: "Vasvo Lao",                  pilotoB: "Nelson David Quiroz",         resultadoA: "P5", resultadoB: "RET" },
+            { pilotoA: "Alexis Iceman",              pilotoB: "Clais Racing",                resultadoA: "P4", resultadoB: "P18" },
+            { pilotoA: "Johans Gormaz",              pilotoB: "Marco Rodriguez",             resultadoA: "DSQ", resultadoB: "P19" },
+            { pilotoA: "Marc cr Rayo",               pilotoB: "Alvaro Redondo",              resultadoA: "P13", resultadoB: "P9" },
+            { pilotoA: "Antonio Pinillos",           pilotoB: "Cristóbal Farias",            resultadoA: "P10", resultadoB: "P17" },
+            { pilotoA: "Frank White",                pilotoB: "Eduardo Scarpati Flores",     resultadoA: "RET", resultadoB: "P20" },
+            { pilotoA: "Templario VCR",              pilotoB: "Nicolo Civera",               resultadoA: "P12", resultadoB: "RET" },
+            { pilotoA: "Christian Horny",            pilotoB: "Alejandro Alonso",            resultadoA: "RET", resultadoB: "RET" },
+            { pilotoA: "Markel Diaz",                pilotoB: "Giacomina Leclerc",           resultadoA: "RET", resultadoB: "P23" }
         ]
     },
     9: {
         fecha: "25 de Marzo",
         partidos: [
-            { local: "Nicolo Civera",              visitante: "Frank White",                 golesLocal: "RET", golesVisitante: "P8" },
-            { local: "Cristóbal Farias",           visitante: "Ruben Medina",                golesLocal: "P21", golesVisitante: "RET" },
-            { local: "Eduardo Calvo",              visitante: "Johans Gormaz",               golesLocal: "P4", golesVisitante: "DSQ", dsq: true },
-            { local: "Alejandro Alonso",           visitante: "Cristian Ezpeleta",           golesLocal: "P17", golesVisitante: "P4" },
-            { local: "Samuel Guevara Salazar",     visitante: "Leoo Castro",                 golesLocal: "P21", golesVisitante: "P3" },
-            { local: "Giacomina Leclerc",          visitante: "Antonio Pinillos",            golesLocal: "P18", golesVisitante: "P5" },
-            { local: "Eduardo Scarpati Flores",    visitante: "Valdi CT",                    golesLocal: "P23", golesVisitante: "P1" },
-            { local: "Sergio Solano",              visitante: "Blake Ezeh",                  golesLocal: "P13", golesVisitante: "P15" },
-            { local: "Templario VCR",              visitante: "Marc cr Rayo",                golesLocal: "P6", golesVisitante: "P9" },
-            { local: "Marco Rodriguez",            visitante: "Christian Horny",             golesLocal: "P12", golesVisitante: "P26" },
-            { local: "Alexis Iceman",              visitante: "Alvaro Redondo",              golesLocal: "P2", golesVisitante: "P10" },
-            { local: "Vasvo Lao",                  visitante: "Markel Diaz",                 golesLocal: "P27", golesVisitante: "RET" },
-            { local: "André Prov",                 visitante: "Francisco Martínez",          golesLocal: "P8", golesVisitante: "P18" },
-            { local: "Clais Racing",               visitante: "Nelson David Quiroz",         golesLocal: "P25", golesVisitante: "P11" }
+            { pilotoA: "Nicolo Civera",              pilotoB: "Frank White",                 resultadoA: "RET", resultadoB: "P8" },
+            { pilotoA: "Cristóbal Farias",           pilotoB: "Ruben Medina",                resultadoA: "P21", resultadoB: "RET" },
+            { pilotoA: "Eduardo Calvo",              pilotoB: "Johans Gormaz",               resultadoA: "P4", resultadoB: "DSQ", dsq: true },
+            { pilotoA: "Alejandro Alonso",           pilotoB: "Cristian Ezpeleta",           resultadoA: "P17", resultadoB: "P4" },
+            { pilotoA: "Samuel Guevara Salazar",     pilotoB: "Leoo Castro",                 resultadoA: "P21", resultadoB: "P3" },
+            { pilotoA: "Giacomina Leclerc",          pilotoB: "Antonio Pinillos",            resultadoA: "P18", resultadoB: "P5" },
+            { pilotoA: "Eduardo Scarpati Flores",    pilotoB: "Valdi CT",                    resultadoA: "P23", resultadoB: "P1" },
+            { pilotoA: "Sergio Solano",              pilotoB: "Blake Ezeh",                  resultadoA: "P13", resultadoB: "P15" },
+            { pilotoA: "Templario VCR",              pilotoB: "Marc cr Rayo",                resultadoA: "P6", resultadoB: "P9" },
+            { pilotoA: "Marco Rodriguez",            pilotoB: "Christian Horny",             resultadoA: "P12", resultadoB: "P26" },
+            { pilotoA: "Alexis Iceman",              pilotoB: "Alvaro Redondo",              resultadoA: "P2", resultadoB: "P10" },
+            { pilotoA: "Vasvo Lao",                  pilotoB: "Markel Diaz",                 resultadoA: "P27", resultadoB: "RET" },
+            { pilotoA: "André Prov",                 pilotoB: "Francisco Martínez",          resultadoA: "P8", resultadoB: "P18" },
+            { pilotoA: "Clais Racing",               pilotoB: "Nelson David Quiroz",         resultadoA: "P25", resultadoB: "P11" }
         ]
     },
     10: {
         fecha: "27 de Marzo",
         partidos: [
-            { local: "Leoo Castro",                visitante: "Frank White",                 golesLocal: "P1", golesVisitante: "P6" },
-            { local: "André Prov",                 visitante: "Cristóbal Farias",            golesLocal: "P28", golesVisitante: "P15" },
-            { local: "Cristian Ezpeleta",          visitante: "Nicolo Civera",               golesLocal: "P13", golesVisitante: "RET" },
-            { local: "Valdi CT",                   visitante: "Blake Ezeh",                  golesLocal: "P3", golesVisitante: "P17" },
-            { local: "Marc cr Rayo",               visitante: "Clais Racing",                golesLocal: "P16", golesVisitante: "RET" },
-            { local: "Sergio Solano",              visitante: "Markel Diaz",                 golesLocal: "P5", golesVisitante: "RET" },
-            { local: "Vasvo Lao",                  visitante: "Eduardo Scarpati Flores",     golesLocal: "P7", golesVisitante: "P20" },
-            { local: "Alexis Iceman",              visitante: "Ruben Medina",                golesLocal: "P4", golesVisitante: "RET" },
-            { local: "Johans Gormaz",              visitante: "Alvaro Redondo",              golesLocal: "DSQ", golesVisitante: "P12", dsq: true },
-            { local: "Antonio Pinillos",           visitante: "Nelson David Quiroz",         golesLocal: "P8", golesVisitante: "P10" },
-            { local: "Francisco Martínez",         visitante: "Samuel Guevara Salazar",      golesLocal: "P19", golesVisitante: "P11" },
-            { local: "Marco Rodriguez",            visitante: "Eduardo Calvo",               golesLocal: "P9", golesVisitante: "P2" },
-            { local: "Templario VCR",              visitante: "Alejandro Alonso",            golesLocal: "P25", golesVisitante: "P14" },
-            { local: "Christian Horny",            visitante: "Giacomina Leclerc",           golesLocal: "P21", golesVisitante: "P24" }
+            { pilotoA: "Leoo Castro",                pilotoB: "Frank White",                 resultadoA: "P1", resultadoB: "P6" },
+            { pilotoA: "André Prov",                 pilotoB: "Cristóbal Farias",            resultadoA: "P28", resultadoB: "P15" },
+            { pilotoA: "Cristian Ezpeleta",          pilotoB: "Nicolo Civera",               resultadoA: "P13", resultadoB: "RET" },
+            { pilotoA: "Valdi CT",                   pilotoB: "Blake Ezeh",                  resultadoA: "P3", resultadoB: "P17" },
+            { pilotoA: "Marc cr Rayo",               pilotoB: "Clais Racing",                resultadoA: "P16", resultadoB: "RET" },
+            { pilotoA: "Sergio Solano",              pilotoB: "Markel Diaz",                 resultadoA: "P5", resultadoB: "RET" },
+            { pilotoA: "Vasvo Lao",                  pilotoB: "Eduardo Scarpati Flores",     resultadoA: "P7", resultadoB: "P20" },
+            { pilotoA: "Alexis Iceman",              pilotoB: "Ruben Medina",                resultadoA: "P4", resultadoB: "RET" },
+            { pilotoA: "Johans Gormaz",              pilotoB: "Alvaro Redondo",              resultadoA: "DSQ", resultadoB: "P12", dsq: true },
+            { pilotoA: "Antonio Pinillos",           pilotoB: "Nelson David Quiroz",         resultadoA: "P8", resultadoB: "P10" },
+            { pilotoA: "Francisco Martínez",         pilotoB: "Samuel Guevara Salazar",      resultadoA: "P19", resultadoB: "P11" },
+            { pilotoA: "Marco Rodriguez",            pilotoB: "Eduardo Calvo",               resultadoA: "P9", resultadoB: "P2" },
+            { pilotoA: "Templario VCR",              pilotoB: "Alejandro Alonso",            resultadoA: "P25", resultadoB: "P14" },
+            { pilotoA: "Christian Horny",            pilotoB: "Giacomina Leclerc",           resultadoA: "P21", resultadoB: "P24" }
         ]
     }
 };
@@ -256,39 +256,39 @@ const eliminatorias = {
         nombre: "Octavos de Final",
         fecha: "30 de Marzo",
         partidos: [
-            { local: "Cristian Ezpeleta",      visitante: "Nelson David Quiroz",        golesLocal: "P3",  golesVisitante: "P10" },
-            { local: "Leoo Castro",            visitante: "Frank White",                golesLocal: "P1",  golesVisitante: "P8" },
-            { local: "Valdi CT",               visitante: "Samuel Guevara Salazar",     golesLocal: "P5",  golesVisitante: "P19" },
-            { local: "Sergio Solano",          visitante: "Ruben Medina",               golesLocal: "P7",  golesVisitante: "RET" },
-            { local: "Vasvo Lao",              visitante: "Alvaro Redondo",             golesLocal: "P4",  golesVisitante: "P11" },
-            { local: "Alexis Iceman",          visitante: "Antonio Pinillos",           golesLocal: "P9",  golesVisitante: "P12" },
-            { local: "André Prov",             visitante: "Marc cr Rayo",               golesLocal: "P6",  golesVisitante: "P13" },
-            { local: "Eduardo Calvo",          visitante: "Marco Rodriguez",            golesLocal: "P2",  golesVisitante: "P15" }
+            { pilotoA: "Cristian Ezpeleta",      pilotoB: "Nelson David Quiroz",        resultadoA: "P3",  resultadoB: "P10" },
+            { pilotoA: "Leoo Castro",            pilotoB: "Frank White",                resultadoA: "P1",  resultadoB: "P8" },
+            { pilotoA: "Valdi CT",               pilotoB: "Samuel Guevara Salazar",     resultadoA: "P5",  resultadoB: "P19" },
+            { pilotoA: "Sergio Solano",          pilotoB: "Ruben Medina",               resultadoA: "P7",  resultadoB: "RET" },
+            { pilotoA: "Vasvo Lao",              pilotoB: "Alvaro Redondo",             resultadoA: "P4",  resultadoB: "P11" },
+            { pilotoA: "Alexis Iceman",          pilotoB: "Antonio Pinillos",           resultadoA: "P9",  resultadoB: "P12" },
+            { pilotoA: "André Prov",             pilotoB: "Marc cr Rayo",               resultadoA: "P6",  resultadoB: "P13" },
+            { pilotoA: "Eduardo Calvo",          pilotoB: "Marco Rodriguez",            resultadoA: "P2",  resultadoB: "P15" }
         ]
     },
     cuartos: {
         nombre: "Cuartos de Final",
         fecha: "1 de Abril",
         partidos: [
-            { local: "Leoo Castro",            visitante: "André Prov",                 golesLocal: "P1", golesVisitante: "P5" },
-            { local: "Eduardo Calvo",          visitante: "Alexis Iceman",              golesLocal: "P2", golesVisitante: "P31" },
-            { local: "Cristian Ezpeleta",      visitante: "Vasvo Lao",                  golesLocal: "P10", golesVisitante: "P3" },
-            { local: "Valdi CT",               visitante: "Sergio Solano",              golesLocal: "P6", golesVisitante: "P8" }
+            { pilotoA: "Leoo Castro",            pilotoB: "André Prov",                 resultadoA: "P1", resultadoB: "P5" },
+            { pilotoA: "Eduardo Calvo",          pilotoB: "Alexis Iceman",              resultadoA: "P2", resultadoB: "P31" },
+            { pilotoA: "Cristian Ezpeleta",      pilotoB: "Vasvo Lao",                  resultadoA: "P10", resultadoB: "P3" },
+            { pilotoA: "Valdi CT",               pilotoB: "Sergio Solano",              resultadoA: "P6", resultadoB: "P8" }
         ]
     },
     semis: {
         nombre: "Semifinales",
         fecha: "3 de Abril",
         partidos: [
-            { local: "Leoo Castro",            visitante: "Eduardo Calvo", golesLocal: "", golesVisitante: "" },
-            { local: "Vasvo Lao", visitante: "Valdi CT", golesLocal: "", golesVisitante: "" }
+            { pilotoA: "Leoo Castro",            pilotoB: "Eduardo Calvo", resultadoA: "P1", resultadoB: "P10" },
+            { pilotoA: "Vasvo Lao", pilotoB: "Valdi CT", resultadoA: "P4", resultadoB: "P20" }
         ]
     },
     final: {
         nombre: "Gran Final",
         fecha: "6 de Abril",
         partidos: [
-            { local: "",            visitante: "", golesLocal: "", golesVisitante: "" }
+            { pilotoA: "Leoo Castro", pilotoB: "Vasvo Lao", resultadoA: "", resultadoB: "" }
         ]
     }
 };
