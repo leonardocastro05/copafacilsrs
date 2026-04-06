@@ -50,7 +50,7 @@ const supercopaT36 = [
         color: '#2ec5ff'
     },
     {
-        label: 'Campeon de Copa',
+        label: 'Subcampeón de Copa',
         nombre: 'Vasvo Lao',
         equipo: 'Subaru F1 Team',
         icon: 'fa-trophy',

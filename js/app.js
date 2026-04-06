@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderStats();
     renderPilotos();
     renderSupercopa();
+    renderClasificacion();
     renderJornadasTrack();
     initNavigation();
 });
@@ -57,7 +58,7 @@ function renderSupercopa() {
         .map((entry) => {
             return `
                 <article>
-                    <div class="supercopa-icon" style="background: linear-gradient(145deg, ${entry.color}, #183860)">
+                    <div class="supercopa-icon" style="background: linear-gradient(145deg, ${entry.color}, #3a0d14)">
                         <i class="fas ${entry.icon}"></i>
                     </div>
                     <span class="supercopa-label">${escapeHtml(entry.label)}</span>
@@ -69,6 +70,33 @@ function renderSupercopa() {
         .join('');
 
     supercopaRoot.innerHTML = cardsHtml;
+}
+
+function renderClasificacion() {
+    const clasificacionRoot = document.getElementById('clasificacion-list');
+    if (!clasificacionRoot) return;
+
+    const rowsHtml = pilotosT36
+        .slice()
+        .sort((a, b) => a.pos - b.pos)
+        .map((piloto, index) => {
+            const puntos = Number.isFinite(piloto.puntos) ? piloto.puntos : 0;
+            const topClass = index < 3 ? ` top-${index + 1}` : '';
+
+            return `
+                <article class="clasificacion-row${topClass}">
+                    <span class="row-pos">#${piloto.pos}</span>
+                    <div class="row-driver">
+                        <strong>${escapeHtml(piloto.nombre)}</strong>
+                        <small>${escapeHtml(piloto.equipo)}</small>
+                    </div>
+                    <span class="row-points">${puntos}</span>
+                </article>
+            `;
+        })
+        .join('');
+
+    clasificacionRoot.innerHTML = rowsHtml;
 }
 
 function renderJornadasTrack() {
