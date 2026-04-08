@@ -19,7 +19,7 @@ function renderStats() {
     const stats = [
         `${pilotosT36.length} pilotos confirmados`,
         `${supercopaT36.length} plazas Supercopa`,
-        `${jornadasT36.length} jornadas en preparacion`
+        `${jornadasT36.length} jornadas programadas`
     ];
 
     statsRoot.innerHTML = stats.map((item) => `<span class="stat-pill">${item}</span>`).join('');
@@ -223,10 +223,16 @@ function renderJornadasTrack() {
 
     trackRoot.innerHTML = jornadasT36
         .map((jornada) => {
+            const enfrentamientos = (jornada.enfrentamientos || [])
+                .map((duelo) => `<li>${escapeHtml(duelo)}</li>`)
+                .join('');
+
             return `
                 <div class="track-item">
                     <strong>${escapeHtml(jornada.nombre)}</strong>
-                    <span>${escapeHtml(jornada.estado)}</span>
+                    <span class="track-meta">${escapeHtml(jornada.fecha || '')} | ${escapeHtml(jornada.estado || '')}</span>
+                    <small>${(jornada.enfrentamientos || []).length} enfrentamientos</small>
+                    <ol class="track-duels">${enfrentamientos}</ol>
                 </div>
             `;
         })
