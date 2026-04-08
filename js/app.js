@@ -4,6 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     renderStats();
+    initCountdown();
     renderPilotos();
     renderSupercopa();
     renderClasificacion();
@@ -22,6 +23,123 @@ function renderStats() {
     ];
 
     statsRoot.innerHTML = stats.map((item) => `<span class="stat-pill">${item}</span>`).join('');
+}
+
+function initCountdown() {
+    const timeRoot = document.getElementById('countdown-time');
+    const noteRoot = document.getElementById('countdown-note');
+    const zonesRoot = document.getElementById('countdown-zones');
+    if (!timeRoot || !noteRoot || !zonesRoot) return;
+
+    const eventZone = 'Europe/Madrid';
+    const localZone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
+    const seasonStartDate = zonedDateTimeToUtc(eventZone, 2026, 4, 8, 21, 0, 0);
+
+    function tick() {
+        const now = new Date();
+        const diffMs = seasonStartDate.getTime() - now.getTime();
+        const safeDiff = Math.max(diffMs, 0);
+
+        timeRoot.textContent = formatDuration(safeDiff);
+
+        const dateLabel = formatDateInZone(seasonStartDate, eventZone);
+        noteRoot.textContent =
+            safeDiff > 0
+                ? `Inicio oficial T36: ${dateLabel} a las 21:00 (hora peninsular)`
+                : 'La Temporada 36 ya ha comenzado.';
+
+        zonesRoot.innerHTML = [
+            renderZoneTag('Espana peninsular', eventZone, seasonStartDate),
+            renderZoneTag('Canarias', 'Atlantic/Canary', seasonStartDate),
+            renderZoneTag('Argentina', 'America/Argentina/Buenos_Aires', seasonStartDate),
+            renderZoneTag(`Tu zona (${localZone})`, localZone, seasonStartDate)
+        ].join('');
+    }
+
+    tick();
+    setInterval(tick, 1000);
+}
+
+function getZonedParts(date, zone) {
+    const formatter = new Intl.DateTimeFormat('en-GB', {
+        timeZone: zone,
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hourCycle: 'h23'
+    });
+
+    const parts = formatter.formatToParts(date);
+    const map = {};
+    parts.forEach((part) => {
+        if (part.type !== 'literal') {
+            map[part.type] = Number(part.value);
+        }
+    });
+
+    return {
+        year: map.year,
+        month: map.month,
+        day: map.day,
+        hour: map.hour,
+        minute: map.minute,
+        second: map.second
+    };
+}
+
+function shiftYmd(year, month, day, addDays) {
+    const shifted = new Date(Date.UTC(year, month - 1, day + addDays, 0, 0, 0));
+    return {
+        year: shifted.getUTCFullYear(),
+        month: shifted.getUTCMonth() + 1,
+        day: shifted.getUTCDate()
+    };
+}
+
+function zonedDateTimeToUtc(zone, year, month, day, hour, minute, second) {
+    const utcBase = Date.UTC(year, month - 1, day, hour, minute, second);
+    const firstGuess = new Date(utcBase - getZoneOffsetMs(zone, new Date(utcBase)));
+    const refinedOffset = getZoneOffsetMs(zone, firstGuess);
+    return new Date(utcBase - refinedOffset);
+}
+
+function getZoneOffsetMs(zone, date) {
+    const zoned = getZonedParts(date, zone);
+    const asIfUtc = Date.UTC(zoned.year, zoned.month - 1, zoned.day, zoned.hour, zoned.minute, zoned.second);
+    return asIfUtc - date.getTime();
+}
+
+function formatDateInZone(date, zone) {
+    return new Intl.DateTimeFormat('es-ES', {
+        timeZone: zone,
+        weekday: 'long',
+        day: '2-digit',
+        month: '2-digit'
+    }).format(date);
+}
+
+function formatZoneTime(date, zone) {
+    return new Intl.DateTimeFormat('es-ES', {
+        timeZone: zone,
+        hour: '2-digit',
+        minute: '2-digit',
+        hourCycle: 'h23'
+    }).format(date);
+}
+
+function renderZoneTag(label, zone, date) {
+    return `<span class="countdown-zone"><strong>${escapeHtml(label)}</strong> ${escapeHtml(formatZoneTime(date, zone))}</span>`;
+}
+
+function formatDuration(diffMs) {
+    const totalSeconds = Math.floor(diffMs / 1000);
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+    return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 }
 
 function renderPilotos() {

@@ -248,6 +248,61 @@ body {
     gap: 10px;
 }
 
+.countdown-card {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 207, 64, 0.3);
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.04), rgba(225, 6, 0, 0.12));
+}
+
+.countdown-kicker {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #ffcf95;
+    font-weight: 700;
+}
+
+.countdown-time {
+    margin-top: 4px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1;
+    letter-spacing: 0.06em;
+    color: #fff3dd;
+}
+
+.countdown-note {
+    margin-top: 6px;
+    color: #ffd5b6;
+    font-size: 0.86rem;
+}
+
+.countdown-zones {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.countdown-zone {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 207, 64, 0.28);
+    background: rgba(0, 0, 0, 0.18);
+    padding: 6px 10px;
+    color: #ffe2c8;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.countdown-zone strong {
+    color: #ffd166;
+}
+
 .official-links {
     margin-top: 18px;
     display: grid;
@@ -646,6 +701,11 @@ body {
 
     .official-links {
         grid-template-columns: 1fr;
+    }
+
+    .countdown-zone {
+        width: 100%;
+        justify-content: space-between;
     }
 }
 
