@@ -33,26 +33,39 @@ function initCountdown() {
 
     const eventZone = 'Europe/Madrid';
     const localZone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
-    const seasonStartDate = zonedDateTimeToUtc(eventZone, 2026, 4, 8, 21, 0, 0);
+    const jornadasSchedule = buildJornadasSchedule(eventZone);
 
     function tick() {
         const now = new Date();
-        const diffMs = seasonStartDate.getTime() - now.getTime();
+        const target = getNextJornadaTarget(jornadasSchedule, now);
+        if (!target) {
+            timeRoot.textContent = '00:00:00';
+            noteRoot.textContent = 'No hay mas jornadas programadas en el calendario.';
+            zonesRoot.innerHTML = [
+                renderZoneTag('Espana peninsular', eventZone, now),
+                renderZoneTag('Canarias', 'Atlantic/Canary', now),
+                renderZoneTag('Argentina', 'America/Argentina/Buenos_Aires', now),
+                renderZoneTag(`Tu zona (${localZone})`, localZone, now)
+            ].join('');
+            return;
+        }
+
+        const diffMs = target.date.getTime() - now.getTime();
         const safeDiff = Math.max(diffMs, 0);
 
         timeRoot.textContent = formatDuration(safeDiff);
 
-        const dateLabel = formatDateInZone(seasonStartDate, eventZone);
+        const dateLabel = formatDateInZone(target.date, eventZone);
         noteRoot.textContent =
             safeDiff > 0
-                ? `Inicio oficial T36: ${dateLabel} a las 21:00 (hora peninsular)`
-                : 'La Temporada 36 ya ha comenzado.';
+                ? `Proxima jornada: ${target.nombre} (${dateLabel}) a las 21:00 (hora peninsular)`
+                : `En curso: ${target.nombre}`;
 
         zonesRoot.innerHTML = [
-            renderZoneTag('Espana peninsular', eventZone, seasonStartDate),
-            renderZoneTag('Canarias', 'Atlantic/Canary', seasonStartDate),
-            renderZoneTag('Argentina', 'America/Argentina/Buenos_Aires', seasonStartDate),
-            renderZoneTag(`Tu zona (${localZone})`, localZone, seasonStartDate)
+            renderZoneTag('Espana peninsular', eventZone, target.date),
+            renderZoneTag('Canarias', 'Atlantic/Canary', target.date),
+            renderZoneTag('Argentina', 'America/Argentina/Buenos_Aires', target.date),
+            renderZoneTag(`Tu zona (${localZone})`, localZone, target.date)
         ].join('');
     }
 
@@ -97,6 +110,70 @@ function shiftYmd(year, month, day, addDays) {
         month: shifted.getUTCMonth() + 1,
         day: shifted.getUTCDate()
     };
+}
+
+function buildJornadasSchedule(zone) {
+    const now = new Date();
+    const currentYear = getZonedParts(now, zone).year;
+    const currentYearSchedule = parseJornadasForYear(zone, currentYear);
+
+    const hasFutureInCurrentYear = currentYearSchedule.some((entry) => entry.date.getTime() > now.getTime());
+    if (hasFutureInCurrentYear) return currentYearSchedule;
+
+    return parseJornadasForYear(zone, currentYear + 1);
+}
+
+function parseJornadasForYear(zone, year) {
+    return jornadasT36
+        .map((jornada) => {
+            const ymd = parseSpanishJornadaDate(jornada.fecha || '');
+            if (!ymd) return null;
+
+            return {
+                nombre: jornada.nombre,
+                date: zonedDateTimeToUtc(zone, year, ymd.month, ymd.day, 21, 0, 0)
+            };
+        })
+        .filter(Boolean)
+        .sort((a, b) => a.date.getTime() - b.date.getTime());
+}
+
+function parseSpanishJornadaDate(text) {
+    const monthMap = {
+        enero: 1,
+        febrero: 2,
+        marzo: 3,
+        abril: 4,
+        mayo: 5,
+        junio: 6,
+        julio: 7,
+        agosto: 8,
+        septiembre: 9,
+        setiembre: 9,
+        octubre: 10,
+        noviembre: 11,
+        diciembre: 12
+    };
+
+    const normalized = normalizeText(text);
+    const match = normalized.match(/^[a-z]+\s+(\d{1,2})\s+de\s+([a-z]+)$/i);
+    if (!match) return null;
+
+    const day = Number(match[1]);
+    const month = monthMap[match[2].toLowerCase()];
+    if (!month || !Number.isInteger(day) || day < 1 || day > 31) return null;
+
+    return { day, month };
+}
+
+function normalizeText(value) {
+    return String(value)
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
+}
+
+function getNextJornadaTarget(schedule, now) {
+    return schedule.find((entry) => entry.date.getTime() > now.getTime()) || null;
 }
 
 function zonedDateTimeToUtc(zone, year, month, day, hour, minute, second) {
