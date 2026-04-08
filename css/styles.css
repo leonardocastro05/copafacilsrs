@@ -445,6 +445,25 @@ body {
     overflow: hidden;
 }
 
+.supercopa-card.is-supercopa-winner {
+    border-color: rgba(255, 207, 64, 0.75);
+    box-shadow: 0 0 0 1px rgba(255, 207, 64, 0.18), 0 16px 36px rgba(255, 176, 32, 0.2);
+    animation: winnerPulse 2.4s ease-in-out infinite;
+}
+
+.supercopa-card.is-supercopa-winner::after {
+    content: '';
+    position: absolute;
+    top: -120%;
+    left: -45%;
+    width: 60%;
+    height: 320%;
+    background: linear-gradient(110deg, transparent 0%, rgba(255, 237, 181, 0.45) 50%, transparent 100%);
+    transform: rotate(12deg);
+    animation: winnerShine 3.2s linear infinite;
+    pointer-events: none;
+}
+
 .supercopa-grid article::before {
     content: '';
     position: absolute;
@@ -480,6 +499,47 @@ body {
 .supercopa-team {
     color: var(--ink-700);
     font-size: 0.88rem;
+}
+
+@keyframes winnerPulse {
+    0%,
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 0 0 1px rgba(255, 207, 64, 0.18), 0 16px 36px rgba(255, 176, 32, 0.2);
+    }
+
+    50% {
+        transform: translateY(-2px);
+        box-shadow: 0 0 0 1px rgba(255, 207, 64, 0.3), 0 20px 44px rgba(255, 176, 32, 0.28);
+    }
+}
+
+@keyframes winnerShine {
+    0% {
+        left: -55%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    40% {
+        left: 120%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 120%;
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .supercopa-card.is-supercopa-winner,
+    .supercopa-card.is-supercopa-winner::after {
+        animation: none;
+    }
 }
 
 .clasificacion-section {

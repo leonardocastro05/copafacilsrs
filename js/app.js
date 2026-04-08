@@ -251,8 +251,11 @@ function renderSupercopa() {
 
     const cardsHtml = supercopaT36
         .map((entry) => {
+            const isWinner = String(entry.label || '').toLowerCase().includes('supercopa');
+            const winnerClass = isWinner ? ' is-supercopa-winner' : '';
+
             return `
-                <article>
+                <article class="supercopa-card${winnerClass}">
                     <div class="supercopa-icon" style="background: linear-gradient(145deg, ${entry.color}, #3a0d14)">
                         <i class="fas ${entry.icon}"></i>
                     </div>
