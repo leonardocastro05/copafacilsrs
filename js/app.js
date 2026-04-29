@@ -325,9 +325,11 @@ function initNavigation() {
 
     links.forEach((link) => {
         link.addEventListener('click', (event) => {
+            const href = link.getAttribute('href') || '';
+            if (!href.startsWith('#')) return;
+
             event.preventDefault();
-            const hash = link.getAttribute('href');
-            const target = hash ? document.querySelector(hash) : null;
+            const target = document.querySelector(href);
             if (!target) return;
 
             const top = target.offsetTop - 90;
@@ -345,7 +347,8 @@ function initNavigation() {
         });
 
         links.forEach((link) => {
-            const targetId = (link.getAttribute('href') || '').replace('#', '');
+            const href = link.getAttribute('href') || '';
+            const targetId = href.startsWith('#') ? href.slice(1) : '';
             if (targetId === currentId) {
                 link.classList.add('active');
             } else {

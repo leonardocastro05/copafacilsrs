@@ -10,38 +10,38 @@ const seasonInfo = {
 };
 
 const pilotosT36 = [
-    { pos: 1, nombre: 'Valdi CT', equipo: '77 Campos Racing F1', puntos: 21 },
-    { pos: 2, nombre: 'Cristian Ezpeleta', equipo: '99 Campos Racing F1', puntos: 21 },
-    { pos: 3, nombre: 'Andre Prov', equipo: 'Tortuga', puntos: 21 },
-    { pos: 4, nombre: 'SERGIO Ruiz Furious', equipo: '88 Honda Marlboro', puntos: 21 },
-    { pos: 5, nombre: 'Eduardo Calvo', equipo: '72 CTC VCT Foxtrot', puntos: 21 },
-    { pos: 6, nombre: 'Vasvo Lao', equipo: 'Subaru F1 Team', puntos: 21 },
-    { pos: 7, nombre: 'Antonio Pinillos', equipo: 'Red Bull Pinkustercia F1 Team', puntos: 21 },
-    { pos: 8, nombre: 'Alexis Iceman', equipo: '00 CRT Competition', puntos: 18 },
-    { pos: 9, nombre: 'Sergio Solano', equipo: '13 CRT Competition', puntos: 18 },
-    { pos: 10, nombre: 'Marc cr Rayo', equipo: 'Rayito Team', puntos: 15 },
-    { pos: 11, nombre: 'Marco Rodriguez', equipo: '94 Pagani Renault', puntos: 15 },
-    { pos: 12, nombre: 'Leoo Castro', equipo: '07 CRT Competition', puntos: 15 },
-    { pos: 13, nombre: 'Luis Reynoso', equipo: 'Renfe Cercanías RT 28', puntos: 15 },
-    { pos: 14, nombre: 'Alejandro Alonso', equipo: 'BMW F1 Team', puntos: 12 },
-    { pos: 15, nombre: 'FrankWhite', equipo: '69 CRT Competition (Lamborghini)', puntos: 9 },
-    { pos: 16, nombre: 'Alvaro Redondo', equipo: '36 CTC VCR FTSE', puntos: 9 },
-    { pos: 17, nombre: 'Mauro Reyes', equipo: '26 Zetta Racing', puntos: 9 },
-    { pos: 18, nombre: 'Tony Crowther', equipo: 'Leyton House March', puntos: 9 },
-    { pos: 19, nombre: 'Templario VCR', equipo: 'Hispania Racing Team', puntos: 6 },
-    { pos: 20, nombre: 'Blake Ezeh', equipo: 'Deco27 HoloLive Racing Team', puntos: 6 },
-    { pos: 21, nombre: 'Peppe Vedda', equipo: 'Iron Racing Team', puntos: 6 },
-    { pos: 22, nombre: 'Stefano Cann', equipo: 'Italica Siracusa', puntos: 6 },
-    { pos: 23, nombre: 'Giacomina Leclerc', equipo: 'Renfe Cercanias RT 6', puntos: 3 },
-    { pos: 24, nombre: 'Christian Horny', equipo: '15 Zetta Racing Team', puntos: 3 },
-    { pos: 25, nombre: 'Francisco Martinez', equipo: 'Renfe Cercanias RT', puntos: 3 },
-    { pos: 26, nombre: 'Cristobal Farias', equipo: '18 Zetta Racing', puntos: 3 },
-    { pos: 27, nombre: 'Juan Ignacio', equipo: '74 Subaru Pirelli SRS Team', puntos: 3 },
-    { pos: 28, nombre: 'Freya Anafi', equipo: 'Subaru Pirelli SRS Team', puntos: 3 },
-    { pos: 29, nombre: 'Juan Garcia', equipo: 'Renault F1 Team', puntos: 3 },
-    { pos: 30, nombre: 'Nelson David Quiroz', equipo: '9 ART Grand Prix', puntos: 0 },
-    { pos: 31, nombre: 'Nicolo Civera', equipo: 'Olympic Torino Racing', puntos: 0 },
-    { pos: 32, nombre: 'Eduardo Scarpati', equipo: 'ESFX Red Bull Ferrari', puntos: 0 }
+    { pos: 1,  nombre: 'Valdi CT',              equipo: '77 Campos Racing F1',                  puntos: 27 },
+    { pos: 2,  nombre: 'SERGIO Ruiz Furious',    equipo: '88 Honda Marlboro',                    puntos: 27 },
+    { pos: 3,  nombre: 'Eduardo Calvo',          equipo: '72 CTC VCT Foxtrot',                   puntos: 27 },
+    { pos: 4,  nombre: 'Andre Prov',             equipo: 'Tortuga',                              puntos: 27 },
+    { pos: 5,  nombre: 'Cristian Ezpeleta',      equipo: '99 Campos Racing F1',                  puntos: 27 },
+    { pos: 6,  nombre: 'Vasvo Lao',              equipo: 'Subaru F1 Team',                       puntos: 24 },
+    { pos: 7,  nombre: 'Antonio Pinillos',       equipo: 'Red Bull Pinkustercia F1 Team',        puntos: 24 },
+    { pos: 8,  nombre: 'Sergio Solano',          equipo: '13 CRT Competition',                   puntos: 24 },
+    { pos: 9,  nombre: 'Luis Reynoso',           equipo: 'Renfe Cercanías RT 28',                puntos: 21 },
+    { pos: 10, nombre: 'Leoo Castro',            equipo: '07 CRT Competition',                   puntos: 21 },
+    { pos: 11, nombre: 'Marc cr Rayo',           equipo: 'Rayito Team',                          puntos: 18 },
+    { pos: 12, nombre: 'Alexis Iceman',          equipo: '00 CRT Competition',                   puntos: 18 },
+    { pos: 13, nombre: 'Marco Rodriguez',        equipo: '94 Pagani Renault',                    puntos: 18 },
+    { pos: 14, nombre: 'Tony Crowther',          equipo: 'Leyton House March',                   puntos: 15 },
+    { pos: 15, nombre: 'Mauro Reyes',            equipo: '26 Zetta Racing',                      puntos: 12 },
+    { pos: 16, nombre: 'Alejandro Alonso',       equipo: 'BMW F1 Team',                          puntos: 12 },
+    { pos: 17, nombre: 'Peppe Vedda',            equipo: 'Iron Racing Team',                     puntos: 9  },
+    { pos: 18, nombre: 'Templario VCR',          equipo: 'Hispania Racing Team',                 puntos: 9  },
+    { pos: 19, nombre: 'FrankWhite',             equipo: '69 CRT Competition (Lamborghini)',     puntos: 9  },
+    { pos: 20, nombre: 'Alvaro Redondo',         equipo: '36 CTC VCR FTSE',                      puntos: 9  },
+    { pos: 21, nombre: 'Stefano Cann',           equipo: 'Italica Siracusa',                     puntos: 9  },
+    { pos: 22, nombre: 'Giacomina Leclerc',      equipo: 'Renfe Cercanias RT 6',                 puntos: 6  },
+    { pos: 23, nombre: 'Blake Ezeh',             equipo: 'Deco27 HoloLive Racing Team',          puntos: 6  },
+    { pos: 24, nombre: 'Christian Horny',        equipo: '15 Zetta Racing Team',                 puntos: 6  },
+    { pos: 25, nombre: 'Francisco Martinez',     equipo: 'Renfe Cercanias RT',                   puntos: 6  },
+    { pos: 26, nombre: 'Freya Anafi',            equipo: 'Subaru Pirelli SRS Team',              puntos: 6  },
+    { pos: 27, nombre: 'Juan Garcia',            equipo: 'Renault F1 Team',                      puntos: 6  },
+    { pos: 28, nombre: 'Cristobal Farias',       equipo: '18 Zetta Racing',                      puntos: 3  },
+    { pos: 29, nombre: 'Juan Ignacio',           equipo: '74 Subaru Pirelli SRS Team',           puntos: 3  },
+    { pos: 30, nombre: 'Eduardo Scarpati',       equipo: 'ESFX Red Bull Ferrari',                puntos: 3  },
+    { pos: 31, nombre: 'Nelson David Quiroz',    equipo: '9 ART Grand Prix',                     puntos: 0  },
+    { pos: 32, nombre: 'Nicolo Civera',          equipo: 'Olympic Torino Racing',                puntos: 0  }
 ];
 
 const supercopaT36 = [
@@ -97,8 +97,7 @@ const jornadasT36 = [
             'Alejandro Alonso vs Eduardo Scarpati (gana Alejandro Alonso)',
             'Templario VCR vs Cristobal Farias (gana Templario VCR)',
             'Blake Ezeh vs Francisco Martinez (gana Blake Ezeh)'
-        
-]
+        ]
     },
     {
         nombre: 'Jornada 2',
@@ -121,8 +120,7 @@ const jornadasT36 = [
             'Marc cr Rayo vs Cristobal Farias (gana Marc cr Rayo)',
             'Alejandro Alonso vs Francisco Martinez (gana Francisco Martinez)',
             'Templario VCR vs Blake Ezeh (gana Templario VCR)'
-        
-]
+        ]
     },
     {
         nombre: 'Jornada 3',
@@ -145,8 +143,7 @@ const jornadasT36 = [
             'Marco Rodriguez vs Francisco Martinez (gana Marco Rodriguez)',
             'Marc cr Rayo vs Blake Ezeh (gana Marc cr Rayo)',
             'Alejandro Alonso vs Templario VCR (gana Alejandro Alonso)'
-        
-]
+        ]
     },
     {
         nombre: 'Jornada 4',
@@ -169,8 +166,7 @@ const jornadasT36 = [
             'Nelson David Quiroz vs Blake Ezeh (gana Blake Ezeh)',
             'Marco Rodriguez vs Templario VCR (gana Marco Rodriguez)',
             'Marc cr Rayo vs Alejandro Alonso (gana Marc cr Rayo)'
-        
-]
+        ]
     },
     {
         nombre: 'Jornada 5',
@@ -193,8 +189,7 @@ const jornadasT36 = [
             'Antonio Pinillos vs Templario VCR (gana Antonio Pinillos)',
             'Nelson David Quiroz vs Alejandro Alonso (gana Alejandro Alonso)',
             'Marco Rodriguez vs Marc cr Rayo (gana Marc cr Rayo)'
-        
-]
+        ]
     },
     {
         nombre: 'Jornada 6',
@@ -217,8 +212,7 @@ const jornadasT36 = [
             'Alvaro Redondo vs Alejandro Alonso (gana Alejandro Alonso)',
             'Antonio Pinillos vs Marc cr Rayo (gana Antonio Pinillos)',
             'Nelson David Quiroz vs Marco Rodriguez (gana Marco Rodriguez)'
-        
-]
+        ]
     },
     {
         nombre: 'Jornada 7',
@@ -241,53 +235,52 @@ const jornadasT36 = [
             'Valdi CT vs Marc cr Rayo (gana Valdi CT)',
             'Alvaro Redondo vs Marco Rodriguez (gana Marco Rodriguez)',
             'Antonio Pinillos vs Nelson David Quiroz (gana Antonio Pinillos)'
-        
-]
+        ]
     },
     {
         nombre: 'Jornada 8',
         fecha: 'Viernes 24 de abril',
-        estado: 'Programada',
+        estado: 'Finalizada (GP Hockenheimring)',
         enfrentamientos: [
-            'Leoo Castro vs Juan Garcia',
-            'Juan Ignacio vs Giacomina Leclerc',
-            'Nicolo Civera vs Freya Anafi',
-            'Stefano Cann vs Tony Crowther',
-            'Luis Reynoso vs Peppe Vedda',
-            'Mauro Reyes vs Christian Horny',
-            'FrankWhite vs Eduardo Scarpati',
-            'SERGIO Ruiz Furious vs Cristobal Farias',
-            'Eduardo Calvo vs Francisco Martinez',
-            'Sergio Solano vs Blake Ezeh',
-            'Alexis Iceman vs Templario VCR',
-            'Vasvo Lao vs Alejandro Alonso',
-            'Andre Prov vs Marc cr Rayo',
-            'Cristian Ezpeleta vs Marco Rodriguez',
-            'Valdi CT vs Nelson David Quiroz',
-            'Alvaro Redondo vs Antonio Pinillos'
+            'Leoo Castro vs Juan Garcia (gana Leoo Castro)',
+            'Juan Ignacio vs Giacomina Leclerc (gana Giacomina Leclerc)',
+            'Nicolo Civera vs Freya Anafi (gana Freya Anafi)',
+            'Stefano Cann vs Tony Crowther (gana Tony Crowther)',
+            'Luis Reynoso vs Peppe Vedda (gana Luis Reynoso)',
+            'Mauro Reyes vs Christian Horny (gana Christian Horny)',
+            'FrankWhite vs Eduardo Scarpati (gana Eduardo Scarpati)',
+            'SERGIO Ruiz Furious vs Cristobal Farias (gana SERGIO Ruiz Furious)',
+            'Eduardo Calvo vs Francisco Martinez (gana Eduardo Calvo)',
+            'Sergio Solano vs Blake Ezeh (gana Sergio Solano)',
+            'Alexis Iceman vs Templario VCR (gana Templario VCR)',
+            'Vasvo Lao vs Alejandro Alonso (gana Vasvo Lao)',
+            'Andre Prov vs Marc cr Rayo (gana Andre Prov)',
+            'Cristian Ezpeleta vs Marco Rodriguez (gana Cristian Ezpeleta)',
+            'Valdi CT vs Nelson David Quiroz (gana Valdi CT)',
+            'Alvaro Redondo vs Antonio Pinillos (gana Antonio Pinillos)'
         ]
     },
     {
         nombre: 'Jornada 9',
         fecha: 'Lunes 27 de abril',
-        estado: 'Programada',
+        estado: 'Finalizada (GP Monza)',
         enfrentamientos: [
-            'Leoo Castro vs Giacomina Leclerc',
-            'Juan Garcia vs Freya Anafi',
-            'Juan Ignacio vs Tony Crowther',
-            'Nicolo Civera vs Peppe Vedda',
-            'Stefano Cann vs Christian Horny',
-            'Luis Reynoso vs Eduardo Scarpati',
-            'Mauro Reyes vs Cristobal Farias',
-            'FrankWhite vs Francisco Martinez',
-            'SERGIO Ruiz Furious vs Blake Ezeh',
-            'Eduardo Calvo vs Templario VCR',
-            'Sergio Solano vs Alejandro Alonso',
-            'Alexis Iceman vs Marc cr Rayo',
-            'Vasvo Lao vs Marco Rodriguez',
-            'Andre Prov vs Nelson David Quiroz',
-            'Cristian Ezpeleta vs Antonio Pinillos',
-            'Valdi CT vs Alvaro Redondo'
+            'Leoo Castro vs Giacomina Leclerc (gana Leoo Castro)',
+            'Juan Garcia vs Freya Anafi (gana Juan Garcia)',
+            'Juan Ignacio vs Tony Crowther (gana Tony Crowther)',
+            'Nicolo Civera vs Peppe Vedda (gana Peppe Vedda)',
+            'Stefano Cann vs Christian Horny (gana Stefano Cann)',
+            'Luis Reynoso vs Eduardo Scarpati (gana Luis Reynoso)',
+            'Mauro Reyes vs Cristobal Farias (gana Mauro Reyes)',
+            'FrankWhite vs Francisco Martinez (gana Francisco Martinez)',
+            'SERGIO Ruiz Furious vs Blake Ezeh (gana SERGIO Ruiz Furious)',
+            'Eduardo Calvo vs Templario VCR (gana Eduardo Calvo)',
+            'Sergio Solano vs Alejandro Alonso (gana Sergio Solano)',
+            'Alexis Iceman vs Marc cr Rayo (gana Marc cr Rayo)',
+            'Vasvo Lao vs Marco Rodriguez (gana Marco Rodriguez)',
+            'Andre Prov vs Nelson David Quiroz (gana Andre Prov)',
+            'Cristian Ezpeleta vs Antonio Pinillos (gana Cristian Ezpeleta)',
+            'Valdi CT vs Alvaro Redondo (gana Valdi CT)'
         ]
     },
     {
