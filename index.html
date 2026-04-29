@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spanish Racing Series - Temporada 36</title>
+    <title>Spanish Racing Series - Temporada 37</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,19 +24,19 @@
                 <span class="brand-mark"><i class="fas fa-flag-checkered"></i></span>
                 <span class="brand-text">
                     <strong>Spanish Racing Series</strong>
-                    <small>Temporada 36</small>
+                    <small>Temporada 37</small>
                 </span>
             </a>
 
             <nav class="main-nav" aria-label="Principal">
                 <a href="#inicio" class="active">Inicio</a>
-                <!-- <a href="#supercopa">Supercopa T36</a> -->
-                <a href="#clasificacion">Clasificacion T36</a>
-                <a href="#jornadas">Jornadas T36</a>
-                <a href="eliminatorias.html">Eliminatorias T36</a>
+                <a href="#supercopa">Supercopa T37</a>
+                <a href="#clasificacion">Clasificacion T37</a>
+                <a href="#jornadas">Jornadas T37</a>
+                <a href="eliminatorias.html">Eliminatorias T37</a>
             </nav>
 
-            <div class="season-chip">T36</div>
+            <div class="season-chip">T37</div>
         </div>
     </header>
 
@@ -45,16 +45,16 @@
             <div class="container hero-grid">
                 <div class="hero-copy">
                     <p class="hero-kicker">Nueva era SRS</p>
-                    <h1>Arranca la Temporada 36</h1>
+                    <h1>Arranca la Temporada 37</h1>
                     <p class="hero-text">
-                        Nuevo ciclo, nueva parrilla y una web renovada. Ya tenemos la base de pilotos para T36 y
+                        Nuevo ciclo, nueva parrilla y una web renovada. Ya tenemos la base de pilotos para T37 y
                         seguiremos ampliando conforme se unan mas participantes.
                     </p>
                     <div class="hero-cta-row">
-                        <!-- <a class="hero-btn" href="#supercopa">
+                        <a class="hero-btn" href="#supercopa">
                             <i class="fas fa-trophy"></i>
                             Ver Supercopa
-                        </a> -->
+                        </a>
                         <a class="hero-link" href="#jornadas">Ver estado de Jornadas</a>
                     </div>
                     <div class="hero-stats" id="hero-stats"></div>
@@ -109,29 +109,77 @@
                 </aside>
             </div>
         </section>
-<!-- 
-        Seccion Supercopa con los 4 clasificados actuales
+        <!-- Seccion Supercopa con los 4 clasificados actuales -->
         <section id="supercopa" class="section supercopa-section">
             <div class="container">
                 <div class="section-head">
                     <p class="section-kicker">Evento de apertura</p>
-                    <h2>Supercopa T36</h2>
-                    <p>Estos son los 4 clasificados actuales para la Supercopa.</p>
+                    <h2>Supercopa T37</h2>
+                    <p>Estos son los clasificados a la Supercopa (Por definir).</p>
                 </div>
 
-                <div class="supercopa-grid" id="supercopa-grid"></div>
+                <!-- Phase pills para Supercopa -->
+                <div class="phases" style="margin-bottom: 30px; display: flex; justify-content: center;">
+                    <div class="phase-pill phase-pill--final" style="min-width: 220px;">
+                        <div class="phase-name">Carrera Final</div>
+                        <div class="phase-date">Día por definir</div>
+                        <div class="phase-icon">4 Pilotos</div>
+                    </div>
+                </div>
+
+                <!-- Bracket de Supercopa (Estilo Eliminatorias) -->
+                <div class="bracket-wrap" style="display: flex; justify-content: center;">
+                    <div class="bracket" style="min-width: auto; width: 100%; max-width: 450px;">
+                        
+                        <!-- ===== FINAL SUPERCOPA ===== -->
+                        <div class="col col--final">
+                            <div class="col-label">Gran Final <span>Por definir</span></div>
+                            <div class="final-wrap">
+                                <div class="trophy" aria-hidden="true">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div class="final-title">Campeón Supercopa</div>
+                                <div class="match match--final" id="sup-fin-1">
+                                    <div class="match-header match-header--final">Final a 4</div>
+                                    
+                                    <div class="match-slot">
+                                        <span class="slot-seed">SC</span>
+                                        <span class="slot-name">Cristian Ezpeleta</span>
+                                    </div>
+                                    <div class="vs-divider">vs</div>
+                                    <div class="match-slot tbd">
+                                        <span class="slot-seed" style="background: rgba(255,207,64,0.15);">Q</span>
+                                        <span class="slot-name">Ganador Qualy</span>
+                                    </div>
+                                    <div class="vs-divider">vs</div>
+                                    <div class="match-slot tbd">
+                                        <span class="slot-seed" style="background: rgba(255,207,64,0.15);">C</span>
+                                        <span class="slot-name">Ganador Copa</span>
+                                    </div>
+                                    <div class="vs-divider">vs</div>
+                                    <div class="match-slot tbd">
+                                        <span class="slot-seed" style="background: rgba(255,207,64,0.15);">M</span>
+                                        <span class="slot-name">Ganador Mundial</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- /.bracket-wrap -->
+
             </div>
-        </section> -->
+        </section>
 
         <section id="clasificacion" class="section clasificacion-section">
             <div class="container">
                 <div class="section-head">
                     <p class="section-kicker">Orden actual</p>
-                    <h2>Clasificacion T36</h2>
+                    <h2>Clasificacion T37</h2>
                     <p>Tabla inicial desbloqueada para rehacer la temporada. Se ira actualizando jornada a jornada.</p>
                 </div>
 
-                <div class="clasificacion-wrap" role="region" aria-label="Clasificacion de pilotos T36">
+                <div class="clasificacion-wrap" role="region" aria-label="Clasificacion de pilotos T37">
                     <div class="clasificacion-head">
                         <span>Pos</span>
                         <span>Piloto / Equipo</span>
@@ -145,14 +193,14 @@
         <section id="jornadas" class="section jornadas-section">
             <div class="container">
                 <div class="section-head">
-                    <p class="section-kicker">Calendario T36</p>
-                    <h2>Jornadas T36</h2>
+                    <p class="section-kicker">Calendario T37</p>
+                    <h2>Jornadas T37</h2>
                     <p>Calendario cerrado con las 10 Jornadas. Se juegan cada lunes, miércoles y viernes.</p>
                 </div>
 
                 <article class="jornadas-placeholder">
                     <div class="placeholder-icon"><i class="fas fa-calendar-check"></i></div>
-                    <h3>Emparejamientos oficiales T36</h3>
+                    <h3>Emparejamientos oficiales T37</h3>
                     <div class="jornadas-track" id="jornadas-track"></div>
                 </article>
             </div>
@@ -164,7 +212,7 @@
         <div class="container footer-wrap">
             <div>
                 <strong>Spanish Racing Series</strong>
-                <p>Web local de trabajo para Temporada 36.</p>
+                <p>Web local de trabajo para Temporada 37.</p>
             </div>
             <div class="footer-links">
                 <a href="https://www.tiktok.com/@calvo.plan?_r=1&_t=ZN-93aEsFGNWVi" target="_blank"

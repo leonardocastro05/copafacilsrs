@@ -1,4 +1,4 @@
-﻿// ========================================
+// ========================================
 // SPANISH RACING SERIES - APP T36
 // ========================================
 
@@ -366,3 +366,41 @@ function escapeHtml(value) {
         .replaceAll('"', '&quot;')
         .replaceAll("'", '&#39;');
 }
+
+// Dibuja el conector de la Supercopa
+function drawSupConnectors() {
+    const connEl = document.getElementById('conn-sup-sem-fin');
+    if (!connEl) return;
+    const connRect = connEl.getBoundingClientRect();
+    if (connRect.height < 10) return;
+
+    const leftCol  = document.querySelector('#supercopa .col--semis');
+    const rightCol = document.querySelector('#supercopa .col--final');
+    if (!leftCol || !rightCol) return;
+
+    const leftMatches  = leftCol.querySelectorAll('.match');
+    const rightMatches = rightCol.querySelectorAll('.match');
+    if (leftMatches.length !== 2 || rightMatches.length !== 1) return;
+
+    const h = connRect.height;
+    const w = connRect.width || 28;
+    let svg = <svg viewBox="0 0  + w +   + h + " preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">;
+
+    const lA = leftMatches[0];
+    const lB = leftMatches[1];
+    const rM = rightMatches[0];
+
+    const yA = lA.getBoundingClientRect().top + lA.getBoundingClientRect().height / 2 - connRect.top;
+    const yB = lB.getBoundingClientRect().top + lB.getBoundingClientRect().height / 2 - connRect.top;
+    const yR = rM.getBoundingClientRect().top + rM.getBoundingClientRect().height / 2 - connRect.top;
+
+    const stroke = stroke="rgba(255,207,64,0.3)" stroke-width="1" fill="none";
+    svg += <line x1="0" y1=" + yA + " x2=" + w / 2 + " y2=" + yA + "  + stroke + />;
+    svg += <line x1="0" y1=" + yB + " x2=" + w / 2 + " y2=" + yB + "  + stroke + />;
+    svg += <line x1=" + w / 2 + " y1=" + yA + " x2=" + w / 2 + " y2=" + yB + "  + stroke + />;
+    svg += <line x1=" + w / 2 + " y1=" + (yA + yB)/2 + " x2=" + w + " y2=" + yR + "  + stroke + />;
+
+    svg += </svg>;
+    connEl.innerHTML = svg;
+}
+window.addEventListener('resize', drawSupConnectors);
