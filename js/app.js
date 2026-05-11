@@ -1,5 +1,5 @@
 // ========================================
-// SPANISH RACING SERIES - APP T36
+// SPANISH RACING SERIES - APP T37
 // ========================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,9 +17,9 @@ function renderStats() {
     if (!statsRoot) return;
 
     const stats = [
-        `${pilotosT36.length} pilotos confirmados`,
-        `${supercopaT36.length} plazas Supercopa`,
-        `${jornadasT36.length} jornadas programadas`
+        `${pilotosT37.length} pilotos confirmados`,
+        `${supercopaT37.length} plazas Supercopa`,
+        `${jornadasT37.length} jornadas programadas`
     ];
 
     statsRoot.innerHTML = stats.map((item) => `<span class="stat-pill">${item}</span>`).join('');
@@ -124,7 +124,7 @@ function buildJornadasSchedule(zone) {
 }
 
 function parseJornadasForYear(zone, year) {
-    return jornadasT36
+    return jornadasT37
         .map((jornada) => {
             const ymd = parseSpanishJornadaDate(jornada.fecha || '');
             if (!ymd) return null;
@@ -225,10 +225,10 @@ function renderPilotos() {
     if (!pilotosRoot) return;
 
     if (countRoot) {
-        countRoot.textContent = `${pilotosT36.length} pilotos`;
+        countRoot.textContent = `${pilotosT37.length} pilotos`;
     }
 
-    const pilotosHtml = pilotosT36
+    const pilotosHtml = pilotosT37
         .map((piloto) => {
             return `
                 <article class="piloto-row">
@@ -249,7 +249,7 @@ function renderSupercopa() {
     const supercopaRoot = document.getElementById('supercopa-grid');
     if (!supercopaRoot) return;
 
-    const cardsHtml = supercopaT36
+    const cardsHtml = supercopaT37
         .map((entry) => {
             const isWinner = String(entry.label || '').toLowerCase().includes('supercopa');
             const winnerClass = isWinner ? ' is-supercopa-winner' : '';
@@ -274,7 +274,7 @@ function renderClasificacion() {
     const clasificacionRoot = document.getElementById('clasificacion-list');
     if (!clasificacionRoot) return;
 
-    const rowsHtml = pilotosT36
+    const rowsHtml = pilotosT37
         .slice()
         .sort((a, b) => a.pos - b.pos)
         .map((piloto, index) => {
@@ -301,7 +301,7 @@ function renderJornadasTrack() {
     const trackRoot = document.getElementById('jornadas-track');
     if (!trackRoot) return;
 
-    trackRoot.innerHTML = jornadasT36
+    trackRoot.innerHTML = jornadasT37
         .map((jornada) => {
             const enfrentamientos = (jornada.enfrentamientos || [])
                 .map((duelo) => `<li>${escapeHtml(duelo)}</li>`)
