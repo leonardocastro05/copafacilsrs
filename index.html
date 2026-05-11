@@ -109,6 +109,7 @@
                 </aside>
             </div>
         </section>
+
         <!-- Seccion Supercopa con los 4 clasificados actuales -->
         <section id="supercopa" class="section supercopa-section">
             <div class="container">
@@ -118,7 +119,7 @@
                     <p>Estos son los clasificados a la Supercopa (Por definir).</p>
                 </div>
 
-                <!-- Phase pills para Supercopa -->
+                <!-- Phase pill para Supercopa -->
                 <div class="phases" style="margin-bottom: 30px; display: flex; justify-content: center;">
                     <div class="phase-pill phase-pill--final" style="min-width: 220px;">
                         <div class="phase-name">Carrera Final</div>
@@ -127,11 +128,9 @@
                     </div>
                 </div>
 
-                <!-- Bracket de Supercopa (Estilo Eliminatorias) -->
+                <!-- Bracket de Supercopa -->
                 <div class="bracket-wrap" style="display: flex; justify-content: center;">
                     <div class="bracket" style="min-width: auto; width: 100%; max-width: 450px;">
-                        
-                        <!-- ===== FINAL SUPERCOPA ===== -->
                         <div class="col col--final">
                             <div class="col-label">Gran Final <span>Por definir</span></div>
                             <div class="final-wrap">
@@ -141,7 +140,6 @@
                                 <div class="final-title">Campeón Supercopa</div>
                                 <div class="match match--final" id="sup-fin-1">
                                     <div class="match-header match-header--final">Final a 4</div>
-                                    
                                     <div class="match-slot">
                                         <span class="slot-seed">SC</span>
                                         <span class="slot-name">Cristian Ezpeleta</span>
@@ -164,10 +162,8 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                </div><!-- /.bracket-wrap -->
-
+                </div>
             </div>
         </section>
 
@@ -231,9 +227,10 @@
         </div>
     </footer>
 
+    <!-- CORRECCIÓN: era "js/data." (sin extensión), corregido a "js/data.js" -->
+    <!-- CORRECCIÓN: eliminado js/eliminatorias.js que no se usa en esta página -->
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/eliminatorias.js"></script>
 </body>
 
 </html>

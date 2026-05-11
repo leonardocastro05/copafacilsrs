@@ -103,15 +103,6 @@ function getZonedParts(date, zone) {
     };
 }
 
-function shiftYmd(year, month, day, addDays) {
-    const shifted = new Date(Date.UTC(year, month - 1, day + addDays, 0, 0, 0));
-    return {
-        year: shifted.getUTCFullYear(),
-        month: shifted.getUTCMonth() + 1,
-        day: shifted.getUTCDate()
-    };
-}
-
 function buildJornadasSchedule(zone) {
     const now = new Date();
     const currentYear = getZonedParts(now, zone).year;
@@ -140,19 +131,10 @@ function parseJornadasForYear(zone, year) {
 
 function parseSpanishJornadaDate(text) {
     const monthMap = {
-        enero: 1,
-        febrero: 2,
-        marzo: 3,
-        abril: 4,
-        mayo: 5,
-        junio: 6,
-        julio: 7,
-        agosto: 8,
-        septiembre: 9,
-        setiembre: 9,
-        octubre: 10,
-        noviembre: 11,
-        diciembre: 12
+        enero: 1, febrero: 2, marzo: 3, abril: 4,
+        mayo: 5, junio: 6, julio: 7, agosto: 8,
+        septiembre: 9, setiembre: 9, octubre: 10,
+        noviembre: 11, diciembre: 12
     };
 
     const normalized = normalizeText(text);
@@ -367,24 +349,28 @@ function escapeHtml(value) {
         .replaceAll("'", '&#39;');
 }
 
-// Dibuja el conector de la Supercopa
+// CORRECCIÓN: drawSupConnectors tenía todos los template literals rotos (faltaban los backticks).
+// Además ahora se llama en el resize únicamente si el elemento existe en la página.
 function drawSupConnectors() {
     const connEl = document.getElementById('conn-sup-sem-fin');
     if (!connEl) return;
+
     const connRect = connEl.getBoundingClientRect();
     if (connRect.height < 10) return;
 
-    const leftCol  = document.querySelector('#supercopa .col--semis');
+    const leftCol = document.querySelector('#supercopa .col--semis');
     const rightCol = document.querySelector('#supercopa .col--final');
     if (!leftCol || !rightCol) return;
 
-    const leftMatches  = leftCol.querySelectorAll('.match');
+    const leftMatches = leftCol.querySelectorAll('.match');
     const rightMatches = rightCol.querySelectorAll('.match');
     if (leftMatches.length !== 2 || rightMatches.length !== 1) return;
 
     const h = connRect.height;
     const w = connRect.width || 28;
-    let svg = <svg viewBox="0 0  + w +   + h + " preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">;
+
+    // CORRECCIÓN: template literals correctos con backticks
+    let svg = `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">`;
 
     const lA = leftMatches[0];
     const lB = leftMatches[1];
@@ -394,13 +380,16 @@ function drawSupConnectors() {
     const yB = lB.getBoundingClientRect().top + lB.getBoundingClientRect().height / 2 - connRect.top;
     const yR = rM.getBoundingClientRect().top + rM.getBoundingClientRect().height / 2 - connRect.top;
 
-    const stroke = stroke="rgba(255,207,64,0.3)" stroke-width="1" fill="none";
-    svg += <line x1="0" y1=" + yA + " x2=" + w / 2 + " y2=" + yA + "  + stroke + />;
-    svg += <line x1="0" y1=" + yB + " x2=" + w / 2 + " y2=" + yB + "  + stroke + />;
-    svg += <line x1=" + w / 2 + " y1=" + yA + " x2=" + w / 2 + " y2=" + yB + "  + stroke + />;
-    svg += <line x1=" + w / 2 + " y1=" + (yA + yB)/2 + " x2=" + w + " y2=" + yR + "  + stroke + />;
+    // CORRECCIÓN: const stroke era una asignación rota, ahora es un string correcto
+    const stroke = `stroke="rgba(255,207,64,0.3)" stroke-width="1" fill="none"`;
 
-    svg += </svg>;
+    svg += `<line x1="0" y1="${yA}" x2="${w / 2}" y2="${yA}" ${stroke}/>`;
+    svg += `<line x1="0" y1="${yB}" x2="${w / 2}" y2="${yB}" ${stroke}/>`;
+    svg += `<line x1="${w / 2}" y1="${yA}" x2="${w / 2}" y2="${yB}" ${stroke}/>`;
+    svg += `<line x1="${w / 2}" y1="${(yA + yB) / 2}" x2="${w}" y2="${yR}" ${stroke}/>`;
+
+    svg += `</svg>`;
     connEl.innerHTML = svg;
 }
+
 window.addEventListener('resize', drawSupConnectors);
