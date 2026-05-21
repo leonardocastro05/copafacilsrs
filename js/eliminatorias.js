@@ -10,14 +10,14 @@
 
 const eliminatorias = {
     octavos: [
-        { id: 'oct-1', p1: 'SERGIO Ruiz Furious', p2: 'Alejandro Alonso', ganador: null },
-        { id: 'oct-2', p1: 'Antonio Pinillos', p2: 'Luis Reynoso', ganador: null },
-        { id: 'oct-3', p1: 'Eduardo Calvo', p2: 'Alexis Iceman', ganador: null },
-        { id: 'oct-4', p1: 'Cristian Ezpeleta', p2: 'Marco Rodriguez', ganador: null },
-        { id: 'oct-5', p1: 'Valdi CT', p2: 'Mauro Reyes', ganador: null },
-        { id: 'oct-6', p1: 'Vasvo Lao', p2: 'Marc cr Rayo', ganador: null },
-        { id: 'oct-7', p1: 'Andre Prov', p2: 'Leoo Castro', ganador: null },
-        { id: 'oct-8', p1: 'Sergio Solano', p2: 'Peppe Vedda', ganador: null }
+        { id: 'oct-1', p1: '', p2: '', ganador: null },
+        { id: 'oct-2', p1: '', p2: '', ganador: null },
+        { id: 'oct-3', p1: '', p2: '', ganador: null },
+        { id: 'oct-4', p1: '', p2: '', ganador: null },
+        { id: 'oct-5', p1: '', p2: '', ganador: null },
+        { id: 'oct-6', p1: '', p2: '', ganador: null },
+        { id: 'oct-7', p1: '', p2: '', ganador: null },
+        { id: 'oct-8', p1: '', p2: '', ganador: null }
     ],
     cuartos: [
         { id: 'cua-1', p1: 'Ganador P1', p2: 'Ganador P2', ganador: null },
