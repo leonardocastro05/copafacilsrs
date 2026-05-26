@@ -248,7 +248,7 @@ const jornadasT37 = [
         fecha: 'Miercoles 27 de mayo',
         estado: 'Pendiente',
         enfrentamientos: [
-            'Valdi CT vs Peppe Vedda',
+            'Valdi CT vs Thiago Campos',
             'André Prov vs Alexis Iceman',
             'Leoo Ferreira vs Christian Horny',
             'Eduardo Calvo vs Freya Anafi',
@@ -256,14 +256,12 @@ const jornadasT37 = [
             'Sergio Solano vs Pablo Mafias',
             'Vasvo Lao vs Juan Garcia',
             'Marco Rodríguez vs Blake Ezeh',
-            'Tony Crowther vs Rui Acacio',
+            'Tony Crowther vs Antonio Pinillos',
             'Álvaro Redondo vs Alejandro Alonso',
-            'Antonio Pinillos vs Cristóbal Farías Galleguillos',
             'Marc cr Rayo vs Francisco Martínez',
             'Giacomina Leclerc vs Roma II',
             'Stefano Cann vs Mauro Reyes Hernández',
-            'Romus Toras vs Templario VCR',
-            'Sebas Srg Ramírez vs Thiago Campos'
+            'Romus Toras vs Templario VCR'
         ]
     },
     {
@@ -277,16 +275,14 @@ const jornadasT37 = [
             'Eduardo Calvo vs Marco Rodríguez',
             'Cristian Ezpeleta vs Stefano Cann',
             'Sergio Solano vs Tony Crowther',
-            'Vasvo Lao vs Rui Acacio',
+            'Vasvo Lao vs Freya Anafi',
             'Alexis Iceman vs Templario VCR',
             'Juan Garcia vs Blake Ezeh',
             'Álvaro Redondo vs Julio Maidana',
             'Marc cr Rayo vs Roma II',
-            'Freya Anafi vs Cristóbal Farías Galleguillos',
             'Giacomina Leclerc vs Francisco Martínez',
-            'Christian Horny vs Sebas Srg Ramírez',
-            'Alejandro Alonso vs Thiago Campos',
-            'Peppe Vedda vs Mauro Reyes Hernández'
+            'Christian Horny vs Mauro Reyes Hernández',
+            'Alejandro Alonso vs Thiago Campos'
         ]
     },
     {
@@ -298,7 +294,7 @@ const jornadasT37 = [
             'André Prov vs Freya Anafi',
             'Leoo Ferreira vs Thiago Campos',
             'Eduardo Calvo vs Francisco Martínez',
-            'Cristian Ezpeleta vs Peppe Vedda',
+            'Cristian Ezpeleta vs Christian Horny',
             'Sergio Solano vs Roma II',
             'Vasvo Lao vs Giacomina Leclerc',
             'Alexis Iceman vs Marc cr Rayo',
@@ -307,9 +303,7 @@ const jornadasT37 = [
             'Álvaro Redondo vs Mauro Reyes Hernández',
             'Antonio Pinillos vs Stefano Cann',
             'Blake Ezeh vs Templario VCR',
-            'Christian Horny vs Sebas Srg Ramírez',
-            'Alejandro Alonso vs Cristóbal Farías Galleguillos',
-            'Julio Maidana vs Rui Acacio'
+            'Alejandro Alonso vs Julio Maidana'
         ]
     }
 ];
