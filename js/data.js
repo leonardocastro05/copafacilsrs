@@ -1,6 +1,6 @@
 ﻿// ========================================
 // SPANISH RACING SERIES - DATA
-// Temporada 37 — Actualizado tras Jornada 7
+// Temporada 37 — Actualizado tras Jornada 8
 // ========================================
 
 const seasonInfo = {
@@ -10,35 +10,35 @@ const seasonInfo = {
 };
 
 // ----------------------------------------
-// PILOTOS — Clasificación actualizada tras J7
+// PILOTOS — Clasificación actualizada tras J8
 // Puntos = 3 puntos por victoria en duelo
 // ----------------------------------------
 const pilotosT37 = [
-    { pos: 1, nombre: 'Leoo Ferreira', equipo: '07 CRT Competition', puntos: 21 },
-    { pos: 2, nombre: 'André Prov', equipo: 'Tortuga', puntos: 21 },
-    { pos: 3, nombre: 'Romus Toras', equipo: '50 Rizia Royal Racing', puntos: 18 },
-    { pos: 4, nombre: 'Vasvo Lao', equipo: 'Subaru F1 Team', puntos: 18 },
-    { pos: 5, nombre: 'Sergio Solano', equipo: '13 CRT Competition', puntos: 18 },
-    { pos: 6, nombre: 'Valdi CT', equipo: '77 Campos Racing F1', puntos: 18 },
-    { pos: 7, nombre: 'Thiago Campos', equipo: 'Mercedes', puntos: 18 },
-    { pos: 8, nombre: 'Tony Crowther', equipo: '44 Patria Italia', puntos: 15 },
-    { pos: 9, nombre: 'Francisco Martínez', equipo: 'Renfe Cercanías RT', puntos: 15 },
-    { pos: 10, nombre: 'Juan Garcia', equipo: 'Ferrari F1 Team', puntos: 15 },
-    { pos: 11, nombre: 'Antonio Pinillos', equipo: 'Red Bull Pinkustercia F1 Team', puntos: 15 },
+    { pos: 1, nombre: 'André Prov', equipo: 'Tortuga', puntos: 24 },
+    { pos: 2, nombre: 'Leoo Ferreira', equipo: '07 CRT Competition', puntos: 24 },
+    { pos: 3, nombre: 'Romus Toras', equipo: '50 Rizia Royal Racing', puntos: 21 },
+    { pos: 4, nombre: 'Vasvo Lao', equipo: 'Subaru F1 Team', puntos: 21 },
+    { pos: 5, nombre: 'Sergio Solano', equipo: '13 CRT Competition', puntos: 21 },
+    { pos: 6, nombre: 'Thiago Campos', equipo: 'Mercedes', puntos: 21 },
+    { pos: 7, nombre: 'Valdi CT', equipo: '77 Campos Racing F1', puntos: 18 },
+    { pos: 8, nombre: 'Antonio Pinillos', equipo: 'Red Bull Pinkustercia F1 Team', puntos: 18 },
+    { pos: 9, nombre: 'Tony Crowther', equipo: '44 Patria Italia', puntos: 15 },
+    { pos: 10, nombre: 'Francisco Martínez', equipo: 'Renfe Cercanías RT', puntos: 15 },
+    { pos: 11, nombre: 'Juan Garcia', equipo: 'Ferrari F1 Team', puntos: 15 },
     { pos: 12, nombre: 'Freya Anafi', equipo: 'Renfe Cercanías RT', puntos: 15 },
-    { pos: 13, nombre: 'Cristian Ezpeleta', equipo: '99 Campos Racing F1', puntos: 12 },
-    { pos: 14, nombre: 'Eduardo Calvo', equipo: '72 CTC VCR Foxtrot', puntos: 12 },
-    { pos: 15, nombre: 'Roma II', equipo: '69 CRT Competition', puntos: 12 },
+    { pos: 13, nombre: 'Eduardo Calvo', equipo: '72 CTC VCR Foxtrot', puntos: 15 },
+    { pos: 14, nombre: 'Cristian Ezpeleta', equipo: '99 Campos Racing F1', puntos: 15 },
+    { pos: 15, nombre: 'Roma II', equipo: '69 CRT Competition', puntos: 15 },
     { pos: 16, nombre: 'Alexis Iceman', equipo: '00 CRT Competition', puntos: 12 },
     { pos: 17, nombre: 'Giacomina Leclerc', equipo: 'Patria Italia', puntos: 12 },
-    { pos: 18, nombre: 'Marc cr Rayo', equipo: 'Rayito Team', puntos: 9 },
-    { pos: 19, nombre: 'Alejandro Alonso', equipo: '3 Zetta Racing', puntos: 9 },
-    { pos: 20, nombre: 'Stefano Cann', equipo: 'Italica Siracusa', puntos: 9 },
-    { pos: 21, nombre: 'Julio Maidana', equipo: '18 BMW Team', puntos: 9 },
-    { pos: 22, nombre: 'Mauro Reyes Hernández', equipo: '26 Zetta Racing', puntos: 9 },
-    { pos: 23, nombre: 'Pablo Mafias', equipo: 'Aston Martin F1 Team Mafias', puntos: 6 },
-    { pos: 24, nombre: 'Álvaro Redondo', equipo: '36 CTC VCR FTSE', puntos: 6 },
-    { pos: 25, nombre: 'Blake Ezeh', equipo: 'Ferrari HoloLive Racing Team', puntos: 6 },
+    { pos: 18, nombre: 'Marc cr Rayo', equipo: 'Rayito Team', puntos: 12 },
+    { pos: 19, nombre: 'Mauro Reyes Hernández', equipo: '26 Zetta Racing', puntos: 12 },
+    { pos: 20, nombre: 'Alejandro Alonso', equipo: '3 Zetta Racing', puntos: 9 },
+    { pos: 21, nombre: 'Stefano Cann', equipo: 'Italica Siracusa', puntos: 9 },
+    { pos: 22, nombre: 'Julio Maidana', equipo: '18 BMW Team', puntos: 9 },
+    { pos: 23, nombre: 'Álvaro Redondo', equipo: '36 CTC VCR FTSE', puntos: 9 },
+    { pos: 24, nombre: 'Blake Ezeh', equipo: 'Ferrari HoloLive Racing Team', puntos: 9 },
+    { pos: 25, nombre: 'Pablo Mafias', equipo: 'Aston Martin F1 Team Mafias', puntos: 6 },
     { pos: 26, nombre: 'Christian Horny', equipo: '15 Zetta Racing', puntos: 3 },
     { pos: 27, nombre: 'Marco Rodríguez', equipo: '94 Pagani Renault', puntos: 3 },
     { pos: 28, nombre: 'Templario VCR', equipo: 'Hispania Racing Team', puntos: 3 },
@@ -246,22 +246,22 @@ const jornadasT37 = [
     {
         nombre: 'Jornada 8',
         fecha: 'Miercoles 27 de mayo',
-        estado: 'Pendiente',
+        estado: 'Completada',
         enfrentamientos: [
-            'Valdi CT vs Thiago Campos',
-            'André Prov vs Alexis Iceman',
-            'Leoo Ferreira vs Christian Horny',
-            'Eduardo Calvo vs Freya Anafi',
-            'Cristian Ezpeleta vs Julio Maidana',
-            'Sergio Solano vs Pablo Mafias',
-            'Vasvo Lao vs Juan Garcia',
-            'Marco Rodríguez vs Blake Ezeh',
-            'Tony Crowther vs Antonio Pinillos',
-            'Álvaro Redondo vs Alejandro Alonso',
-            'Marc cr Rayo vs Francisco Martínez',
-            'Giacomina Leclerc vs Roma II',
-            'Stefano Cann vs Mauro Reyes Hernández',
-            'Romus Toras vs Templario VCR'
+            '🏆 Thiago Campos vs Valdi CT (P3 vs P10)',
+            '🏆 André Prov vs Alexis Iceman (P2 vs P12)',
+            '🏆 Leoo Ferreira vs Christian Horny (P4 vs P13)',
+            '🏆 Eduardo Calvo vs Freya Anafi (P5 vs P20)',
+            '🏆 Cristian Ezpeleta vs Julio Maidana (P14 vs P25)',
+            '🏆 Sergio Solano vs Pablo Mafias (P9 vs P11)',
+            '🏆 Vasvo Lao vs Juan Garcia (P7 vs P16)',
+            '🏆 Blake Ezeh vs Marco Rodríguez (P29 DNF vs DNS)',
+            '🏆 Antonio Pinillos vs Tony Crowther (P19 vs DNS)',
+            '🏆 Álvaro Redondo vs Alejandro Alonso (P15 vs P18)',
+            '🏆 Marc cr Rayo vs Francisco Martínez (P22 vs P23)',
+            '🏆 Roma II vs Giacomina Leclerc (P6 vs P8)',
+            '🏆 Mauro Reyes Hernández vs Stefano Cann (P17 vs DNS)',
+            '🏆 Romus Toras vs Templario VCR (P1 vs P21)'
         ]
     },
     {
