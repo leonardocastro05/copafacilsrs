@@ -1,5 +1,6 @@
 /* ========================================
-   SPANISH RACING SERIES - ELIMINATORIAS T36
+   SPANISH RACING SERIES - ELIMINATORIAS T37
+   Diseño compacto para captura sin scroll
    ======================================== */
 
 :root {
@@ -19,19 +20,13 @@
     --border: rgba(255, 207, 64, 0.22);
     --border-bright: rgba(255, 207, 64, 0.6);
     --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.45);
-    --shadow-strong: 0 24px 70px rgba(0, 0, 0, 0.6);
     --radius-xl: 26px;
     --radius-md: 14px;
-    --radius-sm: 10px;
+    --radius-sm: 8px;
     --transition: all 0.25s ease;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+* { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
 body {
@@ -58,7 +53,7 @@ body {
     margin-inline: auto;
 }
 
-/* ===== HEADER (reutiliza estilos de styles.css) ===== */
+/* ===== HEADER ===== */
 .main-header {
     position: sticky;
     top: 0;
@@ -69,7 +64,7 @@ body {
 }
 
 .header-wrap {
-    min-height: 76px;
+    min-height: 64px;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
@@ -85,35 +80,35 @@ body {
 }
 
 .brand-mark {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
     display: grid;
     place-items: center;
-    border-radius: 12px;
+    border-radius: 10px;
     background: linear-gradient(135deg, var(--red-500), #7b0d18);
     color: #fff;
     box-shadow: var(--shadow-soft);
 }
 
-.brand-text strong { display: block; font-size: 0.92rem; line-height: 1.1; }
-.brand-text small  { color: #ffc761; font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.brand-text strong { display: block; font-size: 0.88rem; line-height: 1.1; }
+.brand-text small  { color: #ffc761; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; }
 
 .main-nav {
     justify-self: center;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     background: rgba(255, 255, 255, 0.08);
     border-radius: 999px;
-    padding: 6px;
+    padding: 5px;
 }
 
 .main-nav a {
     text-decoration: none;
     color: #ffe2cc;
     font-weight: 600;
-    font-size: 0.92rem;
-    padding: 8px 14px;
+    font-size: 0.88rem;
+    padding: 7px 12px;
     border-radius: 999px;
     transition: var(--transition);
 }
@@ -126,9 +121,9 @@ body {
 
 .season-chip {
     border-radius: 999px;
-    padding: 9px 14px;
+    padding: 7px 12px;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     letter-spacing: 0.08em;
     background: linear-gradient(135deg, var(--gold-500), #ffb13e);
     color: #3f2f0b;
@@ -136,52 +131,52 @@ body {
 
 /* ===== SECTION ===== */
 .elim-section {
-    padding: 64px 0 80px;
+    padding: 28px 0 40px;
 }
 
 /* ===== CABECERA ===== */
 .elim-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
 }
 
 .elim-kicker {
-    font-size: 0.76rem;
+    font-size: 0.72rem;
     text-transform: uppercase;
     letter-spacing: 0.14em;
     color: #ffbf94;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     font-weight: 700;
 }
 
 .elim-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(3rem, 7vw, 5rem);
+    font-size: clamp(2rem, 5vw, 3.2rem);
     letter-spacing: 0.03em;
     line-height: 0.95;
     background: linear-gradient(135deg, #fff5e8 30%, var(--gold-500));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 .elim-sub {
     color: var(--ink-700);
-    font-size: 0.9rem;
+    font-size: 0.82rem;
 }
 
 /* ===== PHASE PILLS ===== */
 .phases {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    margin-bottom: 36px;
+    gap: 8px;
+    margin-bottom: 16px;
 }
 
 .phase-pill {
     text-align: center;
-    padding: 14px 10px;
+    padding: 8px 6px;
     border-radius: 999px;
     border: 1px solid var(--border);
     background: linear-gradient(155deg, var(--card-900), var(--card-850));
@@ -191,7 +186,6 @@ body {
 .phase-pill:hover {
     border-color: var(--border-bright);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
 }
 
 .phase-pill--final {
@@ -201,67 +195,61 @@ body {
 
 .phase-pill .phase-name {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     letter-spacing: 0.06em;
     color: var(--gold-500);
 }
 
-.phase-pill--final .phase-name {
-    font-size: 1.3rem;
-}
+.phase-pill--final .phase-name { font-size: 1.1rem; }
 
 .phase-pill .phase-date {
-    font-size: 0.72rem;
+    font-size: 0.65rem;
     color: var(--ink-700);
-    margin-top: 3px;
+    margin-top: 2px;
 }
 
-.phase-pill--final .phase-date {
-    color: #ffd59c;
-}
+.phase-pill--final .phase-date { color: #ffd59c; }
 
 .phase-pill .phase-icon {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--ink-600);
-    margin-top: 5px;
+    margin-top: 3px;
 }
 
-.phase-pill--final .phase-icon {
-    color: rgba(255, 207, 64, 0.6);
-}
+.phase-pill--final .phase-icon { color: rgba(255, 207, 64, 0.6); }
 
 /* ===== BRACKET WRAP ===== */
 .bracket-wrap {
     overflow-x: auto;
-    padding-bottom: 12px;
+    padding-bottom: 8px;
 }
 
 .bracket {
     display: flex;
     align-items: stretch;
-    min-width: 860px;
+    min-width: 780px;
     gap: 0;
 }
 
 /* ===== COL LABELS ===== */
 .col-label {
-    font-size: 0.7rem;
+    font-size: 0.62rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: var(--ink-700);
     font-weight: 700;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     padding: 0 4px;
 }
 
 .col-label span {
     display: block;
     color: var(--gold-500);
-    font-size: 0.65rem;
-    margin-top: 2px;
+    font-size: 0.58rem;
+    margin-top: 1px;
     opacity: 0.8;
 }
 
@@ -276,24 +264,24 @@ body {
 .col--octavos { flex: 1.6; }
 .col--cuartos { flex: 1.3; }
 .col--semis   { flex: 1.2; }
-.col--final   { flex: 1; }
+.col--final   { flex: 0.95; }
 
 .match-group {
     display: flex;
     flex-direction: column;
     flex: 1;
     justify-content: space-around;
-    gap: 6px;
+    gap: 4px;
 }
 
 /* ===== CONNECTOR COLUMNS ===== */
 .connector-col {
-    width: 28px;
+    width: 22px;
     flex-shrink: 0;
     position: relative;
 }
 
-/* ===== MATCH CARD ===== */
+/* ===== MATCH CARD — COMPACTO ===== */
 .match {
     border-radius: var(--radius-sm);
     overflow: hidden;
@@ -304,15 +292,15 @@ body {
 
 .match:hover {
     border-color: rgba(255, 207, 64, 0.45);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
     transform: translateY(-1px);
 }
 
 .match-header {
     background: linear-gradient(90deg, rgba(225, 6, 0, 0.18), rgba(255, 207, 64, 0.1));
     border-bottom: 1px solid var(--border);
-    padding: 4px 10px;
-    font-size: 0.6rem;
+    padding: 2px 7px;
+    font-size: 0.55rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--gold-500);
@@ -323,23 +311,23 @@ body {
     background: linear-gradient(90deg, rgba(255, 207, 64, 0.25), rgba(225, 6, 0, 0.2));
 }
 
+/* Slot compacto: altura reducida */
 .match-slot {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px 10px;
-    font-size: 0.78rem;
+    gap: 5px;
+    padding: 5px 7px;
+    font-size: 0.68rem;
     font-weight: 600;
     color: var(--ink-800);
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    min-height: 34px;
+    min-height: 24px;
     transition: background 0.15s;
 }
 
 .match-slot:last-child { border-bottom: none; }
 .match-slot.tbd { color: var(--ink-600); font-style: italic; font-weight: 400; }
 
-/* Cuando el slot tiene ganador definido */
 .match-slot.winner {
     color: #fff3e8;
     font-style: normal;
@@ -348,13 +336,13 @@ body {
 }
 
 .slot-seed {
-    width: 20px;
-    height: 20px;
-    border-radius: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
     background: rgba(225, 6, 0, 0.22);
     display: grid;
     place-items: center;
-    font-size: 0.6rem;
+    font-size: 0.55rem;
     font-weight: 700;
     color: #ffa07a;
     flex-shrink: 0;
@@ -374,10 +362,10 @@ body {
 
 .vs-divider {
     text-align: center;
-    font-size: 0.55rem;
+    font-size: 0.5rem;
     letter-spacing: 0.14em;
     color: var(--ink-600);
-    padding: 2px 0;
+    padding: 1px 0;
     background: rgba(255, 255, 255, 0.015);
     border-top: 1px solid rgba(255, 255, 255, 0.04);
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
@@ -389,26 +377,26 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 7px;
     flex: 1;
-    padding: 8px 0;
+    padding: 6px 0;
 }
 
 .trophy {
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
     background: linear-gradient(135deg, var(--red-500), #7b0d18);
     display: grid;
     place-items: center;
-    box-shadow: 0 0 0 1px rgba(255, 207, 64, 0.35), 0 12px 28px rgba(225, 6, 0, 0.35);
-    font-size: 1.4rem;
+    box-shadow: 0 0 0 1px rgba(255, 207, 64, 0.35), 0 10px 22px rgba(225, 6, 0, 0.35);
+    font-size: 1.2rem;
     color: var(--gold-500);
 }
 
 .final-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 0.06em;
     color: var(--gold-500);
     text-align: center;
@@ -419,24 +407,20 @@ body {
     border-color: rgba(255, 207, 64, 0.55);
     box-shadow:
         0 0 0 1px rgba(255, 207, 64, 0.12),
-        0 16px 36px rgba(255, 176, 32, 0.15);
+        0 12px 28px rgba(255, 176, 32, 0.15);
     animation: finalpulse 2.6s ease-in-out infinite;
 }
 
 @keyframes finalpulse {
-    0%, 100% {
-        box-shadow: 0 0 0 1px rgba(255,207,64,0.12), 0 16px 36px rgba(255,176,32,0.12);
-    }
-    50% {
-        box-shadow: 0 0 0 1px rgba(255,207,64,0.3), 0 20px 44px rgba(255,176,32,0.22);
-    }
+    0%, 100% { box-shadow: 0 0 0 1px rgba(255,207,64,0.12), 0 12px 28px rgba(255,176,32,0.12); }
+    50%       { box-shadow: 0 0 0 1px rgba(255,207,64,0.3),  0 16px 36px rgba(255,176,32,0.22); }
 }
 
 @media (prefers-reduced-motion: reduce) {
     .match--final { animation: none; }
 }
 
-/* ===== CONNECTORS (SVG dibujados por JS) ===== */
+/* ===== CONNECTORS ===== */
 .connector-col svg {
     width: 100%;
     height: 100%;
@@ -446,11 +430,11 @@ body {
 /* ===== BRACKET NOTE ===== */
 .bracket-note {
     text-align: center;
-    margin-top: 32px;
-    font-size: 0.76rem;
+    margin-top: 16px;
+    font-size: 0.7rem;
     color: var(--ink-600);
     border-top: 1px solid rgba(255, 207, 64, 0.1);
-    padding-top: 20px;
+    padding-top: 14px;
     letter-spacing: 0.04em;
 }
 
@@ -458,30 +442,30 @@ body {
 
 /* ===== FOOTER ===== */
 .main-footer {
-    margin-top: 20px;
+    margin-top: 16px;
     border-top: 1px solid rgba(225, 6, 0, 0.2);
     background: linear-gradient(90deg, #090607 0%, #260a10 55%, #4c111a 100%);
 }
 
 .footer-wrap {
-    min-height: 94px;
+    min-height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 16px;
 }
 
-.footer-wrap p  { color: #f1c5af; font-size: 0.88rem; }
+.footer-wrap p  { color: #f1c5af; font-size: 0.84rem; }
 .footer-wrap strong { color: var(--gold-400); }
 
-.footer-links { display: flex; gap: 10px; flex-wrap: wrap; }
+.footer-links { display: flex; gap: 8px; flex-wrap: wrap; }
 
 .footer-links a {
     text-decoration: none;
     color: #ffe1d5;
     font-weight: 700;
-    font-size: 0.84rem;
-    padding: 6px 10px;
+    font-size: 0.8rem;
+    padding: 5px 9px;
     border-radius: 999px;
     border: 1px solid rgba(255, 207, 64, 0.22);
     background: rgba(255, 255, 255, 0.03);
@@ -496,14 +480,14 @@ body {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 980px) {
-    .header-wrap { grid-template-columns: 1fr; padding: 12px 0; }
+    .header-wrap { grid-template-columns: 1fr; padding: 10px 0; }
     .main-nav { justify-self: start; }
     .season-chip { justify-self: start; }
     .phases { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
-    .elim-section { padding: 40px 0 60px; }
-    .phases { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-    .footer-wrap { flex-direction: column; align-items: flex-start; padding: 18px 0; }
+    .elim-section { padding: 20px 0 32px; }
+    .phases { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+    .footer-wrap { flex-direction: column; align-items: flex-start; padding: 14px 0; }
 }
