@@ -1,6 +1,6 @@
 ﻿// ========================================
 // SPANISH RACING SERIES - DATA
-// Temporada 37 — Actualizado tras Jornada 8
+// Temporada 37 — Actualizado tras Jornada 10
 // ========================================
 
 const seasonInfo = {
@@ -10,38 +10,38 @@ const seasonInfo = {
 };
 
 // ----------------------------------------
-// PILOTOS — Clasificación actualizada tras J8
+// PILOTOS — Clasificación actualizada tras J10
 // Puntos = 3 puntos por victoria en duelo
 // ----------------------------------------
 const pilotosT37 = [
-    { pos: 1, nombre: 'André Prov', equipo: 'Tortuga', puntos: 27, clasificado: true },
-    { pos: 2, nombre: 'Leoo Ferreira', equipo: '07 CRT Competition', puntos: 27, clasificado: true },
-    { pos: 3, nombre: 'Romus Toras', equipo: '50 Rizia Royal Racing', puntos: 24, clasificado: true },
-    { pos: 4, nombre: 'Vasvo Lao', equipo: 'Subaru F1 Team', puntos: 24, clasificado: true },
-    { pos: 5, nombre: 'Sergio Solano', equipo: '13 CRT Competition', puntos: 24, clasificado: true },
-    { pos: 6, nombre: 'Thiago Campos', equipo: 'Mercedes', puntos: 24, clasificado: true },
-    { pos: 7, nombre: 'Valdi CT', equipo: '77 Campos Racing F1', puntos: 18 },
-    { pos: 8, nombre: 'Antonio Pinillos', equipo: 'Red Bull Pinkustercia F1 Team', puntos: 18 },
-    { pos: 9, nombre: 'Francisco Martínez', equipo: 'Renfe Cercanías RT', puntos: 18 },
-    { pos: 10, nombre: 'Juan Garcia', equipo: 'Ferrari F1 Team', puntos: 18 },
-    { pos: 11, nombre: 'Eduardo Calvo', equipo: '72 CTC VCR Foxtrot', puntos: 18 },
-    { pos: 12, nombre: 'Cristian Ezpeleta', equipo: '99 Campos Racing F1', puntos: 18 },
-    { pos: 13, nombre: 'Tony Crowther', equipo: '44 Patria Italia', puntos: 15 },
-    { pos: 14, nombre: 'Freya Anafi', equipo: 'Renfe Cercanías RT', puntos: 15 },
-    { pos: 15, nombre: 'Roma II', equipo: '69 CRT Competition', puntos: 15 },
-    { pos: 16, nombre: 'Alexis Iceman', equipo: '00 CRT Competition', puntos: 15 },
-    { pos: 17, nombre: 'Marc cr Rayo', equipo: 'Rayito Team', puntos: 15 },
-    { pos: 18, nombre: 'Giacomina Leclerc', equipo: 'Patria Italia', puntos: 12 },
-    { pos: 19, nombre: 'Mauro Reyes Hernández', equipo: '26 Zetta Racing', puntos: 12 },
-    { pos: 20, nombre: 'Julio Maidana', equipo: '18 BMW Team', puntos: 12 },
-    { pos: 21, nombre: 'Alejandro Alonso', equipo: '3 Zetta Racing', puntos: 9 },
-    { pos: 22, nombre: 'Stefano Cann', equipo: 'Italica Siracusa', puntos: 9 },
-    { pos: 23, nombre: 'Álvaro Redondo', equipo: '36 CTC VCR FTSE', puntos: 9 },
-    { pos: 24, nombre: 'Blake Ezeh', equipo: 'Ferrari HoloLive Racing Team', puntos: 9 },
-    { pos: 25, nombre: 'Pablo Mafias', equipo: 'Aston Martin F1 Team Mafias', puntos: 6 },
-    { pos: 26, nombre: 'Christian Horny', equipo: '15 Zetta Racing', puntos: 6 },
-    { pos: 27, nombre: 'Marco Rodríguez', equipo: '94 Pagani Renault', puntos: 3 },
-    { pos: 28, nombre: 'Templario VCR', equipo: 'Hispania Racing Team', puntos: 3 },
+    { pos: 1, nombre: 'André Prov', equipo: 'Tortuga', puntos: 30, clasificado: true },
+    { pos: 2, nombre: 'Romus Toras', equipo: '50 Rizia Royal Racing', puntos: 27, clasificado: true },
+    { pos: 3, nombre: 'Vasvo Lao', equipo: 'Subaru F1 Team', puntos: 27, clasificado: true },
+    { pos: 4, nombre: 'Thiago Campos', equipo: 'Mercedes', puntos: 27, clasificado: true },
+    { pos: 5, nombre: 'Leoo Ferreira', equipo: '07 CRT Competition', puntos: 27, clasificado: true },
+    { pos: 6, nombre: 'Sergio Solano', equipo: '13 CRT Competition', puntos: 24, clasificado: true },
+    { pos: 7, nombre: 'Valdi CT', equipo: '77 Campos Racing F1', puntos: 21, clasificado: true },
+    { pos: 8, nombre: 'Antonio Pinillos', equipo: 'Red Bull Pinkustercia F1 Team', puntos: 21, clasificado: true },
+    { pos: 9, nombre: 'Eduardo Calvo', equipo: '72 CTC VCR Foxtrot', puntos: 21, clasificado: true },
+    { pos: 10, nombre: 'Cristian Ezpeleta', equipo: '99 Campos Racing F1', puntos: 21, clasificado: true },
+    { pos: 11, nombre: 'Roma II', equipo: '69 CRT Competition', puntos: 18, clasificado: true },
+    { pos: 12, nombre: 'Alexis Iceman', equipo: '00 CRT Competition', puntos: 18, clasificado: true },
+    { pos: 13, nombre: 'Francisco Martínez', equipo: 'Renfe Cercanías RT', puntos: 18, clasificado: true },
+    { pos: 14, nombre: 'Juan Garcia', equipo: 'Ferrari F1 Team', puntos: 18, clasificado: true },
+    { pos: 15, nombre: 'Julio Maidana', equipo: '18 BMW Team', puntos: 15, clasificado: true },
+    { pos: 16, nombre: 'Tony Crowther', equipo: '44 Patria Italia', puntos: 15, clasificado: false },
+    { pos: 17, nombre: 'Freya Anafi', equipo: 'Renfe Cercanías RT', puntos: 15, clasificado: true },
+    { pos: 18, nombre: 'Marc cr Rayo', equipo: 'Rayito Team', puntos: 15 },
+    { pos: 19, nombre: 'Álvaro Redondo', equipo: '36 CTC VCR FTSE', puntos: 12 },
+    { pos: 20, nombre: 'Giacomina Leclerc', equipo: 'Patria Italia', puntos: 12 },
+    { pos: 21, nombre: 'Mauro Reyes Hernández', equipo: '26 Zetta Racing', puntos: 12 },
+    { pos: 22, nombre: 'Pablo Mariño', equipo: 'Aston Martin F1 Team Mariño', puntos: 9 },
+    { pos: 23, nombre: 'Alejandro Alonso', equipo: '3 Zetta Racing', puntos: 9 },
+    { pos: 24, nombre: 'Stefano Cann', equipo: 'Italica Siracusa', puntos: 9 },
+    { pos: 25, nombre: 'Blake Ezeh', equipo: 'Ferrari HoloLive Racing Team', puntos: 9 },
+    { pos: 26, nombre: 'Templario VCR', equipo: 'Hispania Racing Team', puntos: 6 },
+    { pos: 27, nombre: 'Christian Horny', equipo: '15 Zetta Racing', puntos: 6 },
+    { pos: 28, nombre: 'Marco Rodríguez', equipo: '94 Pagani Renault', puntos: 3 },
     { pos: 29, nombre: 'Cristóbal Farías Galleguillos', equipo: '18 Zetta Racing', puntos: 0 },
     { pos: 30, nombre: 'Rui Acacio', equipo: 'Flamengüam', puntos: 0 },
     { pos: 31, nombre: 'Sebas Srg Ramírez', equipo: '11 Ferrari McDonald\'s', puntos: 0 },
@@ -91,7 +91,7 @@ const jornadasT37 = [
             '🏆 André Prov vs Julio Maidana (P6 vs P29 DNF)',
             '🏆 Leoo Ferreira vs Marc cr Rayo (P2 vs P21)',
             '🏆 Romus Toras vs Eduardo Calvo (P1 vs P9)',
-            '🏆 Cristian Ezpeleta vs Pablo Mafias (P13 vs P14)',
+            '🏆 Cristian Ezpeleta vs Pablo Mariño (P13 vs P14)',
             '🏆 Sergio Solano vs Mauro Reyes Hernández (P5 vs P27)',
             '🏆 Vasvo Lao vs Álvaro Redondo (P3 vs P17)',
             '🏆 Marco Rodríguez vs Sebas Srg Ramírez (P16 vs P28 DNF)',
@@ -116,7 +116,7 @@ const jornadasT37 = [
             '🏆 Eduardo Calvo vs Antonio Pinillos (P7 vs P16)',
             '🏆 Cristian Ezpeleta vs Rui Acacio (P9 vs P28)',
             '🏆 Sergio Solano vs Blake Ezeh (P6 vs P27)',
-            '🏆 Vasvo Lao vs Pablo Mafias (P4 vs P24)',
+            '🏆 Vasvo Lao vs Pablo Mariño (P4 vs P24)',
             '🏆 Freya Anafi vs Marco Rodríguez (P13 vs P25)',
             '🏆 Thiago Campos vs Alexis Iceman (P10 vs P11)',
             '🏆 Juan Garcia vs Francisco Martínez (P5 vs P26)',
@@ -144,7 +144,7 @@ const jornadasT37 = [
             '🏆 Juan Garcia vs Sebas Srg Ramírez (P5 vs P28)',
             '🏆 Romus Toras vs Álvaro Redondo (P6 vs P22)',
             '🏆 Antonio Pinillos vs Peppe Vedda (P16 vs P20)',
-            '🏆 Freya Anafi vs Pablo Mafias (P31 vs P32)',
+            '🏆 Freya Anafi vs Pablo Mariño (P31 vs P32)',
             '🏆 Julio Maidana vs Giacomina Leclerc (P13 vs P17)',
             '🏆 Thiago Campos vs Blake Ezeh (P2 vs P23)',
             '🏆 Francisco Martínez vs Rui Acacio (P24 vs P30)',
@@ -166,7 +166,7 @@ const jornadasT37 = [
             '🏆 Francisco Martínez vs Marco Rodríguez (P22 vs P30 DNF)',
             '🏆 Juan Garcia vs Julio Maidana (P29 vs P32 DNF)',
             '🏆 Tony Crowther vs Cristóbal Farías Galleguillos (P21 vs P25)',
-            '🏆 Pablo Mafias vs Antonio Pinillos (P13 vs P15)',
+            '🏆 Pablo Mariño vs Antonio Pinillos (P13 vs P15)',
             '🏆 Romus Toras vs Marc cr Rayo (P6 vs P23)',
             '🏆 Thiago Campos vs Freya Anafi (P5 vs P28)',
             '🏆 Giacomina Leclerc vs Mauro Reyes Hernández (P7 vs P18)',
@@ -194,7 +194,7 @@ const jornadasT37 = [
             '🏆 Freya Anafi vs Peppe Vedda (P23 vs P24)',
             '🏆 Giacomina Leclerc vs Sebas Srg Ramírez (P2 vs P29)',
             '🏆 Romus Toras vs Stefano Cann (P3 vs P13)',
-            '🏆 Pablo Mafias vs Mauro Reyes Hernández (P12 vs P20)'
+            '🏆 Pablo Mariño vs Mauro Reyes Hernández (P12 vs P20)'
         ]
     },
     {
@@ -216,7 +216,7 @@ const jornadasT37 = [
             '🏆 Templario VCR vs Freya Anafi (P29 DNF vs P19)',
             '🏆 Julio Maidana vs Stefano Cann (P15 vs P21)',
             '🏆 Francisco Martínez vs Cristóbal Farías Galleguillos (P22 vs P24)',
-            '🏆 Romus Toras vs Pablo Mafias (P2 vs P10)',
+            '🏆 Romus Toras vs Pablo Mariño (P2 vs P10)',
             '🏆 Alejandro Alonso vs Rui Acacio (P25 vs P26)'
         ]
     },
@@ -228,7 +228,7 @@ const jornadasT37 = [
             '🏆 Valdi CT vs Sebas Srg Ramírez (P3 vs DNS)',
             '🏆 André Prov vs Templario VCR (P1 vs P13)',
             '🏆 Leoo Ferreira vs Tony Crowther (P5 vs P18)',
-            '🏆 Eduardo Calvo vs Pablo Mafias (P2 vs P28)',
+            '🏆 Eduardo Calvo vs Pablo Mariño (P2 vs P28)',
             '🏆 Giacomina Leclerc vs Cristian Ezpeleta (P7 vs P11)',
             '🏆 Sergio Solano vs Francisco Martínez (P10 vs P27)',
             '🏆 Vasvo Lao vs Cristóbal Farías Galleguillos (P8 vs P20)',
@@ -253,7 +253,7 @@ const jornadasT37 = [
             '🏆 Leoo Ferreira vs Christian Horny (P4 vs P13)',
             '🏆 Eduardo Calvo vs Freya Anafi (P5 vs P20)',
             '🏆 Cristian Ezpeleta vs Julio Maidana (P14 vs P25)',
-            '🏆 Sergio Solano vs Pablo Mafias (P9 vs P11)',
+            '🏆 Sergio Solano vs Pablo Mariño (P9 vs P11)',
             '🏆 Vasvo Lao vs Juan Garcia (P7 vs P16)',
             '🏆 Blake Ezeh vs Marco Rodríguez (P29 DNF vs DNS)',
             '🏆 Antonio Pinillos vs Tony Crowther (P19 vs DNS)',
@@ -270,7 +270,7 @@ const jornadasT37 = [
         estado: 'Completada',
         enfrentamientos: [
             '🏆 Romus Toras vs Valdi CT (P1 vs P3)',
-            '🏆 André Prov vs Pablo Mafias (P2 vs P9)',
+            '🏆 André Prov vs Pablo Mariño (P2 vs P9)',
             '🏆 Leoo Ferreira vs Antonio Pinillos (P6 vs P17)',
             '🏆 Eduardo Calvo vs Marco Rodríguez (P5 vs DNS)',
             '🏆 Cristian Ezpeleta vs Stefano Cann (P23 vs DNS)',
@@ -288,22 +288,22 @@ const jornadasT37 = [
     {
         nombre: 'Jornada 10',
         fecha: 'Lunes 1 de junio',
-        estado: 'Pendiente',
+        estado: 'Completada',
         enfrentamientos: [
-            'Valdi CT vs Marco Rodríguez',
-            'André Prov vs Freya Anafi',
-            'Leoo Ferreira vs Thiago Campos',
-            'Eduardo Calvo vs Francisco Martínez',
-            'Cristian Ezpeleta vs Christian Horny',
-            'Sergio Solano vs Roma II',
-            'Vasvo Lao vs Giacomina Leclerc',
-            'Alexis Iceman vs Marc cr Rayo',
-            'Juan Garcia vs Romus Toras',
-            'Tony Crowther vs Pablo Mafias',
-            'Álvaro Redondo vs Mauro Reyes Hernández',
-            'Antonio Pinillos vs Stefano Cann',
-            'Blake Ezeh vs Templario VCR',
-            'Alejandro Alonso vs Julio Maidana'
+            '🏆 Valdi CT vs Marco Rodríguez (P2 vs DNS)',
+            '🏆 André Prov vs Freya Anafi (P7 vs P14)',
+            '🏆 Thiago Campos vs Leoo Ferreira (P4 vs P5)',
+            '🏆 Eduardo Calvo vs Francisco Martínez (P11 vs P23)',
+            '🏆 Cristian Ezpeleta vs Christian Horny (P8 vs P16)',
+            '🏆 Roma II vs Sergio Solano (P10 vs P31 DNF)',
+            '🏆 Vasvo Lao vs Giacomina Leclerc (P3 vs P6)',
+            '🏆 Alexis Iceman vs Marc cr Rayo (P9 vs P18)',
+            '🏆 Romus Toras vs Juan Garcia (P1 vs P13)',
+            '🏆 Pablo Mariño vs Tony Crowther (P12 vs DNS)',
+            '🏆 Álvaro Redondo vs Mauro Reyes Hernández (P19 vs P20)',
+            '🏆 Antonio Pinillos vs Stefano Cann (P17 vs DNS)',
+            '🏆 Templario VCR vs Blake Ezeh (P32 DNF vs DNS)',
+            '🏆 Julio Maidana vs Alejandro Alonso (P15 vs P27)'
         ]
     }
 ];
